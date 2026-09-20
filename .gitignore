@@ -1,0 +1,8 @@
+# 机密：API key / 环境变量，绝不提交
+config/api.env
+*.env
+.env
+
+# Python
+__pycache__/
+*.pyc
