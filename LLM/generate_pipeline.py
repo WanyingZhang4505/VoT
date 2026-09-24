@@ -73,6 +73,8 @@ def extract_json(text):
 # INPUT — a real example shaped like Appendix E (SocialGood / unemployment)
 # Replace raw_news and series with your own to try other inputs.
 # ============================================================
+# dataset_name 决定去 LLM/template/<dataset_name>.json 找已有模板
+dataset_name = "socialgood"
 dataset_description = ("Monthly unemployment statistics for the United States, "
                        "disaggregated by race. OT value = unemployment rate. "
                        "Text data = economic news and policy reports.")
@@ -87,25 +89,57 @@ pred_len = 12
 # ============================================================
 # STEP 1 — TEMPLATE GENERATION (Appendix E.1)
 # ============================================================
-template_prompt = f"""You are a senior data scientist designing a COMPACT extraction schema for OT-value time-series forecasting.
+template_prompt = f"""You are a professional data scientist. Design a compact JSON
+template that will later be filled in to summarize each time window of a dataset
+for OT-value forecasting.
 
 Dataset description: {dataset_description}
 
-Produce a JSON template (a schema of empty/placeholder fields, NOT an analysis) that a downstream model will later fill for each time window. It must guide extraction of forecasting-relevant signals from both the series and the news text.
+Produce a JSON template with EXACTLY these three top-level sections:
 
-HARD CONSTRAINTS:
-- Maximum nesting depth = 2 (a top-level key may hold a flat object OR a flat list; no deeper).
-- No metadata bloat: include a field ONLY if it plausibly changes the forecast. Drop descriptive fluff (data source, units, frequency) unless forecasting-critical.
-- Every field name must be self-explanatory; values are short placeholders describing what to put there.
+1. "dataset_info": a FLAT set of key-value fields (single level, no nesting)
+   capturing the basics — e.g. dataset name, domain, target variable (OT), unit,
+   frequency, data modalities. Values here are short descriptors.
 
-Cover, compactly, these and more potential forecasting essentials:
-1. the temporal trend/seasonality to read from the series,
-2. the event/impact signal to extract from the news (what happened, direction, and how long it plausibly lasts),
-3. the domain relationships worth considering (temporal / causal — skip any that don't apply),
-4. a short reasoning cue linking text to the numeric outlook.
-5. more potential forecasting essentials
+2. "predictive_factors": grouped factors, EXACTLY two levels deep — the outer key
+   is a factor CATEGORY, with category names end with "<CATEGORY> for prediction". 
+   The inner value is a short description of what to extract for that category. 
+   Use a few meaningful categories (e.g. temporal dynamics, external drivers, domain signals). 
+   Do NOT nest deeper than these two levels.
 
-Output ONLY the JSON template."""
+3. "forecast_outlook": a FLAT set of single-level fields for the actual analysis
+   to be filled later — e.g. expected direction, key driver, confidence. Keep each
+   value a concise one-line insight, not a paragraph.
+
+STRICT RULES:
+- Maximum nesting depth is TWO levels anywhere in the JSON.
+- "dataset_info" and "forecast_outlook" must be strictly single-level (flat).
+- Keep it concise and readable: few fields, each meaningful. No redundant or
+  overlapping fields. Favor analytical depth per field over number of fields.
+- Output ONLY the JSON template, no commentary."""
+
+# 模板目录：LLM/template/
+TEMPLATE_DIR = Path(__file__).resolve().parent / "template"
+
+def get_template(dataset_name):
+    """优先读本地模板 LLM/template/<dataset_name>.json
+    若文件不存在 / 为空 / 解析失败，则回退到用 LLM 生成。"""
+    tpl_path = TEMPLATE_DIR / f"{dataset_name}.json"
+
+    if tpl_path.exists() and tpl_path.stat().st_size > 0:
+        try:
+            with open(tpl_path) as f:
+                tpl = json.load(f)
+            if tpl:   # 解析出来且内容非空（非空 dict/list）
+                print(f"STEP 1: loaded template from {tpl_path}")
+                return tpl
+            print(f"STEP 1: {tpl_path} 内容为空，改用 LLM 生成 ...")
+        except json.JSONDecodeError as e:
+            print(f"STEP 1: {tpl_path} 解析失败（{e}），改用 LLM 生成 ...")
+    else:
+        print(f"STEP 1: 未找到 {tpl_path}，改用 LLM 生成 ...")
+
+    return extract_json(call_llm(template_prompt))
 
 # ============================================================
 # STEP 2 — SUMMARY (Appendix E.2)
@@ -167,22 +201,21 @@ def run():
         return
 
     print(f"[using model: {MODEL}]\n")
-    print("STEP 1: generating template ...")
-    template = extract_json(call_llm(template_prompt))
+    template = get_template(dataset_name)
     print(json.dumps(template, indent=2), "\n")
 
-    # print("STEP 2: filling template from news+series -> structured summary ...")
-    # summary = extract_json(call_llm(build_summary_prompt(template)))
-    # print(json.dumps(summary, indent=2)[:1000], "\n")
+    print("STEP 2: filling template from news+series -> structured summary ...")
+    summary = extract_json(call_llm(build_summary_prompt(template)))
+    print(json.dumps(summary, indent=2)[:1000], "\n")
 
-    # print("STEP 3: reasoning -> numeric prediction ...")
-    # pred = extract_json(call_llm(build_reasoning_prompt(summary)))
-    # print(json.dumps(pred, indent=2), "\n")
+    print("STEP 3: reasoning -> numeric prediction ...")
+    pred = extract_json(call_llm(build_reasoning_prompt(summary)))
+    print(json.dumps(pred, indent=2), "\n")
 
-    # with open("vot_pipeline_output.json", "w") as f:
-    #     json.dump({"template": template, "summary": summary, "prediction": pred},
-    #               f, indent=2)
-    # print("saved -> vot_pipeline_output.json")
+    with open("vot_pipeline_output.json", "w") as f:
+        json.dump({"template": template, "summary": summary, "prediction": pred},
+                  f, indent=2)
+    print("saved -> vot_pipeline_output.json")
 
 if __name__ == "__main__":
     run()

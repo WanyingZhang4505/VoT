@@ -1,4 +1,4 @@
-# 机密：API key / 环境变量，绝不提交
+# 敏感信息
 config/api.env
 *.env
 .env
@@ -6,3 +6,6 @@ config/api.env
 # Python
 __pycache__/
 *.pyc
+
+# 输出/缓存
+LLM/vot_pipeline_output.json
