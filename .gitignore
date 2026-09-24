@@ -6,6 +6,7 @@ config/api.env
 # Python
 __pycache__/
 *.pyc
+.gitignore
 
 # 输出/缓存
 LLM/vot_pipeline_output.json
