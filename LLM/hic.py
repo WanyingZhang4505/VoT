@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 from dotenv import load_dotenv
 
-# ================ API and Model Configuration ===================
+# ================ API and Model Configuration ====================
 env_path = Path(__file__).resolve().parent.parent / 'config'/ 'api.env'
 model_cfg_path = Path(__file__).resolve().parent.parent / 'config' / 'model.yaml'
 load_dotenv(env_path)  # write config/api.env into os.environ

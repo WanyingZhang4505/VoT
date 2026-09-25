@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 脚本所在目录（即使从别的目录 source 也能正确定位 config/requirements.txt）
+# current path
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if ! conda env list | grep -q "vot"; then
