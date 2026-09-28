@@ -1,0 +1,50 @@
+{
+  "template": {
+    "dataset_info": {
+      "dataset_name": "US Monthly Unemployment by Race",
+      "domain": "Labor Economics",
+      "target_variable": "Unemployment Rate (OT)",
+      "unit": "Percent",
+      "frequency": "Monthly",
+      "data_modalities": "Time series and text",
+      "disaggregation": "Race",
+      "geography": "United States"
+    },
+    "predictive_factors": {
+      "Temporal Dynamics for prediction": "Extract trend, seasonality, lagged unemployment rates by race, volatility, and regime shifts.",
+      "External Drivers for prediction": "Extract macro conditions, policy changes, labor market tightness, and economic news sentiment.",
+      "Domain Signals for prediction": "Extract race-specific disparities, demographic shifts, sectoral employment exposure, and historical gaps.",
+      "Textual Signals for prediction": "Extract tone, topics, and relevance from economic news and policy reports affecting unemployment by race."
+    },
+    "forecast_outlook": {
+      "expected_direction": "One-line: likely up, down, or stable for each race group.",
+      "key_driver": "One-line: dominant factor expected to shape the forecast.",
+      "confidence": "One-line: low, medium, or high with brief rationale.",
+      "uncertainty": "One-line: main risk or ambiguous signal.",
+      "horizon": "One-line: next month or target window focus."
+    }
+  },
+  "kb_size": 1,
+  "test_prediction": {
+    "prediction": [
+      9.8,
+      9.9,
+      9.8,
+      9.7,
+      9.6,
+      9.5,
+      9.4,
+      9.3,
+      9.2,
+      9.1,
+      9.0,
+      8.9
+    ],
+    "reasoning": "The series shows a sharp spike followed by a gradual decline and a recent uptick. Given the fragile labor market recovery and cautious news sentiment, the uptick is likely temporary. Mean reversion and policy lags suggest the rate will stabilize and then resume a slow downward trend. Racial disparities may keep the rate elevated but not indefinitely rising. Thus, forecast a slight increase then gradual decline."
+  },
+  "retrieval": {
+    "method": "bge_small_cosine",
+    "selected_index": 0,
+    "similarity": 0.9065579013538749
+  }
+}

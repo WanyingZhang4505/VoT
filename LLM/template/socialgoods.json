@@ -1,0 +1,25 @@
+{
+  "dataset_info": {
+    "dataset_name": "US Monthly Unemployment by Race",
+    "domain": "Labor Economics",
+    "target_variable": "Unemployment Rate (OT)",
+    "unit": "Percent",
+    "frequency": "Monthly",
+    "data_modalities": "Time series and text",
+    "disaggregation": "Race",
+    "geography": "United States"
+  },
+  "predictive_factors": {
+    "Temporal Dynamics for prediction": "Extract trend, seasonality, lagged unemployment rates by race, volatility, and regime shifts.",
+    "External Drivers for prediction": "Extract macro conditions, policy changes, labor market tightness, and economic news sentiment.",
+    "Domain Signals for prediction": "Extract race-specific disparities, demographic shifts, sectoral employment exposure, and historical gaps.",
+    "Textual Signals for prediction": "Extract tone, topics, and relevance from economic news and policy reports affecting unemployment by race."
+  },
+  "forecast_outlook": {
+    "expected_direction": "One-line: likely up, down, or stable for each race group.",
+    "key_driver": "One-line: dominant factor expected to shape the forecast.",
+    "confidence": "One-line: low, medium, or high with brief rationale.",
+    "uncertainty": "One-line: main risk or ambiguous signal.",
+    "horizon": "One-line: next month or target window focus."
+  }
+}

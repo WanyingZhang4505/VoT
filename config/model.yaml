@@ -1,4 +1,5 @@
-model: gemini-3.5-flash
-embedding_model: gemini-embedding-2
+model: deepseek-flash
+# Gemini is disabled; local BGE handles retrieval embeddings and DeepSeek Flash handles text generation.
+# embedding_model: gemini-embedding-2
 temperature: 0.7
-max_output_toke: 2048
+max_output_tokens: 2048

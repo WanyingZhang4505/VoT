@@ -1,7 +1,13 @@
-import os, json, yaml, requests
-import numpy as np
+import os, json, yaml
+import math
+import warnings
 from pathlib import Path
 from dotenv import load_dotenv
+
+try:
+    from .deepseek_client import call_chat_completion
+except ImportError:  # Support running this file directly as `python LLM/hic.py`.
+    from deepseek_client import call_chat_completion
 
 # ================ API and Model Configuration ====================
 env_path = Path(__file__).resolve().parent.parent / 'config'/ 'api.env'
@@ -11,56 +17,32 @@ load_dotenv(env_path)  # write config/api.env into os.environ
 with open(model_cfg_path) as f:
     mdl_cfg = yaml.safe_load(f)
 
-API_KEY = os.environ.get("GEMINI_API_KEY", "PUT-YOUR-KEY-HERE")
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 MODEL = mdl_cfg["model"]
-EMBED_MODEL = mdl_cfg["embedding_model"]
 
 # ================ LLM + Embedding calls =========================
-# Transient HTTP statuses worth retrying (server overload / rate limit / gateway).
-_RETRY_STATUS = {429, 500, 502, 503, 504}
-
 def call_llm(prompt, temperature=0.3, max_retries=6):
-    """One Gemini call. Returns the text content.
-
-    Retries transient server errors (e.g. 503 UNAVAILABLE "high demand")
-    with exponential backoff, since the API instructs clients to retry later.
-    """
-    url_ = (f"https://generativelanguage.googleapis.com/v1beta/models/"
-            f"{MODEL}:generateContent?key={API_KEY}")
-
-    import time
-    headers = {"Content-Type": "application/json"}
-    body = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": temperature},
-    }
-    for attempt in range(max_retries):
-        r = requests.post(url_, headers=headers, json=body, timeout=120)
-        if r.status_code in _RETRY_STATUS and attempt < max_retries - 1:
-            wait = min(2 ** attempt, 32)  # 1,2,4,8,16,32s capped
-            print(f"  [call_llm] {r.status_code} transient error; retrying in {wait}s "
-                  f"(attempt {attempt + 1}/{max_retries}) ...")
-            time.sleep(wait)
-            continue
-        r.raise_for_status()
-        data = r.json()
-        # Gemini nests the text under candidates[0].content.parts[0].text
-        return data["candidates"][0]["content"]["parts"][0]["text"]
+    """Call DeepSeek Flash in JSON mode and return assistant text."""
+    return call_chat_completion(
+        prompt,
+        api_key=DEEPSEEK_API_KEY,
+        model=MODEL,
+        temperature=temperature,
+        max_tokens=mdl_cfg.get("max_output_tokens", 2048),
+        max_retries=max_retries,
+    )
 
 
-def call_emb(txt):
-    """call GEMINI embedding models. Return a text outcome."""
-    url_ = (f"https://generativelanguage.googleapis.com/v1beta/models/"
-            f"{EMBED_MODEL}:embedContent?key={API_KEY}")
-    r = requests.post(url_, json={"content": {"parts": [{"text": txt}]}}, timeout=120)
-    r.raise_for_status()
-    return np.array(r.json()["embedding"]["values"], dtype=float)
-
-def cosine(a, b):
-    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-19)
+# Historical summaries are embedded locally; DeepSeek remains responsible for
+# generating summaries, forecasts, and correction notes.
+BGE_MODEL_NAME = "BAAI/bge-small-en-v1.5"
+BGE_QUERY_INSTRUCTION = "Represent this sentence for searching relevant passages: "
+BGE_MAX_LENGTH = 512
+BGE_EMBEDDING_DIMENSION = 384
+_embedder = None
 
 def extract_json(text):
-    """Gemini often wraps JSON in ```json fences; strip and parse."""
+    """Strip optional Markdown fences and parse a model-generated JSON value."""
     t = text.strip()
     if "```" in t:
         t = t.split("```")[1]
@@ -80,7 +62,8 @@ pred_len = 12
 
 industry = "socialgoods"
 
-kb_file = Path(__file__).resolve().parent / "knowledge_base" / f"kb_{industry}.json" 
+kb_file = (Path(__file__).resolve().parent / "knowledge_base" /
+           f"kb_{industry}_deepseek.json")
 
 #  ==================  Prmopt design ================================
 def build_template_prompt():
@@ -176,6 +159,137 @@ def build_correction_prompt(summary, series, truth, pred, reasoning):
     """
     return p
 
+
+def _ordered_fields(fields, preferred_keys):
+    if not isinstance(fields, dict):
+        return []
+    ordered = [key for key in preferred_keys if key in fields]
+    ordered.extend(sorted(key for key in fields if key not in preferred_keys))
+    return [(key, fields[key]) for key in ordered]
+
+
+def _summary_value_to_text(value):
+    if isinstance(value, str):
+        return " ".join(value.split())
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return str(value)
+
+
+def summary_to_embedding_text(summary):
+    """Serialize summaries deterministically, prioritizing case-specific signals."""
+    if isinstance(summary, str):
+        return " ".join(summary.split())
+    if not isinstance(summary, dict):
+        return _summary_value_to_text(summary)
+
+    section_orders = (
+        ("predictive_factors", (
+            "Temporal Dynamics for prediction",
+            "External Drivers for prediction",
+            "Domain Signals for prediction",
+            "Textual Signals for prediction",
+        )),
+        ("forecast_outlook", (
+            "expected_direction", "key_driver", "uncertainty", "confidence", "horizon",
+        )),
+        ("dataset_info", (
+            "domain", "target_variable", "unit", "frequency", "geography",
+        )),
+    )
+    lines = []
+    for section, preferred_keys in section_orders:
+        for key, value in _ordered_fields(summary.get(section), preferred_keys):
+            if value is None or value == "":
+                continue
+            lines.append(f"{key.replace('_', ' ')}: {_summary_value_to_text(value)}")
+    if lines:
+        return "\n".join(lines)
+    return json.dumps(summary, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+class LocalBgeEmbedder:
+    """Lazy local inference wrapper for the BGE sentence encoder."""
+
+    def __init__(self, model_name=BGE_MODEL_NAME):
+        import torch
+        from transformers import AutoModel, AutoTokenizer
+
+        self.torch = torch
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModel.from_pretrained(model_name).to(self.device)
+        self.model.eval()
+        self.model_name = model_name
+
+    def encode(self, texts, is_query=False):
+        if not texts:
+            return []
+        prepared = [
+            BGE_QUERY_INSTRUCTION + text if is_query else text
+            for text in texts
+        ]
+        untruncated = self.tokenizer(
+            prepared, add_special_tokens=True, truncation=False
+        )["input_ids"]
+        truncated_count = sum(len(tokens) > BGE_MAX_LENGTH for tokens in untruncated)
+        if truncated_count:
+            warnings.warn(
+                f"{truncated_count} HIC embedding input(s) exceed {BGE_MAX_LENGTH} "
+                "tokens and will be truncated; case-specific signals are serialized "
+                "before static dataset metadata.",
+                RuntimeWarning,
+                stacklevel=2,
+            )
+
+        encoded = self.tokenizer(
+            prepared,
+            padding=True,
+            truncation=True,
+            max_length=BGE_MAX_LENGTH,
+            return_tensors="pt",
+        )
+        encoded = {key: value.to(self.device) for key, value in encoded.items()}
+        with self.torch.inference_mode():
+            output = self.model(**encoded)
+            vectors = self.torch.nn.functional.normalize(
+                output.last_hidden_state[:, 0], p=2, dim=1
+            )
+
+        if vectors.ndim != 2 or vectors.shape[1] != BGE_EMBEDDING_DIMENSION:
+            raise RuntimeError(
+                f"{self.model_name} returned {tuple(vectors.shape)}; expected "
+                f"(batch, {BGE_EMBEDDING_DIMENSION})."
+            )
+        if not self.torch.isfinite(vectors).all():
+            raise RuntimeError(f"{self.model_name} returned a non-finite embedding.")
+        return vectors.cpu().tolist()
+
+
+def get_embedder():
+    """Load BGE on first use and reuse it for subsequent HIC retrievals."""
+    global _embedder
+    if _embedder is None:
+        _embedder = LocalBgeEmbedder()
+    return _embedder
+
+
+def _normalize_stored_embedding(vector, label):
+    if not isinstance(vector, (list, tuple)) or len(vector) != BGE_EMBEDDING_DIMENSION:
+        raise ValueError(
+            f"Knowledge-base embedding {label} must have {BGE_EMBEDDING_DIMENSION} dimensions."
+        )
+    try:
+        values = [float(value) for value in vector]
+    except (TypeError, ValueError):
+        raise ValueError(f"Knowledge-base embedding {label} must contain numeric values.") from None
+    if not all(math.isfinite(value) for value in values):
+        raise ValueError(f"Knowledge-base embedding {label} contains non-finite values.")
+    norm = math.sqrt(sum(value * value for value in values))
+    if norm == 0 or not math.isfinite(norm):
+        raise ValueError(f"Knowledge-base embedding {label} must have a non-zero finite norm.")
+    return [value / norm for value in values]
+
 # ======================= Get template =================================
 # template folder with all industry datasets
 TEMPLATE_DIR = Path(__file__).resolve().parent / "template"
@@ -211,11 +325,59 @@ def reason(summary, series, correction=None):
 def correct(summary, series, truth, pred, reasoning):
     return extract_json(call_llm(build_correction_prompt(summary, series, truth, pred, reasoning)))
 
+
+def select_similar_case(query_summary, knowledge_base):
+    if not knowledge_base:
+        raise ValueError("Cannot retrieve a case from an empty knowledge base.")
+
+    for index, record in enumerate(knowledge_base):
+        if not isinstance(record, dict) or "summary" not in record or "correction" not in record:
+            raise ValueError(
+                f"Knowledge-base entry {index} must contain 'summary' and 'correction'."
+            )
+
+    embedder = get_embedder()
+    query_vectors = embedder.encode(
+        [summary_to_embedding_text(query_summary)], is_query=True
+    )
+    if len(query_vectors) != 1:
+        raise RuntimeError("BGE must return exactly one embedding for the query summary.")
+    query_vector = _normalize_stored_embedding(query_vectors[0], "query")
+
+    pending_indices = [
+        index for index, record in enumerate(knowledge_base)
+        if record.get("embedding_model") != BGE_MODEL_NAME or "embedding" not in record
+    ]
+    if pending_indices:
+        passage_texts = [
+            summary_to_embedding_text(knowledge_base[index]["summary"])
+            for index in pending_indices
+        ]
+        passage_vectors = embedder.encode(passage_texts, is_query=False)
+        if len(passage_vectors) != len(pending_indices):
+            raise RuntimeError("BGE returned a different number of passage vectors than inputs.")
+        for index, vector in zip(pending_indices, passage_vectors):
+            knowledge_base[index]["embedding"] = _normalize_stored_embedding(vector, index)
+            knowledge_base[index]["embedding_model"] = BGE_MODEL_NAME
+
+    similarities = []
+    for index, record in enumerate(knowledge_base):
+        vector = _normalize_stored_embedding(record["embedding"], index)
+        similarities.append(sum(left * right for left, right in zip(query_vector, vector)))
+
+    selected_index = max(range(len(similarities)), key=similarities.__getitem__)
+    metadata = {
+        "method": "bge_small_cosine",
+        "selected_index": selected_index,
+        "similarity": similarities[selected_index],
+    }
+    return knowledge_base[selected_index], metadata
+
 # ======================= Build Knowledge Base ============================
 def build_knowledge_base(train_samples, template, append=True):
     """
     input: train_samepls -> [{"train_sample":[...], "series":[...], "truth":[...], "news": "..."}, ...]
-    output: kb -> [{"embedding": [...], "correction": "..."}, {...}]
+    output: kb -> [{"summary": {...}, "correction": "...", "embedding": [...]}, ...]
     """
     if append and kb_file.exists():
         kb = json.load(open(kb_file))
@@ -226,29 +388,46 @@ def build_knowledge_base(train_samples, template, append=True):
         summary = summarize(template, s["series"], s["news"])
         init_r = reason(summary, s["series"])
         corr_r = correct(summary, s['series'], s['truth'], init_r.get("prediction"), init_r.get("reasoning"))
-        txt_summary = json.dumps(summary)
         kb.append(
             {
-                "embedding": call_emb(txt_summary),
-                "correction": corr_r.get("Key Insights") or corr_r.get("Improved Reasoning") or str(corr_r)
+                "summary": summary,
+                "correction": corr_r.get("Key Insights") or corr_r.get("Improved Reasoning") or str(corr_r),
             }
         )
         print(f"Create KB entry {i+1} / {len(train_samples)}")
-    json.dump(kb, open(kb_file, "w"), indent=2)
+
+    pending_entries = [
+        entry for entry in kb
+        if entry.get("embedding_model") != BGE_MODEL_NAME or "embedding" not in entry
+    ]
+    if pending_entries:
+        passage_texts = [
+            summary_to_embedding_text(entry["summary"])
+            for entry in pending_entries
+        ]
+        vectors = get_embedder().encode(passage_texts, is_query=False)
+        if len(vectors) != len(pending_entries):
+            raise RuntimeError("BGE returned a different number of passage vectors than inputs.")
+        for index, (entry, vector) in enumerate(zip(pending_entries, vectors)):
+            entry["embedding"] = _normalize_stored_embedding(vector, index)
+            entry["embedding_model"] = BGE_MODEL_NAME
+
+    kb_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(kb_file, "w", encoding="utf-8") as f:
+        json.dump(kb, f, indent=2, ensure_ascii=False)
     print(f"Saved KB -> {kb_file} {len(train_samples)} entries")
     return kb
 
 # ======================= hic prediction =======================
 def hic_predict(kb, template, series, news):
     summary = summarize(template, series, news)
-    q = call_emb(json.dumps(summary))
-    best_sim, best = max(
-        ((cosine(q, np.array(kb_record["embedding"])), kb_record) for kb_record in kb),
-        key=lambda x: x[0]
+    best, retrieval = select_similar_case(summary, kb)
+    print(
+        f"  retrieved case {retrieval['selected_index']} via local BGE "
+        f"(cosine={retrieval['similarity']:.4f})"
     )
-    print(f"  retrieved most similar case (cosine={best_sim:.3f})")
 
-    return reason(summary, series, best["correction"]), best_sim
+    return reason(summary, series, best["correction"]), retrieval
 
 # ======================= TEST =======================
 train_samples = [{
@@ -266,27 +445,23 @@ test_sample = {
 
 # ======================= RUN =======================
 def run():
-    if API_KEY == "PUT-YOUR-KEY-HERE":
-        print("!! Set GEMINI_API_KEY first. Structure is ready; here is one prompt:\n")
-        print(build_reasoning_prompt({"trend":"up"}, [1,2,3],
-              correction="Do not assume smooth recovery after shocks.")[:400])
-        return
-    print(f"[model={MODEL} | embed={EMBED_MODEL}]\n")
+    if not DEEPSEEK_API_KEY:
+        raise RuntimeError("Set DEEPSEEK_API_KEY in config/api.env before running HIC.")
+    print(f"[model={MODEL} | retrieval=local {BGE_MODEL_NAME} cosine similarity]\n")
     template = get_template(industry)
     print(json.dumps(template, indent=2), "\n")
 
     print("STEP 4-5: building knowledge base from train samples ...")
-    kb = build_knowledge_base(train_samples, template)
+    kb = build_knowledge_base(train_samples, template, append=False)
 
     print("\nSTEP 6: HIC-guided prediction on test sample (#719) ...")
-    pred, sim = hic_predict(kb, template, test_sample["series"], test_sample["news"])
+    pred, retrieval = hic_predict(kb, template, test_sample["series"], test_sample["news"])
     print(json.dumps(pred, indent=2))
  
     json.dump({"template": template, "kb_size": len(kb),
-               "test_prediction": pred, "retrieval_cosine": sim},
+               "test_prediction": pred, "retrieval": retrieval},
               open(Path(__file__).resolve().parent / "vot_hic_output.json", "w"), indent=2)
     print("\nsaved -> vot_hic_output.json")
 
 if __name__ == "__main__":
     run()
-    
