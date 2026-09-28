@@ -452,6 +452,8 @@ def run():
     print(json.dumps(template, indent=2), "\n")
 
     print("STEP 4-5: building knowledge base from train samples ...")
+    # train_samples is the complete source corpus for this reproducible demo;
+    # rebuild the KB so reruns do not accumulate duplicate copies of the same cases.
     kb = build_knowledge_base(train_samples, template, append=False)
 
     print("\nSTEP 6: HIC-guided prediction on test sample (#719) ...")

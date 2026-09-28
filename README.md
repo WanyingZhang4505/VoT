@@ -60,6 +60,10 @@ API usage charges. Local BGE handles retrieval separately. Output is written to
 only one training case and one test case; this verifies the workflow, not
 retrieval quality or forecast accuracy. A single candidate is selected by
 definition, so meaningful retrieval evaluation requires more historical cases.
+The demo treats `train_samples` in `LLM/hic.py` as the complete authoritative
+training corpus and rebuilds the knowledge base from it on each run. Add the full
+historical corpus there before running; previously generated KB entries are not
+incrementally retained, which also prevents duplicate entries on repeated runs.
 
 ### Train and evaluate model
 
