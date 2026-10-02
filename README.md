@@ -8,7 +8,7 @@ Given a python environment (**note**: this project is fully tested under python 
 
 ```
 conda create -n vot python==3.10
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 And you need to download the required language model in the `language_model` directory and set the corresponding `--llm_dim` parameter in `run_vot.py`
 
@@ -21,6 +21,15 @@ summary into a normalized 384-dimensional vector, and HIC selects the closest
 stored summary by cosine similarity. Retrieval does not call DeepSeek or require
 an embedding API key.
 
+Create `config/api.env` in the repository root and add your own key:
+
+```text
+DEEPSEEK_API_KEY=your_key_here
+```
+
+Do not commit or share this file. Each user must provide their own DeepSeek API
+key; the repository does not contain a usable key.
+
 The query summary receives BGE's recommended retrieval instruction; stored case
 summaries do not. Summary serialization puts temporal and external-event signals
 before static dataset metadata. Inputs are capped at 512 tokens; longer inputs
@@ -28,27 +37,29 @@ are truncated with a warning. Embeddings are stored with each knowledge-base
 entry and tagged with the model ID so vectors from another model are not mixed.
 Legacy entries without BGE vectors are embedded when retrieval needs them.
 
-On Windows, the local HIC environment used for this integration can be recreated
-with:
+On Windows, recreate the tested local HIC environment from the repository root
+with Python 3.12 and a CPU-only PyTorch installation:
 
 ```powershell
-python -m venv .venv
+py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install torch==2.6.0+cpu --index-url https://download.pytorch.org/whl/cpu
 .\.venv\Scripts\python.exe -m pip install transformers==4.52.4 PyYAML python-dotenv
 ```
 
-The first BGE run downloads the model weights (about 133 MB) into the user's
-Hugging Face cache, outside this repository. To smoke-test only the local
+The first HIC run downloads `BAAI/bge-small-en-v1.5` (about 133 MB) into the
+user's Hugging Face cache, outside this repository; internet access is required
+for this download and for DeepSeek API requests. To smoke-test only the local
 embedding and retrieval path without making DeepSeek requests, run:
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/test_local_bge.py
 ```
 
-Run the available one-train/one-test example with:
+Run the available one-train/one-test example with the same virtual-environment
+interpreter:
 
-```shell
-python LLM/hic.py
+```powershell
+.\.venv\Scripts\python.exe LLM\hic.py
 ```
 
 With the template cached, the current one-train/one-test run makes five main
