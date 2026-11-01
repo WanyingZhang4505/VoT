@@ -1,5 +1,0 @@
-{
-  "prediction": [1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9, 1007085333.9],
-  "updated_correction": "For this truth-aware revision of Security case security_validation_series_20170301T000000 only, the supplied validation values span about 347 million to 2.16 billion and have a mean near 1.007 billion. The earlier 550 million flat level and declining path were too low across this sequence. Use a central forecast near the case-specific validation mean when revising this case, while representing the sparse pre-target history's uncertainty and not attempting to predict individual spikes. This outcome-informed adjustment is specific to this post-hoc exercise and does not establish a general forecasting rule or explain the variation's cause.",
-  "reasoning": "The supplied truth-aware feedback shows a highly variable sequence whose mean is about 1.007 billion; the previous forecasts were too low. I use that case-specific central level for all ten steps because the eight-point pre-target history and unrelated text do not establish a reliable path for the swings."
-}

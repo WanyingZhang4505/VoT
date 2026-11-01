@@ -1,4 +1,0 @@
-{
-  "prediction": [650000000, 550000000, 480000000, 430000000, 400000000, 380000000, 370000000, 360000000, 350000000, 350000000],
-  "reasoning": "The eight observations are sparse and volatile, and the final jump is a single point with no target definition or supporting covariates. I use a mildly elevated near-term level that gradually returns toward the earlier range rather than extrapolating the spike. The disaster-response text has no established link to the numeric series, so it does not affect the forecast. This trajectory is uncertain."
-}

@@ -2,17 +2,15 @@
 
 This guide explains how to clone the public `BILL_DeepSeek` branch, restore its Qdrant library, configure DeepSeek and local BGE-M3, and run one new case at a time. It describes the code shipped in this branch as of 2026-11-01.
 
-The active path for a user-supplied case is `scripts/run_deepseek_hic_case.py`. The frozen 15-case evaluation runners are separate and are not general-purpose new-case commands.
+The active path for a user-supplied case is `scripts/run_deepseek_hic_case.py`. This branch is organized around that reusable one-case workflow.
 
 ## 1. What is included
 
 - `scripts/run_deepseek_hic_case.py`: truth-blind one-case runner. It generates one case summary, a no-retrieval forecast (A), embeds the summary locally with BGE-M3, retrieves one direct-nearest Top-1 Qdrant memory, then generates a fresh Full HIC forecast (B). It does not write points to Qdrant.
 - `qdrant/DeepSeek_Test_1_718_20261101.snapshot`: portable snapshot of the live `DeepSeek Test 1` collection at 718 points, 1024-dimensional Cosine vectors, created with Qdrant 1.19.2.
 - `qdrant/snapshot_manifest.json`: source collection, count, vector configuration, snapshot size, creation time, and SHA256.
-- `LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_snapshot/agent_test_8_filtered_703.jsonl`: the separate clean 703-point baseline used by the frozen 15-case run.
-- `scripts/run_deepseek_test1_strict.py`: the historical strict one-pass evaluation runner. It is bound to its frozen 15 cases and a 703-point collection.
 
-The 718-point snapshot includes 15 validation-derived experiences added after the 15-case evaluation. It is a development memory bank, not an untouched blind-test library. Do not use it to claim blind performance on those same 15 cases. The HIC and Qdrant code use the collection read-only during a new-case prediction.
+The 718-point snapshot includes 15 validation-derived experiences added after the 15-case evaluation. It is a development memory bank, not an untouched blind-test library. Do not use it to claim blind performance on those same 15 cases. The HIC and Qdrant code use the collection read-only during a new-case prediction. Frozen Agent Test 8 case outputs, score logs, and specialized evaluation runners are not included because they are not needed to run a new case.
 
 ## 2. Software and model downloads
 
@@ -218,9 +216,7 @@ Resume verifies the original input hash, collection, and Qdrant URL. Completed p
 
 This new-case command deliberately uses the same direct-nearest Top-1 rule as the DeepSeek Test 1 path. It does not filter by date, horizon, source family, or source case. Inspect the saved Top-1 `case_id`, `point_id`, `source_metadata`, and similarity for every prediction. The nearest point can be from the same source family or have a horizon/time relationship that is not suitable for the new case.
 
-The 718-point snapshot includes the 15 experiences derived from the previous validation results. A new case that duplicates one of those cases can retrieve its own validation-derived correction. Such a run is useful as a workflow demonstration, not as a blind evaluation. For an untouched historical baseline, use the clean 703-point snapshot and a separate collection; do not replace an existing collection.
-
-The `run_deepseek_test1_strict.py` command is for the exact frozen 15-case protocol. It hard-codes the `DeepSeek Test 1` collection and a green 703-point count, and gates the full run on its saved four-case pilot. It will reject the published 718-point post-score snapshot. Do not use that runner for arbitrary cases; use `run_deepseek_hic_case.py` above.
+The 718-point snapshot includes the 15 experiences derived from the previous validation results. A new case that duplicates one of those cases can retrieve its own validation-derived correction. Treat such a run as a workflow demonstration, not a blind evaluation. Use `run_deepseek_hic_case.py` for new cases; this branch contains the reusable one-case runner, not the fixed 15-case evaluation protocol.
 
 No score is calculated for a new case because the case file contains no truth. If an outcome becomes available later, keep it sealed until the A/B outputs and request records are saved. Any later correction-writing process changes the library and must be recorded as development feedback; it is not part of this read-only prediction command.
 

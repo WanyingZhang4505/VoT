@@ -1,4 +1,0 @@
-{
-  "prediction": [230000000, 230000000, 230000000, 230000000, 230000000, 230000000, 230000000, 230000000, 230000000, 230000000],
-  "reasoning": "The eight observations are too few and the target is unspecified. Treating the single extreme spike as an isolated event, the remaining values center near 233 million; use a flat forecast near that level, with low confidence."
-}

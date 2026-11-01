@@ -1,4 +1,0 @@
-{
-  "prediction": [227298949, 227298949, 227298949, 227298949, 227298949, 227298949, 227298949, 227298949, 227298949, 227298949],
-  "reasoning": "The history has one isolated extreme spike, while the other seven values have a median of 227,298,949. I use that robust level for the forecast because the remaining observations fluctuate without a clear sustained trend. The latest value is below this level, but eight observations do not establish a reliable direction. The disaster-related text has no verified connection to the unspecified numeric target, so it does not adjust the forecast."
-}

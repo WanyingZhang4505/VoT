@@ -1,4 +1,0 @@
-{
-  "prediction": [550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000],
-  "reasoning": "The series is volatile, and its final value of about 1.72 billion is a sharp jump from the prior observations. With no evidence that this jump will persist, I use a cautious elevated level that partly reflects it while allowing for mean reversion; uncertainty remains high."
-}

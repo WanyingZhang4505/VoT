@@ -1,4 +1,0 @@
-{
-  "prediction": [1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325, 1.24325],
-  "reasoning": "The target is unidentified and its unit is unknown. It declined for most of the observed period, then rose across the final observations to 1.24325. The supplied covariates also rose near the end, but their relationship to the target is not established. The retrieved experience is a qualitative analogy: when target identity is unclear and no validated target-aligned evidence supports a change, retain a simple baseline and avoid unsupported turning-point claims. I therefore use the latest observed value throughout the horizon; this does not assume the recent rise will persist."
-}
