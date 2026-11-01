@@ -1,0 +1,1791 @@
+{
+  "file_count": 357,
+  "total_bytes": 43455451,
+  "files": [
+    {
+      "path": "config/model.yaml",
+      "size_bytes": 206,
+      "sha256": "81ac036307b3e11d1108fe81d4017927674dfb907257a256749b2bd326234f2f"
+    },
+    {
+      "path": "config/requirements.txt",
+      "size_bytes": 378,
+      "sha256": "2668798d74130c4f225869609e832abbb46d698c0046a0e3313dc4af78357983"
+    },
+    {
+      "path": "data/Agriculture.csv",
+      "size_bytes": 710264,
+      "sha256": "99135c58a8a67099970a990584c895530e3d56db309702271081981f976a71b6"
+    },
+    {
+      "path": "data/Climate.csv",
+      "size_bytes": 766017,
+      "sha256": "d5c0cffd3bfb27296e5031d89e0630e585fc0f221fb9c9b85775b1b2e2fdb50c"
+    },
+    {
+      "path": "data/Economy_sort.csv",
+      "size_bytes": 980956,
+      "sha256": "275af408db7cd60ed5744dd78d72bdd83672996571b51d0a5433f51ae82690f7"
+    },
+    {
+      "path": "data/Energy.csv",
+      "size_bytes": 783993,
+      "sha256": "d32f6dca6818cf8cb415c15af77a9d8e63904a04bf2cd8243fde92ffb67e547f"
+    },
+    {
+      "path": "data/Health.csv",
+      "size_bytes": 1054449,
+      "sha256": "63b7bcd452c021edf241206262a239d063c908ba1115e3d23f0de70055f6aff4"
+    },
+    {
+      "path": "data/new_metr.csv",
+      "size_bytes": 2456220,
+      "sha256": "0f135daea9c4a4fc2dc6f06e2e1e45c2b4b5b2a82c169624d2bbbbc3ace402b4"
+    },
+    {
+      "path": "data/Security.csv",
+      "size_bytes": 730921,
+      "sha256": "f01af1376e25d182b2c8adc06436d864ae0abf5978aba22be7d2d598678cb837"
+    },
+    {
+      "path": "data/SocialGood.csv",
+      "size_bytes": 2138395,
+      "sha256": "009eda3907fc049c38c3d7918423cb82866d2f0760582388ef3cadc38560f4c2"
+    },
+    {
+      "path": "data/source_manifest.json",
+      "size_bytes": 4299,
+      "sha256": "b1d109f0c0c7b763cc89f6b133248865a91acc867072ab9add57aa1a982ecf92"
+    },
+    {
+      "path": "data/target_contracts.json",
+      "size_bytes": 13269,
+      "sha256": "9d2cae51f90c11a3da1dbe47ecba7bc7cfcd30fe1744d0c0202d8b5ea25abb00"
+    },
+    {
+      "path": "docker-compose.yml",
+      "size_bytes": 231,
+      "sha256": "dc708d537e9175edee76f31a7899295c67b4edb03d357a8308f28b900746e383"
+    },
+    {
+      "path": "docs/context/hic_configuration_coverage_20261030.md",
+      "size_bytes": 7432,
+      "sha256": "5772ecbd163c607168923cda5669c2bf4d878b0f65f4d612c204a298ec605da7"
+    },
+    {
+      "path": "docs/test7_pursuing_goal_20261030.md",
+      "size_bytes": 1510,
+      "sha256": "fe041b8b97284279f57124fa8ca39230ffc20e7c984fbf015b51483e1f38e879"
+    },
+    {
+      "path": "LLM/append_8192_followup_process_book.py",
+      "size_bytes": 6301,
+      "sha256": "5942d8ccc9c607ed7adc70b245197b06e731e3dee537dbb479a56d302c67ec86"
+    },
+    {
+      "path": "LLM/append_climate_hic_validation_process_book.py",
+      "size_bytes": 9807,
+      "sha256": "1c8b96b8f28f2f1ffcb53a46ef52e413813fe99b83cb31592fa4c603154bcca5"
+    },
+    {
+      "path": "LLM/append_climate_hic_window_audit_process_book.py",
+      "size_bytes": 9342,
+      "sha256": "804e1fe58698d8a77df088f491972c3f30b6a5a741b8de7668280ff21837b68e"
+    },
+    {
+      "path": "LLM/append_graph_contract_process_book.py",
+      "size_bytes": 5653,
+      "sha256": "9f276c4191ea01a1af08a9c41cf4584c3654fad60aa4970dd44a24844c7af05c"
+    },
+    {
+      "path": "LLM/append_hic_generic_runner_process_book.py",
+      "size_bytes": 8219,
+      "sha256": "1c81a2d6697627ebb043f33ddb4a2fd20e6a5db96d7e53ad717abf3349374eac"
+    },
+    {
+      "path": "LLM/append_hic_graph_implementation_process_book.py",
+      "size_bytes": 9012,
+      "sha256": "19e5aec345088f7501a9b9bf06c81a16367db7ee1844659fa37c37a449f2fead"
+    },
+    {
+      "path": "LLM/append_hic_graph_interface_process_book.py",
+      "size_bytes": 9069,
+      "sha256": "2f518fd52760cdda643d293d09a07a1a55ef84d5b152f20e1ec9213920a0de8a"
+    },
+    {
+      "path": "LLM/append_hic_residual_selection_audit_process_book.py",
+      "size_bytes": 6733,
+      "sha256": "0ac4a43d038c1fa2b66e27295c2f9d7c98c5d82217a1aeb43ed4b2bb99c2efeb"
+    },
+    {
+      "path": "LLM/append_hic_validation_selection_process_book.py",
+      "size_bytes": 6830,
+      "sha256": "e8492a6c1f60aab17daf37b1ffe3470dc852fa4053264d92848d1691bb05ffb6"
+    },
+    {
+      "path": "LLM/append_native_cutoff_plan_process_book.py",
+      "size_bytes": 6650,
+      "sha256": "6c666c2adae5d063905b08629bce83372b4bdc2a5d64322e1cfd70b377850069"
+    },
+    {
+      "path": "LLM/append_native_horizon_process_book.py",
+      "size_bytes": 7605,
+      "sha256": "73165934eb10f84f37d4e5ef7c67644d4b75971b9e7e1b57dbb72c11d022a781"
+    },
+    {
+      "path": "LLM/append_offline_integration_process_book.py",
+      "size_bytes": 4834,
+      "sha256": "11010be508721b37b38fb88ea6e9a938733a387a1d163151e0ba6baf4502b0a5"
+    },
+    {
+      "path": "LLM/append_qdrant_integrity_process_book.py",
+      "size_bytes": 8172,
+      "sha256": "0243a1513d98b443b61ffbc6d46ad497cbfb161e9ce41da910a858af115edeaf"
+    },
+    {
+      "path": "LLM/append_qdrant_store_ab_audit_process_book.py",
+      "size_bytes": 10623,
+      "sha256": "c0233fc057c8f0fe3a251ef3fb1bb76e63d1b60b4dfa465d1f735dc33a696d04"
+    },
+    {
+      "path": "LLM/append_sealed_preflight_process_book.py",
+      "size_bytes": 5212,
+      "sha256": "a6890f2fc259602138506bd5c994f0ba18ebd88eb4b08e616c6b630baf8b62f7"
+    },
+    {
+      "path": "LLM/append_socialgood_h12_interruption_process_book.py",
+      "size_bytes": 5356,
+      "sha256": "4316b860f6eb720ccbb924869af12e2a9fa534ca766cf53672b0d536dc0526ad"
+    },
+    {
+      "path": "LLM/append_socialgood_h12_results_process_book.py",
+      "size_bytes": 8083,
+      "sha256": "2e72f375a198c2f8fc46ac0c34537dd8d4e998a07d231f3852faf1206fcb873c"
+    },
+    {
+      "path": "LLM/append_socialgood_h12_window_audit_process_book.py",
+      "size_bytes": 4920,
+      "sha256": "5f68d569e8a4d7461e11ed61e1476eca2e8b4f165ef2f1ad8be235ded5a968ea"
+    },
+    {
+      "path": "LLM/append_source_kb_audit_process_book.py",
+      "size_bytes": 5893,
+      "sha256": "2325e800c7c58828c78080544749822ae0dab4e1968847c760dea7a842827b39"
+    },
+    {
+      "path": "LLM/append_ten_to_eleven_process_book.py",
+      "size_bytes": 8700,
+      "sha256": "4ee862083ae7c86af4b713a72438c9db56e15dddbe9e7a9eb065ae4075a6a7b0"
+    },
+    {
+      "path": "LLM/append_validation_uncertainty_process_book.py",
+      "size_bytes": 6621,
+      "sha256": "7fb66b25562d1c61ecb36cf1ed624d8aedc82a31b903281e1a66086e1207df51"
+    },
+    {
+      "path": "LLM/bge_comparison.py",
+      "size_bytes": 3921,
+      "sha256": "03cfe315dff31384fde677f3cd3afe1b39bcbdaa36351c3b86aecc075294357b"
+    },
+    {
+      "path": "LLM/build_hic_case_graph.py",
+      "size_bytes": 3728,
+      "sha256": "98fd85ec9ddd1601683c9798d5f8d4fab9b599ad5573e9a131852748eecb245c"
+    },
+    {
+      "path": "LLM/compare_bge_models.py",
+      "size_bytes": 18381,
+      "sha256": "bb8431dbd0f04a73e6bbf32e485959519745fe864c1e80a44073c2ce8cdd03dd"
+    },
+    {
+      "path": "LLM/corpus_audit.py",
+      "size_bytes": 18861,
+      "sha256": "3a945a7c846190097b03e8a64079325575f280dc5383d853567018e8c0e743f3"
+    },
+    {
+      "path": "LLM/deepseek_client.py",
+      "size_bytes": 9881,
+      "sha256": "aad6599580d3f0fb290d951f757fd624a6f93806f193c42a635b124a58114f08"
+    },
+    {
+      "path": "LLM/deepseek_usage.py",
+      "size_bytes": 31002,
+      "sha256": "9cd03c7af6ec95292e8278c2d6b84a007ef908b4a12b27877dbac58e107b5929"
+    },
+    {
+      "path": "LLM/economy_pilot.py",
+      "size_bytes": 23630,
+      "sha256": "f62fecc72a4fdd97b67f251dea5a4ada91a5d66e6c3da23b5641140d76efc266"
+    },
+    {
+      "path": "LLM/economy_rolling_eval.py",
+      "size_bytes": 16504,
+      "sha256": "acb406420474fa22bb06e4fff24e31929594ca0888b6ac63a2e130fc04350b0e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/audit/ingest_plan.json",
+      "size_bytes": 88543,
+      "sha256": "e96fd741472efd2862fe24e6c93ac44ea8fc37b8430b517f5f137a8cafccc943"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/audit/prewrite_snapshot.json",
+      "size_bytes": 603,
+      "sha256": "f8fed0886da66daffe85888cd1ee880131cee77fad8c07a41f2b8575f0a8b825"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/audit/write_receipt.json",
+      "size_bytes": 8567,
+      "sha256": "3cb6d23b3f4bdc6b675a2c341eea6411ccb60aa96517f1548e4807dd7523665f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/01.json",
+      "size_bytes": 2806,
+      "sha256": "09e7d8052a820fbb96dd0e2d5275f98be62a3d4074f16a9401739dc7ef7418f6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/02.json",
+      "size_bytes": 2806,
+      "sha256": "602631f15e05c3a76327a4a394e60976e1d944076d044fdc2c21df3647cc1ad1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/03.json",
+      "size_bytes": 2808,
+      "sha256": "5af747bd852eb0e843861e983caeec92691fad90eac7f5484aa1b5cb4eb921a8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/04.json",
+      "size_bytes": 4130,
+      "sha256": "7569aa74e57bcfa71e60583e4ca08fb01ea19f786b8d64bd931c4a193e00d6d4"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/05.json",
+      "size_bytes": 4163,
+      "sha256": "7c8912f8cd2f982292ccbe51cca42a3175b5f1fddaf5db690180ab8200d4c570"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/06.json",
+      "size_bytes": 4193,
+      "sha256": "7dc79a5eb62370882591565b21366b5ebf4ceb02ccde4baaef562d035782a782"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/07.json",
+      "size_bytes": 2806,
+      "sha256": "6bf602d03b601eb1940b6fe9e2af24b354b763af2f628c41708ae0d586c64528"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/08.json",
+      "size_bytes": 2799,
+      "sha256": "9a4246d6a82da55cdae6612957732a5e2225d981bb880b1f5b54827a6100c12a"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/09.json",
+      "size_bytes": 3926,
+      "sha256": "9fae36219b996438671dd8e5a2b3b8f0d42b3215d806d5eebe45b66ad97d346b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/10.json",
+      "size_bytes": 2758,
+      "sha256": "3de8ead2ac313167055c0c1e6f37e7003297f3e667b9141cea5a8ed2822af9c1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/11.json",
+      "size_bytes": 3841,
+      "sha256": "c646d515078532b83b12828ecbc135fcd1807aa93fc77056ccb69269f8774bf7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/12.json",
+      "size_bytes": 2764,
+      "sha256": "944bac7adfa36386e0dd820217a91166117560c5a8bd95bc84304e9dc3b047a7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/13.json",
+      "size_bytes": 2785,
+      "sha256": "7b34d5dca5e8f526c5bc7326fb5deccd7262d28aa288e59936e43b15fbd8cfda"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/14.json",
+      "size_bytes": 2750,
+      "sha256": "82e4ae6d07d4ca21416c4f4c69972ec32a53573f588eb617bbb6124c12cbbf25"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/corrections/15.json",
+      "size_bytes": 2758,
+      "sha256": "0222577bc3b89a8bd90b139ba4ce817852453568fb3b8018a9f0ad1149e627bf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/reports/ingest_report.md",
+      "size_bytes": 3544,
+      "sha256": "64bb40f983286263cc2adf974bfa0d776e5836c954c983739a79f2d6a03bd70f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/snapshot/agent_test_8-8008848820407063-2026-11-01-02-42-53.snapshot",
+      "size_bytes": 15311360,
+      "sha256": "fb2f62775d5d285ef2073dc4079913c1b8b7a050a5a1fca4cdd839dcf6db7734"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/cases/04_audit.json",
+      "size_bytes": 653,
+      "sha256": "3906afc78bbbe258509dd53452b4b07433088723830a15bfd4e7cd82de0088b8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/cases/05_audit.json",
+      "size_bytes": 654,
+      "sha256": "30d6fbb47e8b18593fb11792ec0f65886a85f67f8cec73d5f61c0a0a9c20386a"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/cases/06_audit.json",
+      "size_bytes": 653,
+      "sha256": "48a34581c0a9c14d8553c9ed9ac15175e779a4f6de94321abb053b8870e19928"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/cases/09_audit.json",
+      "size_bytes": 637,
+      "sha256": "da7eae23a1830d4e4412dbef00f25e9ea7c8a32c7525f0609cd1520bd0263e28"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/cases/11_audit.json",
+      "size_bytes": 648,
+      "sha256": "f206f385c5252d41a9a262dc810a341b015d3f5c988f428f94a35807ad87b400"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/corrections/04_revision1.json",
+      "size_bytes": 3045,
+      "sha256": "c8db6790f9ae22db2055ed8e565d3e839b7da2990b33ffeb0c35a5d8623548a8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/corrections/05_revision1.json",
+      "size_bytes": 3075,
+      "sha256": "8d35904e1f1355e54fd3590ad21772c3f01a3369670bdc01c6d32eac28f265a1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/corrections/06_revision1.json",
+      "size_bytes": 3109,
+      "sha256": "64b95509ed502a67e5934896f28f2df447f6609b5bbdcb67f52d0b53f41d83dd"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/corrections/09_revision1.json",
+      "size_bytes": 2874,
+      "sha256": "ada9af15777e95549fd371debf0b27129f9802b83e68f24c626e5e1369d1f6a3"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/corrections/11_revision1.json",
+      "size_bytes": 2778,
+      "sha256": "5dbec4552023b5047e278a0c8a5ae22477bdc6d782ff19737a56e41522712260"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/reports/final_report.json",
+      "size_bytes": 7180,
+      "sha256": "731ec99520c3a1026e473d4883b6bdec8b56f9509421fc77592869c9bd897e97"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/reports/final_report.md",
+      "size_bytes": 1837,
+      "sha256": "a722771ed27f058411a02836fe0614ccad301e27c03238c1ccc80a1d2c47b885"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/scores/04_revision1.json",
+      "size_bytes": 1101,
+      "sha256": "44f7a1aef0d2cefe59ae54d0e866152334b157b6361f936d5f2f2fb685ec05d9"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/scores/05_revision1.json",
+      "size_bytes": 1104,
+      "sha256": "03d6fdb30b19840e481b38999fd705ae31b783d1c558f097b23b68f6d079158d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/scores/06_revision1.json",
+      "size_bytes": 1100,
+      "sha256": "6ddb919b20f10cd17ba6182cdb0934a6227beaa69aa5e79d8f83cd203248b922"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/scores/09_revision1.json",
+      "size_bytes": 1067,
+      "sha256": "9269e9fded8a051c55f56db21216fde2dc3bbeabf47232284d52192d97ba4ee6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/scores/11_revision1.json",
+      "size_bytes": 1079,
+      "sha256": "c0303be7d29218815471f65f310fbd9ab1b39fd9b64bbf5680399643228ce216"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/04_revision1.json",
+      "size_bytes": 6968,
+      "sha256": "9fd2454d8e0ae54cbd61cdbf7172867504b223591a616941575f1f6e75b80c9f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/05_revision1.json",
+      "size_bytes": 7042,
+      "sha256": "733f8cce33fb1b32b7110b920de8109dbba9307085513044ca0400e54e2afced"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/06_revision1.json",
+      "size_bytes": 7050,
+      "sha256": "02eb0766c49f4f798dd8e0f9cbef0f5177b8664eba9aa2e7ce07dc311c7a3aae"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/09_revision1.json",
+      "size_bytes": 9730,
+      "sha256": "9d71d71ec2b8b99dea31df3173deb7ce3732a4718502ab7730090324a75b9a21"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/11_revision1.json",
+      "size_bytes": 9242,
+      "sha256": "b9ed800c105d3cfba76617eedfce92b949b9dbc97c66c8f7b974741849bd0ce4"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/responses/04_revision1.json",
+      "size_bytes": 458,
+      "sha256": "de54f2b350cb9e8bc6adef5c646e5aaa31a0414befc39bc311be96403a57ccd1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/responses/05_revision1.json",
+      "size_bytes": 458,
+      "sha256": "9d92ac1118c4bf2d094888752e5a2123339dde112ce2e7866e17983a3c09fb32"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/responses/06_revision1.json",
+      "size_bytes": 458,
+      "sha256": "21071cfe3642d32b8f4f8cc2df068911836d777477d76383fcc6ea6b6bdd75b6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/responses/09_revision1.json",
+      "size_bytes": 2390,
+      "sha256": "1a372837f24ec17a098773b9b9ace0cc591bd1bcc048a636c9f7b790963d0956"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_correction_driven_degraded5_iter5_20261101/tasks/responses/11_revision1.json",
+      "size_bytes": 2390,
+      "sha256": "1a372837f24ec17a098773b9b9ace0cc591bd1bcc048a636c9f7b790963d0956"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/cases/04/case_state.json",
+      "size_bytes": 14670,
+      "sha256": "db9fd5c1087c69841431c9d1d48639d7db4577055352e003b03c5609c993c8c9"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/cases/05/case_state.json",
+      "size_bytes": 14942,
+      "sha256": "6543fca587425c2a3539fda9e8c90e9fd3e562e7601c72dbb8a91a65eb489ba6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/cases/06/case_state.json",
+      "size_bytes": 15037,
+      "sha256": "f1f4b924e692d3637a250546df22996fcc6f5beaddbe582789ec78e41fabd231"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/cases/09/case_state.json",
+      "size_bytes": 25618,
+      "sha256": "1f8055fd3cdbf8a707e9c5ecfbee54ee36de06136f83a85b4a410c03540b913b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/cases/11/case_state.json",
+      "size_bytes": 24740,
+      "sha256": "06ac0d700350a27aab720f91cca435b8bac7ab8f5d464855e1de7ac5addd0d86"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/reports/final_report.json",
+      "size_bytes": 9094,
+      "sha256": "52d8ebf9e59405f96fffa09bd498d07601e6cd44de87d7b302b2725dc02ffa15"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/reports/final_report.md",
+      "size_bytes": 1819,
+      "sha256": "aecf00e78eae0b7193e691bd353c85cab8d3353e8d64b425bdf448c5a053d499"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/run_manifest.json",
+      "size_bytes": 3495,
+      "sha256": "b16c248bc448d85cb3caf9c9a796354adc1d3ac6d07db769d1c02bb4d12aaa14"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/run_posthoc_iterations.py",
+      "size_bytes": 20861,
+      "sha256": "1884d76211348a3305d2a2927895e801c0f7dcbfeaffa8849d154e0a4291d527"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/scores/04_iter1.json",
+      "size_bytes": 2386,
+      "sha256": "e70f9aa04566dea59c5cafe4fbb6282bcce623bdf1badea3a866e385902ff6da"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/scores/05_iter1.json",
+      "size_bytes": 2430,
+      "sha256": "d976314e05042b297faa29ea24d45b5dac50b79e76375d24a59b27a0878585f0"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/scores/06_iter1.json",
+      "size_bytes": 2465,
+      "sha256": "f46c9354206ab26b55abe71084d6556a3b2f17ea26d897e3a35dabaad47d8c94"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/scores/09_iter1.json",
+      "size_bytes": 4560,
+      "sha256": "03ad26d0b3811a429b2fc04be3d9ca3523e23dcb3719e4c00545263e6253d0d7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/scores/11_iter1.json",
+      "size_bytes": 4126,
+      "sha256": "229b552c0f6f189b743c97c73a0cc32479ac6db1936f729cb9f25a6c830d79e7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/04_iter1.json",
+      "size_bytes": 10444,
+      "sha256": "7997c9d3303ae807e830a98478f12dd817a9937ce2017add3d329eadf3cdeea6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/05_iter1.json",
+      "size_bytes": 10627,
+      "sha256": "e9a2bc7a1dc8cd039004641c376973934a9d5769d2fb72f792e9c0889153074e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/06_iter1.json",
+      "size_bytes": 10648,
+      "sha256": "00162739001294852872ebce26ee4fdfb3bf7b6c768e308a9209610b255aff47"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/09_iter1.json",
+      "size_bytes": 15324,
+      "sha256": "55763a19d3b3496713812864a6dbe6e45e9764f33a6afd2a10e61ad3cac8e533"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/11_iter1.json",
+      "size_bytes": 14894,
+      "sha256": "10558d63c39f2c6ab3e9b048c85ef6e87d74b9208c8ea98276279e25779949f7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/responses/04_iter1.json",
+      "size_bytes": 1038,
+      "sha256": "5be7e3c8bb6333aa324741e792655be5d9a6e022b4afc4469e141d8507d74939"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/responses/05_iter1.json",
+      "size_bytes": 1104,
+      "sha256": "f1d5d558dc9deff34b926b1640615b7ff7197412ff6d3db03e731b6dbb02218d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/responses/06_iter1.json",
+      "size_bytes": 1159,
+      "sha256": "ceede22606b45f934a48cfdc56d2c05ef5c6c485d247f099b400c146070204a1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/responses/09_iter1.json",
+      "size_bytes": 2156,
+      "sha256": "d4f43d07a8276f6a69715aabce60ebf12b1622c013b73b1765ba1255034c8ebd"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/posthoc_degraded5_iter5_20261101/tasks/responses/11_iter1.json",
+      "size_bytes": 2896,
+      "sha256": "4af0b4da17b48f7486308e7715205d6e85a317a175809c97da56a6fc2571a3bb"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/01_c39c148c35987b7639ee6952d985c12c1eed2b94600e238f6c7259f1943cffcc.json",
+      "size_bytes": 15636,
+      "sha256": "d5b33b77435030b0f13a6b4de63fffb4cbc45f344bd50296743e7d5faf491b7e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/02_02bac196a1df6846e66ad610b9a6eb67f0d2a2c522019f7713fb56b6f88cb745.json",
+      "size_bytes": 14507,
+      "sha256": "75877ebc579d758fd1be8b60ec29b754481dd9445974feb337ba6824423196d2"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/03_ad172eea5a916d65d6e43bf737a5113233d5d7e302298ef3bf6f2f3a9ec85c4d.json",
+      "size_bytes": 14300,
+      "sha256": "3d8a55dd95230f87f1ab85dd82be8a62c6d5b422d142b09c4fb396afe8daef36"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/04_e92688a76054af95db603900d3e7483d5889b34f10f4a3e5e33bfe50e8faaffa.json",
+      "size_bytes": 12227,
+      "sha256": "6ab764f3abc1499134b9d7b9d4958af3118abdd0fd921ca1bcfb45b28152cc45"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/05_f0d03c5c26399cd27d6850947314a9a4ea6960e6257e4b35051b3bd53974f187.json",
+      "size_bytes": 12257,
+      "sha256": "939b668017db5c5a11f1f28235da2338ec476f4f298eb20741714a48a005b910"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/06_cb0f89a5223c7992c3cf7cdd6e54224ec3c09dfbb88fbef640878825f9daa94a.json",
+      "size_bytes": 12237,
+      "sha256": "a36e41a5e847d5ce00d5e9e82e54b23b52bf1fd6f26ff5a2d12ef4f52afecc3d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/07_452dbc3f5449522441807135ae345fb08ccda4535c4e1b8a755057c76d6fac06.json",
+      "size_bytes": 20267,
+      "sha256": "bf0ce5ac85a0015f4bd092c1bef666ff0e4250079b2b7c13658e9c12fd39b93f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/08_aa449247bd31e0ff2b55f34264149cd4d94233095fd6cae97fadf272e45e3d27.json",
+      "size_bytes": 20102,
+      "sha256": "83755f2729ff80b8900d62a723dfc3d93692638031b17745423421d3f1f4ec65"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/09_27c9252fcb7a55e83f517e0fae1a1a5a33e1005c4f6f55169d027b356d6fe221.json",
+      "size_bytes": 18584,
+      "sha256": "b91a06ced213215424f97a4bd9c4a3e960dcb16afa3f7c5b2865efd4d23d486f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/10_88d79686e1e4826f0ee265e2f6f7e57e2610ba6803435089d5dcd9bd82fb5742.json",
+      "size_bytes": 19548,
+      "sha256": "edfe96e4a2cf7738b4da00897936bb4f323ba227117de3336f86258394ef5e78"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/11_84f8483b3f8d35a8654919c64460c69a5ecf889975df0ccbf7333c49e48c5d60.json",
+      "size_bytes": 18897,
+      "sha256": "b83a543c3a52d5a218751308010053a82ca4889c9400707f20ea50b60daa65b0"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/12_bb0a7ac75c9e8db050afc81a9e9126e9b5f4e30adf0f5d2b886323c26bde28ad.json",
+      "size_bytes": 20142,
+      "sha256": "b6e8cb82c3873fe6ca83bbb38b18da1f428239af5a61f795a733a535cef0be44"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/13_13cac71aa60e71786affd9c678dcf784ef548ddd2de7745bf234f4ced10b078d.json",
+      "size_bytes": 19268,
+      "sha256": "8192e432bb8121d3719d7152c156e459492952fe7f075fd9c3124c349d5fbaa8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/14_428e4b4443351860e7d20fc08b75e8e8377481198644cc69f92554581d659e0f.json",
+      "size_bytes": 20507,
+      "sha256": "4facd6e4c801cbb2635308ca46a17b209f2b83a58931f5baf12af834889cb7bf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/cases/15_602f95f7617aaa16df944cde344a031c3381dddc464377adf320f0aa1da3c96b.json",
+      "size_bytes": 19044,
+      "sha256": "32e956e20cbb3d947af4611ec0da6d9f44bd5b61b73cc290d271871537c968d3"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/checkpoints/checkpoint_03.json",
+      "size_bytes": 399,
+      "sha256": "9380194a302db596556cd7c1022328e490cf8df71bd1667cfb35d57f3639cef5"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/checkpoints/checkpoint_06.json",
+      "size_bytes": 534,
+      "sha256": "bcea2973b5423959d6e1099d7f71ce4e94197526075cf99c2ed85feb7182b506"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/checkpoints/checkpoint_09.json",
+      "size_bytes": 669,
+      "sha256": "d9ec216e34f6f709410ecd85be88c3b72e49d15dccadd173ad412df51104339e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/checkpoints/checkpoint_12.json",
+      "size_bytes": 806,
+      "sha256": "32b5589c086c6093cdd624013819341ff6155ddec49312786d602ff644253914"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/checkpoints/checkpoint_15.json",
+      "size_bytes": 941,
+      "sha256": "b308daa320ac5939ea513ed8d11db0d084cf10a25f9c6797aa0d40b02bb4bff1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/01_c39c148c35987b7639ee6952d985c12c1eed2b94600e238f6c7259f1943cffcc.json",
+      "size_bytes": 13174,
+      "sha256": "6e2ee1f36d902975f44214213e1d465ddcc14d605f1bbf9cfd9a8d89adbc5a24"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/02_02bac196a1df6846e66ad610b9a6eb67f0d2a2c522019f7713fb56b6f88cb745.json",
+      "size_bytes": 12368,
+      "sha256": "15055769c71efbd15c3e1e38994b7d76b283f214dbf1375671631d38231c85b7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/03_ad172eea5a916d65d6e43bf737a5113233d5d7e302298ef3bf6f2f3a9ec85c4d.json",
+      "size_bytes": 12098,
+      "sha256": "f2aecfa22ac910d9563d147398d9614fa68d74c2d2b8d613c2977ae22a3cf3a0"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/04_e92688a76054af95db603900d3e7483d5889b34f10f4a3e5e33bfe50e8faaffa.json",
+      "size_bytes": 10583,
+      "sha256": "2b289049f708197065d3a0315d6b93c4d77a007bf7c910f555d5daed2a0a7155"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/05_f0d03c5c26399cd27d6850947314a9a4ea6960e6257e4b35051b3bd53974f187.json",
+      "size_bytes": 10557,
+      "sha256": "8b3796286dfcb5d9bf5089035319d196b5bb3e4d57a8d5e86844634b16fd9bf4"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/06_cb0f89a5223c7992c3cf7cdd6e54224ec3c09dfbb88fbef640878825f9daa94a.json",
+      "size_bytes": 10567,
+      "sha256": "bc3ea4926fff846c51ea54bb20540c0a04cb8e0352e243bcec605d484de74ed8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/07_452dbc3f5449522441807135ae345fb08ccda4535c4e1b8a755057c76d6fac06.json",
+      "size_bytes": 19473,
+      "sha256": "e0783402676bec94eebd32577d2b90ba8b08a41b17cb65767aa16b140df6971a"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/08_aa449247bd31e0ff2b55f34264149cd4d94233095fd6cae97fadf272e45e3d27.json",
+      "size_bytes": 19824,
+      "sha256": "66b266bd7016a8244721e2999a3d4d3cbef507fa76ff0e429a022580d4ae78a2"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/09_27c9252fcb7a55e83f517e0fae1a1a5a33e1005c4f6f55169d027b356d6fe221.json",
+      "size_bytes": 17990,
+      "sha256": "7e81185f7aceee9bd6f39a072eadb0269136676efef37d6bd07fa5c6957d473f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/10_88d79686e1e4826f0ee265e2f6f7e57e2610ba6803435089d5dcd9bd82fb5742.json",
+      "size_bytes": 19214,
+      "sha256": "d83deae12a1c0147cc93c0dcb89a9e1b246e00f80debee766f6ff8493848176b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/11_84f8483b3f8d35a8654919c64460c69a5ecf889975df0ccbf7333c49e48c5d60.json",
+      "size_bytes": 18699,
+      "sha256": "d93265cdab75f409014ae4daac53f422a62c91a35de09967eaa14572b95230f8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/12_bb0a7ac75c9e8db050afc81a9e9126e9b5f4e30adf0f5d2b886323c26bde28ad.json",
+      "size_bytes": 19596,
+      "sha256": "cf9951ffb70814ad155be0b4f8012fcca1ec5ec5ec4c90e458296f4c79d54d2e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/13_13cac71aa60e71786affd9c678dcf784ef548ddd2de7745bf234f4ced10b078d.json",
+      "size_bytes": 18627,
+      "sha256": "e4c1d8a3830b82f6507cb260767432a4bf05768ecf6cb348246807b44f33a501"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/14_428e4b4443351860e7d20fc08b75e8e8377481198644cc69f92554581d659e0f.json",
+      "size_bytes": 19902,
+      "sha256": "a024be11b4f2eeca7b1080cc587832ea1b9b6f1fbac6bea4ca8af1015addd5c4"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/forecast_locks/15_602f95f7617aaa16df944cde344a031c3381dddc464377adf320f0aa1da3c96b.json",
+      "size_bytes": 18447,
+      "sha256": "22e1e1eb486e38ab2755a1b1b007c171abda8dcf0fb68ba45fecdb65c4d0cedd"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/frozen_protocol.json",
+      "size_bytes": 2328,
+      "sha256": "cf51f442ff33c29d61937b3d0040ed48f0eec6eff86920a13da0d38597629036"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/input_snapshots.json",
+      "size_bytes": 361121,
+      "sha256": "1e8f8af81ef7098bae530b70233f320763271e5475777ea9822507a1b5392f40"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/preflight/preflight_evidence.json",
+      "size_bytes": 2363,
+      "sha256": "54c28d5c6053b5ac56b2a55538842c2923940d653ffce7239866073c085de601"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/preflight/qdrant_copy_manifest.json",
+      "size_bytes": 1227,
+      "sha256": "82eb8d93278d0d735f6735cfe8f8e5f94c7fd55d34179e191949cfa9819240a8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/preflight/qdrant_snapshot/agent_test_7_full_points.jsonl",
+      "size_bytes": 14443556,
+      "sha256": "0dbd02848356f0497dee90bcdcee4e4e3b4422f480db00b2f98abc7834641acf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/progress.json",
+      "size_bytes": 313,
+      "sha256": "dd48ff66af0663c7acbf99038ec44ab930c076a10b3c2ef1083bf4ce74aa6577"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/checkpoint_03.json",
+      "size_bytes": 11365,
+      "sha256": "c85e312957119f7c12ab6a8e0c8ad714c3a8660356b87d603bd1a49ff58e7c76"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/checkpoint_06.json",
+      "size_bytes": 21650,
+      "sha256": "af112d3bbd555b92ab0def1a630e81d160fb1ef0a5c4b4a29dd5d009e71c083c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/checkpoint_09.json",
+      "size_bytes": 31865,
+      "sha256": "185bbf675221e5056d3b9e33a7a1abbe0e6becc11b226ecf9cf6a86133cbef45"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/checkpoint_12.json",
+      "size_bytes": 42278,
+      "sha256": "2f666b0821c45438f20fbf549a63d8740ef9cab1cf0a617193e88864e0ec5327"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/checkpoint_15.json",
+      "size_bytes": 52432,
+      "sha256": "84c7b74e2694f15be049afb8e6819438f3e8819afd302c3509c67bddabc1a7f6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/final_report.json",
+      "size_bytes": 63673,
+      "sha256": "cb224d0c5cd571b9bd28c080748daaafd37a291edfbf4d643243eea0e64e8d58"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/final_report.md",
+      "size_bytes": 5809,
+      "sha256": "2900b785f1100d03b055bb5421eb8bab50e141f1c09414cc6173e28d8690ede6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/reports/postrun_audit.json",
+      "size_bytes": 8722,
+      "sha256": "50b2e615d1107deac423c9ceaa4dfb27f82cb6a48fbfdd88cdc4c28b7e80292f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/run_manifest.json",
+      "size_bytes": 8079,
+      "sha256": "075e71544fb9f0ce32721e537e0df0806fe8973631d0664cc7268b138493384e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/01.json",
+      "size_bytes": 1908,
+      "sha256": "2ea8716c008967f53d0580ba99309495460aeaa1aa348ed84ec694d98b6e2631"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/02.json",
+      "size_bytes": 1920,
+      "sha256": "fc1c9e6715ef9fc6d5578d07678da4a8919087bdea66a1e2d2cc282f8bd683bd"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/03.json",
+      "size_bytes": 1925,
+      "sha256": "7a3a74686fec09a909f1b7b260afd798f69145795683f36810b4763ac7e35151"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/04.json",
+      "size_bytes": 1169,
+      "sha256": "8382fd37974242503bfca228d95fb53c7ed57ce053fd1a6775b379320c5b0072"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/05.json",
+      "size_bytes": 1171,
+      "sha256": "73e8256ed4b3b38d44f0730737e4a4b3ef432dd3c5f269a48ab75a2eb33c48e7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/06.json",
+      "size_bytes": 1172,
+      "sha256": "ed016b0c90db2e49f51ff9a669a7a48848cf310e4620974c6bca6b4076bd2b46"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/07.json",
+      "size_bytes": 6021,
+      "sha256": "c94855e0455b6f23b19becdbfea0af4544c0be05c5202bab27a1d9f85bf5fedc"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/08.json",
+      "size_bytes": 6031,
+      "sha256": "52e329eee3d122fbbcc5fc489da16a191124f940267f30a08992cb3d2d082b36"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/09.json",
+      "size_bytes": 6012,
+      "sha256": "841ece61d41dbe61e83c7510cbbedefa360f956659bfcb7131ee2b4d8c7e495d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/10.json",
+      "size_bytes": 6010,
+      "sha256": "d2f4448a79049b67f751974e712e4a7f8fec053e5433bf902558ee4b9e8e7916"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/11.json",
+      "size_bytes": 6015,
+      "sha256": "42c7c1b0d2482dd968eb588c49b8047a5a95defcf546908654c8ea71eadaef22"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/12.json",
+      "size_bytes": 5997,
+      "sha256": "f7bf74d94e943fc457d1e3c6e0350fed62f7512b17c583f0531d4deaae37932e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/13.json",
+      "size_bytes": 6010,
+      "sha256": "394cf0fc78943cc67b196e46b6224c31e756106d1b5a864dca6bd372c967bfd8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/14.json",
+      "size_bytes": 5999,
+      "sha256": "7a464d3d0a0483e8ac527ecdd962313b03bb4d2792f508ec3ce325cf440ff8f1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/scores/15.json",
+      "size_bytes": 5998,
+      "sha256": "40ec679f44c54f67f54c9f9ab80a9d2bf066fe19488d9419d419b935c561cc20"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/0431658ca8420902b71ce8ef827768c081703ef3a61df55c62a2ca92e057de57.json",
+      "size_bytes": 12852,
+      "sha256": "86de306fab684812fd093d399001da64262d45e0b0262a1fcfe3e34310262d36"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/04c729d0ff9eb7a6c7b1a4abd4969eb1e5082000ca2d7109a5a3c845ea45e474.json",
+      "size_bytes": 5645,
+      "sha256": "697852f23bac04f140d152ac3b0ede4cb083fbdd1e72ca97a4df2595f35e0cef"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/0cbd80c025990ab5ad08ecc2f6306799ac6418db7acaee6258dd8657832bd940.json",
+      "size_bytes": 12703,
+      "sha256": "6c239cb2f1d535d98c66a3e5dd9ffc37f8680cc888d152cc6e39603a6d543f57"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/1e5b2ab72208127c82874642f6f3eddf6fa5583865c288e68c95347b06fc4dac.json",
+      "size_bytes": 8786,
+      "sha256": "9e36f537db09104f81bcde34836560782433aaf18c58efc205603a627dff96ff"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/2b386c9aaa04e17eb6762e42637b83da00f6b2ef8a1c0b59e5c20fab76669e20.json",
+      "size_bytes": 27174,
+      "sha256": "fbd94ba5cbbd4339c02410cbaf637eced4cf02f53f23c7acff793aa5b055376f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/327a7656cf9240e378176f04ce2572e21b2a29a525af722fb5d9f89b544edce8.json",
+      "size_bytes": 13940,
+      "sha256": "4a2a993683b52344456ffda1e9893ae2d037920e3ff35bda782186a495c6e620"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/34014f7750992c5ac00d4f268d902bf3d570d08fb95aaeaa354ed4d23190dc82.json",
+      "size_bytes": 14854,
+      "sha256": "a1fe5a8feefe4851d80fae09c08e78f2d6a7c1866f9e44db463234aeef9bffc6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/42cb8951c45b71447e4ca79d614fd5553f24b93e45b0f4f3cc8e83190f4f5714.json",
+      "size_bytes": 8878,
+      "sha256": "8bb6e94d82967215f67bd90b67e6ebbac338394c270efa227a5041498833c222"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/43aa8704970a890e40e5bf79baa842d2c659f200fd1b31a30bb1f1bbc5cf36f1.json",
+      "size_bytes": 14462,
+      "sha256": "b965788a1489b0a7d30dcece70a48a5a44a1101a3822654be0484eb43bf4f12d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/49533529153ae5df5acc94bf8a13c92a7835ba82d722a924b5c2f7e8fa2580b9.json",
+      "size_bytes": 9269,
+      "sha256": "5bc6e66931fc93f1cf60e0ea636604d8e7158539cdb07e2a59151b4ebb9c9d50"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/55e40c080e21dd6e7271fb4b5a4bb890bcca04608d9e7aff7d1bc35e976665be.json",
+      "size_bytes": 9310,
+      "sha256": "53ea521ca49c05edb7a812edfc6f76e5bc82579fe795a018f1349318a25f66e6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/55f2172482629078385efef34574e90a027cb8ed5da86f8edcc0bc118a52d3cb.json",
+      "size_bytes": 5671,
+      "sha256": "ad10d6ad1efebc861f923e1b716e56938eb14b3e54b823dde8c23f4a28046056"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/68005f0cf235238f336a961995c20a50ce02928f793fd587be396d013b5968b9.json",
+      "size_bytes": 21616,
+      "sha256": "e1a54d09954673dab3f93a00ee51d9f096d3ad13ab7154a3635e9a8ca7ff9381"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/7d10d89488134c169d136b664e16c1c72b326459230b265513c50f45cabc1248.json",
+      "size_bytes": 31716,
+      "sha256": "2e7c9f45c19d52eb8495817890f76c0ed3cca202e8fe47c03e80a9bd0d1e801f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/82be24ac90587c52e45c127dbb8201cbc1688845b2ef8b97951608019845552f.json",
+      "size_bytes": 14185,
+      "sha256": "716d1e4124fb86935e7b00d0d59af234e1e1c84b237b43fe0de345ff0b320c99"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/88b307e6cc8486756fbd51be175a90313a8a716f71b2bc7900413aed16188417.json",
+      "size_bytes": 11308,
+      "sha256": "2ff6372576390c4671b55fa694698d8ef53e28d21fcbdc5b83c93717f5778975"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/893bfd2b17cd86b0930d43815887de32d00ca090c8352d7b317b30785d26c02b.json",
+      "size_bytes": 24603,
+      "sha256": "fd526eac0359745d8c9d7b16d6154bed8c112f94d2665014f1e2eac5b7d5ce60"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/8c357b6737c7cd7e66bd639599e587e9cc5ddd6e190895b2047ae3812bea6ebf.json",
+      "size_bytes": 11452,
+      "sha256": "f20de4ca8d33fa8ca24de3e4c4218ede6e3c3065d8b8a7ce8773fbfcb2d2a26f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/8d63b589e1bd4a9a6b2b20c0a5baafd084c7660296a39c96f38968c3ad126afc.json",
+      "size_bytes": 20353,
+      "sha256": "393886a5231c9ec708e449c8a58d3bfa070ae2982c1e3bc2fe6cdda781fdbc69"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/8efc36aef51cf6d8fa272aa71ceb32ef4905ae9afa0d0c0238c2f882ac8f49d4.json",
+      "size_bytes": 10360,
+      "sha256": "9ab7a256eb3e9d4e4f3c721afdfa60daca7655a72360968285dd6936d3b5c902"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/908b8c403fbb912339d2e5ce7fc2a3b68120c1023223dab1c301fe134d65ecb4.json",
+      "size_bytes": 11407,
+      "sha256": "86afb0e6ee4b683e5254254b3abb33b2c5e0dc41a51c8e4787e00b078ea6b03c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/93c454528c3222257d47c9739047c1512bfd0d0bbb73256fc0ce73b92ac92d4d.json",
+      "size_bytes": 14716,
+      "sha256": "83cd6bccd16b7b0be0104a724f340008c7e2a2c0caa7b96f8d0a4d1700c64d4c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/96cb058668dbab384ba6b58bf4bcae0c98020f2f2e325f019acd2167db178330.json",
+      "size_bytes": 5606,
+      "sha256": "449d259ba54f78a7bb3c2c9ffdc76dc7756e2c482910422d24e0e344b9aa3d87"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/9750e11f6829c00e091e1ad100e1a4e2b9499d2f3842da4cede39063ac730eaa.json",
+      "size_bytes": 10370,
+      "sha256": "fb0be6e873619da93c29177e0fff70443bc6a40985959ee1e387d1aae42dc351"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/9b6f921d845235a56e67d8217af0e94c14fbbcd7b281a6a5a9fac8365c78e7c2.json",
+      "size_bytes": 13801,
+      "sha256": "8cee5497ece0cc4c57af1d28a8a2c924470036a1d8050ebddd8e1f4515e28242"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/9c875a125adaaf7d1bf0d91ff73a39834a7b74a42cad94e7310a5875206bf3a6.json",
+      "size_bytes": 11716,
+      "sha256": "19e1511a7d0025ef7039c08153fb64ed888934a8a10c57327b7423a950ab0933"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/a2ca0b2f376b6b42db51217a9bea335598ad1a73478767b4c571fa2669aad8d9.json",
+      "size_bytes": 14396,
+      "sha256": "f3e13b1dccf3311e0ee763b3e20991eef05777d10b4f19e3cd573be2d558f5f6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/a5acb33e89728e53582ef405a18bc112c0ee2ac6a35c6f662c16cf7430c5a74e.json",
+      "size_bytes": 10456,
+      "sha256": "2f9077b97d3b17c00415b770f4b4c323dcc4697722b18cfcb40caba43f4153be"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/a6683d2aca05ec97882fcdd72838b659163179611f646d746a83d5116b4a6f73.json",
+      "size_bytes": 8804,
+      "sha256": "a13d249d8decb874842bac33244cb7f77c343e9d9585d8864bb788066d007339"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/a8dbb91d9fcdcfcd573d8fa2360178ecd2dc46b58dfbe0d362df6167ef9fc81c.json",
+      "size_bytes": 13441,
+      "sha256": "05f9d6915228246c900f515bb27f7e1482fae2fdff1d54e4a8346777617e7a6c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/aadc89f34a92ff76f63286fdac4528f9e6e593da58512d96af3f07618ffc8006.json",
+      "size_bytes": 15134,
+      "sha256": "151e2728568200bda35b9060a63ceac443eba894942b3db40e0d61e9c959777d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/ad1b6476ec0104b91cf9d997110a22f03e94bffa88f9eca516d106a6460f15b7.json",
+      "size_bytes": 15389,
+      "sha256": "2f2fd02274989246d6ea8f126305d7bd7843a17ae33c68343fd0028e8d65cdd7"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/bdc63d4630eab3d872a08e78d7f4a9ebc55ce45cfd0c0764a5b41e33b164960d.json",
+      "size_bytes": 15510,
+      "sha256": "adcf1d2846164d7fff43ee9d7d043f93823d1d57259a75518b6483ae5526e59d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/bf289c9fb1e1afd75c987de0b9048a4f2fa11408ab2bab9238b1679314a75831.json",
+      "size_bytes": 25140,
+      "sha256": "1ab1550bb47e43a520008e6a59e7cc3fb980c3118334f5158d65daea1ca6ee5e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/c34a2cdc3ca40271ffd01f4a1ebbeb071e6b6df96bb0f1c55cffad09c80812a8.json",
+      "size_bytes": 15396,
+      "sha256": "10b3847614d9a9acd6c6badd3384d3b28431c405128c1c1b540ad9a44c9b27f4"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/caf2aede527b78f70deedcd33c145840b9f72c5bbbd7f6415296dd77cf696560.json",
+      "size_bytes": 9504,
+      "sha256": "c257fde2c060765b35fe8fb0e66e29b45a4cd5369be61e253679a63f466afd03"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/cc9eff87be2923947649fa44c0a82368659f26c3efd7481cb1c97845cf1de78e.json",
+      "size_bytes": 10307,
+      "sha256": "5841fc29d35d4bb665b3b7432aa554b730f98d807b2efafe95a644bd676bbcb9"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/daf4a24e06e3503ef514b35760da60d8cc26eb1a42d358ebedb79154bd6aeb05.json",
+      "size_bytes": 19331,
+      "sha256": "997036a6e766b4456a61b4e040a320cd40490e733d27f46c27723e3f8a87aa50"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/dc68ea2db0beef733b3f45683e33e08932da2ad6b76e65f5e18b05ac48df49f5.json",
+      "size_bytes": 25313,
+      "sha256": "3d39424b00675552c4351c389c6af7aec85bcc65c8a36d64e26a90851cdcd898"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/e741a9616e0418b61c9c80b4f4fa44f13ef554727ccecf6adf27996765019e3e.json",
+      "size_bytes": 26282,
+      "sha256": "71ad27e8fbc0b44067a38c48536da92b0a99b9d5e8477035582444ce2f9628c3"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/e7922ffde55b7c66357f260ccc0860be2710a3fd6241c87c87b1aa6e129f25f4.json",
+      "size_bytes": 12567,
+      "sha256": "e8dadf8d0fc091b6a67c43fcd9509990f8fca4a806c01ae4dd1881cb9515c903"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/ecbf3732d5e929429f3945f829d071e68aac1bab2e0dde4801cba58d040aa547.json",
+      "size_bytes": 14915,
+      "sha256": "6ab84a3e3c46d831d1cf08c4a7bcbcab84ef2d26a6ac00b94007dcaadca4acdf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/f5445bfabf697475dc01fe3833bed154365174a3328727cfaff65854eb3fe263.json",
+      "size_bytes": 29360,
+      "sha256": "a2ede5ea375698859b600caed3655fb12a173de244e66309b5347e7df9947c75"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/f60c312e8888ff3aa81d4337116eb980d23eb16f483d847742fafc8482ef39b2.json",
+      "size_bytes": 30138,
+      "sha256": "b2bb3c50bebee229a3eac81068aaa6764e6254445268e9bd9bfa629abed82081"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/f9d309ca000c06e2ba95fe5f1e416608ea4a35981c0bef0005e4b97d29e4a4fb.json",
+      "size_bytes": 27620,
+      "sha256": "68bdef772a20c2fbf5dd7d4e58388eb09d7fbdca10097b95b82a9320df824296"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case01_a_attempt1.json",
+      "size_bytes": 635,
+      "sha256": "d5c8f423d93891e865ef64a4e263aae0e1e8a02964ee0d361cdc4a19296b07a9"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case01_b_attempt1.json",
+      "size_bytes": 946,
+      "sha256": "7d1aadda8ffed5f9ba848b085fb82938c1ad0f970dcb81a07df284151dfb941d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case01_summary_attempt1.json",
+      "size_bytes": 2377,
+      "sha256": "b7f44747b734d9ff2c1540de18f4be716047b8cb3eb5ab5b7e2dfc2d98b177ca"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case02_a_attempt1.json",
+      "size_bytes": 571,
+      "sha256": "1fec2254ae2061fed1c3330de0ced06362bff211817a70fcae94319a1e5cbd10"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case02_b_attempt1.json",
+      "size_bytes": 941,
+      "sha256": "9b184a023a1cae07c6c6b6856b066c5792a2c44881dae0f5a2d2de8392664bf2"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case02_summary_attempt1.json",
+      "size_bytes": 2316,
+      "sha256": "d72260bdb9604a61dc49701eed93acb44b4098d4f7bfd4e1dcc954cacec0c4e0"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case03_a_attempt1.json",
+      "size_bytes": 515,
+      "sha256": "ad96938c5b20d0b2dcb23091510b80390ad8558f65f0948cbb291e583142b7d4"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case03_b_attempt1.json",
+      "size_bytes": 738,
+      "sha256": "b8fc111acfa2f9c4149954f1a31c5b1f727204c8ff9e24f5c80e596c4c71946d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case03_summary_attempt1.json",
+      "size_bytes": 2374,
+      "sha256": "374c37847e5b1805855300749b23d5f953d1cc90e62b0a182f644b707dafdab9"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case04_a_attempt1.json",
+      "size_bytes": 421,
+      "sha256": "9b7e901ebf02c85caf9d940b1342b3625efd3ba1e55c9d7d0b37bb83a8dfc216"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case04_b_attempt1.json",
+      "size_bytes": 616,
+      "sha256": "fab2aaace83d1523d491a84ac0e8ffde765cfb19cc564816bfa77f144e685e2a"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case04_summary_attempt1.json",
+      "size_bytes": 1646,
+      "sha256": "f11d2cd4295cf0c215df1303487f953d374aa12d8efdd4ed4c085576cf71dca8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case05_a_attempt1.json",
+      "size_bytes": 375,
+      "sha256": "f7586635b96aeea2098e6e37b1668193a381880ef59c898759431cc60a9ec26c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case05_b_attempt1.json",
+      "size_bytes": 595,
+      "sha256": "970c76a39f8dc818f4266632a39c70ebaed5a5703ea2e2bfe2004417550c607b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case05_summary_attempt1.json",
+      "size_bytes": 1700,
+      "sha256": "9b8858b53ad9f047be595d4e09d7433bc0d9990dd239fa8bfda5c18906336732"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case06_a_attempt1.json",
+      "size_bytes": 423,
+      "sha256": "5d355e30fa06a6ac1fc9e19cf513d0527110ef95b3e975523c67ed2c4a50964d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case06_b_attempt1.json",
+      "size_bytes": 551,
+      "sha256": "fe591ddee38ad94d96b2332828ae7cab615416a4edfcf2bf608fe6bc1d29a3c1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case06_summary_attempt1.json",
+      "size_bytes": 1669,
+      "sha256": "a08d1fa4fa368000d753b64a41b09078512834c8cd0b2a3bb1b774b85895100b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case07_a_attempt1.json",
+      "size_bytes": 908,
+      "sha256": "b2c71930d7467aca6f64bd61b8fcceca905d9f5600a3c11e5183b3b94e7d490d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case07_a_recovery.json",
+      "size_bytes": 2318,
+      "sha256": "1be9ac1097fdec5f1a1ed1be24a09be0a3232988bcc79811eee745352810fd7b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case07_a_recovery3.json",
+      "size_bytes": 1238,
+      "sha256": "9f9495e6a209164078fa5d2b915df7c2e2bc2273d378dec16cc80766b8b2a609"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case07_b_attempt1.json",
+      "size_bytes": 2541,
+      "sha256": "a03af34caea29b0e791de667d1348396b5d1b3d4cc5d36bd9ba20047b0bfb9c1"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case07_summary_attempt1.json",
+      "size_bytes": 2221,
+      "sha256": "abb856e1e628f96161dbfd4cbcb18bcf8b8849caac9ad25171166a45c9122eb6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case08_a_attempt1.json",
+      "size_bytes": 2532,
+      "sha256": "d852fbe6d7a2482c5affb763ed16a9393692d1cd80940959b299aee83450fd27"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case08_b_attempt1.json",
+      "size_bytes": 2751,
+      "sha256": "6a810fe729f01f349735b681ffd19196b36f9a5cf14be76439078908323cb220"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case08_summary_attempt1.json",
+      "size_bytes": 1862,
+      "sha256": "3efa8ef2fb75c0026a2dc303518eabb5349bd2d89db0a874fada219ee36eecf8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case09_a_attempt1.json",
+      "size_bytes": 1306,
+      "sha256": "9c2f4c72ebdd3af88d13fd6dd6084b3f37dd110415ac48ee3314f61e1d311841"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case09_b_attempt1.json",
+      "size_bytes": 2087,
+      "sha256": "d1805070ba0647c619f631bde013d2b9fc2276b13ac19dbbefc47af96d6a4a26"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case09_summary_attempt1.json",
+      "size_bytes": 2304,
+      "sha256": "502f566d1c0dbb68afad3e1ba03516af14af69b80096b3563ef42e153933059b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case10_a_attempt1.json",
+      "size_bytes": 2066,
+      "sha256": "c68d59d4ce074c18f8026b1eadddde84244b871798f7dfdb95e751c658fac6ae"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case10_b_attempt1.json",
+      "size_bytes": 2648,
+      "sha256": "992ec0bace89a304fa4829c9c5df6b5429a75045b9ef5e83df9e3fe1b45c2f80"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case10_summary_attempt1.json",
+      "size_bytes": 1941,
+      "sha256": "1732f65731a82fd62ac1b23619cc01546a4ea93c77349fa11a2f1895071cd402"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case11_a_attempt1.json",
+      "size_bytes": 2058,
+      "sha256": "b81b35cc7bb9cd044d1318e4195f68796e7e5d972c20352324353aa031595a6a"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case11_b_attempt1.json",
+      "size_bytes": 2678,
+      "sha256": "e2db2015aa185c2eeec2bb842d95eb5ab2508094da63d12b7850c1cdf54eb11b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case11_summary_attempt1.json",
+      "size_bytes": 1904,
+      "sha256": "e8d74f5cc1d1a59fa304787ee4f1d7cde94e55c4ed6daad2cfab15c8a6dcf419"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case12_a_attempt1.json",
+      "size_bytes": 2424,
+      "sha256": "2fdb05a24ca8780f6286bf77eb707381340507b675b34be33237a0e4dd612083"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case12_b_attempt1.json",
+      "size_bytes": 2209,
+      "sha256": "ceeac3f2a2bb6cf98a0a31865876120c2b33efb7b36f26871b6c83a0c6008e2b"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case12_summary_attempt1.json",
+      "size_bytes": 2272,
+      "sha256": "92c83fb7f1f7b46c0332e57214f7eec6c541c47730eb6640311f6006b9fededf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case13_a_attempt1.json",
+      "size_bytes": 2416,
+      "sha256": "6149226a85266c0d58b8eb77103d673c83de45ceb3124b76ece2aea4b3a2e818"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case13_b_attempt1.json",
+      "size_bytes": 1460,
+      "sha256": "d80e2c7302cc192003ce2805174ae54e54d5f10bda989e6ab6402694714a00d8"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case13_summary_attempt1.json",
+      "size_bytes": 2248,
+      "sha256": "95980ac9e16cb81a74beab78b952bfeaf1f73707b8368d1c1989629e568ee03f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case14_a_attempt1.json",
+      "size_bytes": 2569,
+      "sha256": "33c6001c182cc743a662bd7557c487626309052818e23085304dbc80bb417b0c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case14_b_attempt1.json",
+      "size_bytes": 2742,
+      "sha256": "36a01bd8326c93c307ae0a47c8d251cab8b4ae2eccb9573dfff30cc6829186de"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case14_summary_attempt1.json",
+      "size_bytes": 2329,
+      "sha256": "64d10cf2ba8aa76623fbde8be36abe1b0aa875be81fe7a19bf9850097eb33857"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case15_a_attempt1.json",
+      "size_bytes": 1296,
+      "sha256": "9019b18498d77afa623b0221c0b9ec46c70b9b1a7a179eeddc244d15f428d265"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case15_b_attempt1.json",
+      "size_bytes": 2117,
+      "sha256": "eb2ecd4f5376d5e66e5f869a6e3aef66fda4c3d39acd16363a9a87cd07b37008"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/tasks/responses/case15_summary_attempt1.json",
+      "size_bytes": 2214,
+      "sha256": "dd2fc1a1f318bb59bf6553a650265e7764e24c0fec555e14889005ff306c323e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/technical_failures/01_attempt_1.json",
+      "size_bytes": 225,
+      "sha256": "0052d5cc27572a34e31f3cf8e3bce37913b2a59775558e394634c0689bee0efe"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/technical_failures/07_attempt_1.json",
+      "size_bytes": 225,
+      "sha256": "76c7c04c9d9744038d0b1df7a51fa9790ddca21324d00dd641b69a6d08dd07fd"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/01.json",
+      "size_bytes": 806,
+      "sha256": "e11c9e9860a5def25f7a1d2e08a1e2c01b4531a4d89aa99f3be7a061c18e798d"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/02.json",
+      "size_bytes": 818,
+      "sha256": "9e15ef6eaff5962b4437d87841db2ace24c93928843bb2d0f4b0e767acd1dd78"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/03.json",
+      "size_bytes": 821,
+      "sha256": "dc9bfb33e03df9af4ddea8629e3f17eea29e3b57a102c72d67210a1399d1ae25"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/04.json",
+      "size_bytes": 644,
+      "sha256": "66874697dbcba6ec400633008dcfa9b263e7ddfdba32d0f0a87e71b335323707"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/05.json",
+      "size_bytes": 644,
+      "sha256": "c4323acca652e009e5af5b583b3416f78d132dbbc9eee6dfa8a931797c93e693"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/06.json",
+      "size_bytes": 648,
+      "sha256": "3b19f673e2c9c9ce0f1cc29fdc647768a44c33f9df2dff7ccf178fe63e7f23c9"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/07.json",
+      "size_bytes": 1483,
+      "sha256": "d987ee36971e3169d62ea79cb14dcf7c38790bcc47b07d640010c463a8f43017"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/08.json",
+      "size_bytes": 1497,
+      "sha256": "f53e1d353b58a92ab49f0919b54643e1181f8a61e553b8fa61c39de15a22d109"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/09.json",
+      "size_bytes": 1496,
+      "sha256": "5646d5995c018a22501700fe8e6df3837a71efb18a0273b6f6073abb5bfde344"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/10.json",
+      "size_bytes": 1500,
+      "sha256": "27c8372cb690e48ae343820d0cfc69ae91e1bed262d993cac0de920194aa6e6e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/11.json",
+      "size_bytes": 1498,
+      "sha256": "62597dbf0b25672db68a397ee507c93bc7e17cfa63c3d647e116aa59d31d1687"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/12.json",
+      "size_bytes": 1483,
+      "sha256": "d7d8611d573f629fca492d085b7a65f9f201fb1d4acceaf03bde3036f06abae5"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/13.json",
+      "size_bytes": 1483,
+      "sha256": "3d6d860ab6e89d7196026ef782b30d921d9c79b65029194b0755e71a9a1eb766"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/14.json",
+      "size_bytes": 1495,
+      "sha256": "efbd7eb0d40f01c08ab412ad1ec1dfc45a4395851df79c5310e4425ccd7f7ca6"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/remaining3families_15_20261101/truth_audit/15.json",
+      "size_bytes": 1488,
+      "sha256": "8e8db8d5eb6ed262eb6f86e0c7b423d0dc811c52c175bcade7233941e8e25bd7"
+    },
+    {
+      "path": "LLM/graph_contract.py",
+      "size_bytes": 13696,
+      "sha256": "52c0057574330f6f3a7be344893f0946969d6a210f06e2131e8c6da9d01bdfcc"
+    },
+    {
+      "path": "LLM/hic.py",
+      "size_bytes": 31862,
+      "sha256": "180515bc11c769d09d47732d3dc69d5ead8f74ef67aec3ce8770285aae7b68b9"
+    },
+    {
+      "path": "LLM/hic_16_config_scope_audit.py",
+      "size_bytes": 22199,
+      "sha256": "defcb1abf6144e7cb8f400d5ef4c3ac8a9d560f1b6f60bb7dd29f47a278f51a8"
+    },
+    {
+      "path": "LLM/hic_agent_test6_reporting.py",
+      "size_bytes": 15701,
+      "sha256": "56f637ee32522e4172c2ccb4d868c47da4730c94752491c7290b8ea708b186c2"
+    },
+    {
+      "path": "LLM/hic_agent_validation.py",
+      "size_bytes": 28667,
+      "sha256": "103c2b0896e7def41f6064e2e85cb809fed1048b0ca0b691ab0303c33a9ff684"
+    },
+    {
+      "path": "LLM/hic_baseline_transfer_audit.py",
+      "size_bytes": 26941,
+      "sha256": "8f4331e83cc6327b6e052ee5e413b440ab9162fb5b911dc375b3894a42f30446"
+    },
+    {
+      "path": "LLM/hic_behavior_profile_backfill.py",
+      "size_bytes": 15194,
+      "sha256": "9ab5440263ddb08aa7e608466fbb4890b60fe2a22d31fa89253b3ba91ea0ba8d"
+    },
+    {
+      "path": "LLM/hic_bias_transfer_audit.py",
+      "size_bytes": 10426,
+      "sha256": "bee1991704dc051bdc1a0857d75cdd16ada2380fefd61ca34b5e85eb7181d025"
+    },
+    {
+      "path": "LLM/hic_case_condition_audit.py",
+      "size_bytes": 17498,
+      "sha256": "4adb887bc8775365af92649b736664ec7fa0187a4079c2669f71bd8a630da07b"
+    },
+    {
+      "path": "LLM/hic_case_graph.py",
+      "size_bytes": 9586,
+      "sha256": "b6bf463fe91ae921bf9cb673764e8a970a3c3bba30f31f94ee63cb0e680d1657"
+    },
+    {
+      "path": "LLM/hic_codex_agent.py",
+      "size_bytes": 37945,
+      "sha256": "2064e98267f092610df19dee3d32bbfaa6cc0abe2216faa3736a3b757ba57136"
+    },
+    {
+      "path": "LLM/hic_codex_agent_batch.py",
+      "size_bytes": 6654,
+      "sha256": "c8223dc134f16f3bb5ee11a01a9d577eb9bce7e37070aa511a7a9b147ec419a8"
+    },
+    {
+      "path": "LLM/hic_correction_consistency.py",
+      "size_bytes": 1904,
+      "sha256": "7a667008078afafdea436eb5b66f8f61079f6ce50fa591ee00b0a8c5bf8d16c5"
+    },
+    {
+      "path": "LLM/hic_correction_effect_audit.py",
+      "size_bytes": 22329,
+      "sha256": "9dafe34a6a161792a34fc46b55eb95685c04710d7f20919f4a7c0864c915ffcc"
+    },
+    {
+      "path": "LLM/hic_evidence_gate.py",
+      "size_bytes": 16314,
+      "sha256": "9f3ae62cad0c4ccc5ae227b0e535b3e4a05394222932aaa7dd3d28e6c31e7c73"
+    },
+    {
+      "path": "LLM/hic_full_reasoning_eval.py",
+      "size_bytes": 59818,
+      "sha256": "fac1141db356093e0f0910a1779ddf0a67659bf0378000f767f368a35efa6713"
+    },
+    {
+      "path": "LLM/hic_graph_data.py",
+      "size_bytes": 19094,
+      "sha256": "f95c4758622b066c8f73be2fd4b263ff12d96cafa05d39200913a96b9e98e26b"
+    },
+    {
+      "path": "LLM/hic_graph_export.py",
+      "size_bytes": 15384,
+      "sha256": "9d7d99cb0bc40140400845cb50d1a8716c73f9dd4770b27b025697999d0647d6"
+    },
+    {
+      "path": "LLM/hic_graph_model.py",
+      "size_bytes": 6816,
+      "sha256": "f12e3641f0323de359e7af385a14e1c0e34619fa1484efee05e5e2cf503514ab"
+    },
+    {
+      "path": "LLM/hic_grid_runner.py",
+      "size_bytes": 70545,
+      "sha256": "4ec3eb2e2190a94c656d8e57ad46ebc119673cd9490a663d244492f7022b9277"
+    },
+    {
+      "path": "LLM/hic_hierarchy_graph.py",
+      "size_bytes": 10116,
+      "sha256": "0fc4b1791ea2819b4d4a09528f3d6805f18780f184e7cf48ea6177670febedc9"
+    },
+    {
+      "path": "LLM/hic_memory_builder.py",
+      "size_bytes": 16566,
+      "sha256": "b57a82d5458495cb28b55ab6f59d5c457c01e9474dda0ac300812302c21dc30a"
+    },
+    {
+      "path": "LLM/hic_phase20_memory_audit.py",
+      "size_bytes": 7533,
+      "sha256": "6ed65a0c12be2e792dc3daef9abec47be645dcc17bb544b0b9d16452b4a0ae91"
+    },
+    {
+      "path": "LLM/hic_phase2_eval.py",
+      "size_bytes": 44585,
+      "sha256": "bc27b0a2e2617d9211e8e185c3de343b64f4ce34051981e732f6187fee0ea4f3"
+    },
+    {
+      "path": "LLM/hic_prompt_ab.py",
+      "size_bytes": 15218,
+      "sha256": "02c1b7a3e57fc6f467f8ef073479bb6fd51f6a8391d5f733ae700f87b90b1bc5"
+    },
+    {
+      "path": "LLM/hic_qdrant_eval.py",
+      "size_bytes": 30480,
+      "sha256": "6db39294f254de82ef3c5ad3c6c52b3fcf740703dbb9d1d08ce10bb91239e0b1"
+    },
+    {
+      "path": "LLM/hic_request_cache.py",
+      "size_bytes": 17167,
+      "sha256": "c52f78913df5feb60e4d88c2cb3369eea069a99514800cec15ccff106f740e7c"
+    },
+    {
+      "path": "LLM/hic_seed_memory.py",
+      "size_bytes": 6734,
+      "sha256": "cec668228f3878f581cd67433d60fe115a1969f85962558e2a62a126ba0be3e7"
+    },
+    {
+      "path": "LLM/hic_similarity_gate_audit.py",
+      "size_bytes": 20715,
+      "sha256": "2658a4267cccc7ec031a170763d0a400ad118bca322e4255ce219c9daa82cb61"
+    },
+    {
+      "path": "LLM/hic_verified_memory.py",
+      "size_bytes": 55093,
+      "sha256": "cdf9134e4e4a1ba006afd94dec58a0c0689c0488e75e2bff8363c279c2301ad3"
+    },
+    {
+      "path": "LLM/hic_vnext.py",
+      "size_bytes": 26819,
+      "sha256": "72aa0ae5e90f3a3250541f6d182fadfeb30087c4e016382b01693e71e0b9151d"
+    },
+    {
+      "path": "LLM/hic_vnext_batch.py",
+      "size_bytes": 26323,
+      "sha256": "835310f699c4d75d1d28e64a58223a0de072b25035ac9c6b5dde7a4f6d529ec5"
+    },
+    {
+      "path": "LLM/hic_vnext_calibration.py",
+      "size_bytes": 76846,
+      "sha256": "38681f04dcef2588d69f05362194acda17923730a9f8db272c05cf892f20a4f1"
+    },
+    {
+      "path": "LLM/hic_vnext_fit_correction_alignment.py",
+      "size_bytes": 11291,
+      "sha256": "d3f38d0d6f2088f62fa5e48b9c9a14cd1dcd64664cf9aff2321b320bfecdb1d2"
+    },
+    {
+      "path": "LLM/hic_vnext_memory_audit.py",
+      "size_bytes": 14657,
+      "sha256": "01e01d69a8a37e593a0a0a7823c9d651f0c3b7d5136752386b8f83f44fd52719"
+    },
+    {
+      "path": "LLM/hic_vnext_memory_eligibility.py",
+      "size_bytes": 11033,
+      "sha256": "49fb0ec4bba780ce4ed1ec07dd7ecc017ab75e8479f7473db11a038a7a26703f"
+    },
+    {
+      "path": "LLM/hic_vnext_narrative_numeric_audit.py",
+      "size_bytes": 14332,
+      "sha256": "bec1ad6aecfad39f4a0a7c0a25ae35f5fb06b91289aeb373025887e637baf3a6"
+    },
+    {
+      "path": "LLM/hic_vnext_narrative_triage.py",
+      "size_bytes": 12672,
+      "sha256": "cddb8c0e27cf4f59e2ff623b6be42dfe97c8587d2e231405a8fc3183b6d9605f"
+    },
+    {
+      "path": "LLM/hic_vnext_origin_sensitivity_audit.py",
+      "size_bytes": 14446,
+      "sha256": "f693142efe5c4c6700c1f7ede8147d49e18427a8cb3a983b3984856c5bb865d5"
+    },
+    {
+      "path": "LLM/hic_vnext_partial_calibration_audit.py",
+      "size_bytes": 9069,
+      "sha256": "ce209b10b75b1e5e95d0133b8bc48b8d9dc693fc61996e367bdd609a3da90843"
+    },
+    {
+      "path": "LLM/hic_vnext_partial_fit_audit.py",
+      "size_bytes": 22082,
+      "sha256": "ed894ca34bb03c24d8a6ab0a3b2c4398b4ac65922d83c7e07f33b38f8dd06312"
+    },
+    {
+      "path": "LLM/hic_vnext_preflight.py",
+      "size_bytes": 7386,
+      "sha256": "4c6cac583db9aa9a7ce9011897c6e7305e85040f3da36980eec8ef8a5921f0ba"
+    },
+    {
+      "path": "LLM/hic_vnext_validation.py",
+      "size_bytes": 11310,
+      "sha256": "de4ff2db4c22541f96d5453b9219d88aeb4ee45246df1b5e58a467d88665aed6"
+    },
+    {
+      "path": "LLM/monthly_hic_data.py",
+      "size_bytes": 11673,
+      "sha256": "f079aa6be42a735862e02c97e54bb00cf7dbc10021699ab491e92d2247776ff4"
+    },
+    {
+      "path": "LLM/native_hic_data.py",
+      "size_bytes": 39219,
+      "sha256": "e6f5ca108558f599c492950c9058caeca978ef0eb2b861fc79cea5e26805e97d"
+    },
+    {
+      "path": "LLM/native_hic_experiment.py",
+      "size_bytes": 17492,
+      "sha256": "32a3e673fdafe2f65782db7ce3ddffb5be80b512900ff087d5941c6114a584b0"
+    },
+    {
+      "path": "LLM/native_hic_pilot.py",
+      "size_bytes": 51418,
+      "sha256": "f1778ae82224c6b7d945a3f2ac98108a87703393020d5779857596e5ad366061"
+    },
+    {
+      "path": "LLM/qdrant_import.py",
+      "size_bytes": 7073,
+      "sha256": "e925240a69e4928038fa998ecd92da564a587d6c1b5e2493901b9e0933e588b7"
+    },
+    {
+      "path": "LLM/qdrant_store.py",
+      "size_bytes": 18764,
+      "sha256": "a485d6f6ac93d407c00d52e878cf55641593fad35b3f92fb0d6aba3cb0f4b1e5"
+    },
+    {
+      "path": "LLM/revise_validation_uncertainty_process_book_verification.py",
+      "size_bytes": 4078,
+      "sha256": "a3632883dadf57a5ba7ff409bbaf9cb94fa165c2344a6593e2b8ae2a1e986c1d"
+    },
+    {
+      "path": "LLM/run_economy_hic_pilot.py",
+      "size_bytes": 10133,
+      "sha256": "e9b51a0bcf5deaa7eade200d4a18c141df9d0975a29347fea6e53ee872c14058"
+    },
+    {
+      "path": "LLM/run_economy_hic_rolling_eval.py",
+      "size_bytes": 12987,
+      "sha256": "ea8775a81f2dd0c36d62456aa9e46a9bc03dcbf2e386c66046e1d690885ef5d0"
+    },
+    {
+      "path": "LLM/run_hic_full_corpus_development.py",
+      "size_bytes": 77191,
+      "sha256": "111a88c8657e1d162487bcd56f7540046ce9feef23257e60500c43e204032e55"
+    },
+    {
+      "path": "LLM/run_hic_phase20_ab.py",
+      "size_bytes": 420,
+      "sha256": "4544e6ef555e869da5614de79ba6e72da1e44ff29e23d08f0c13e062eddbcfa8"
+    },
+    {
+      "path": "LLM/run_hic_prompt_ab.py",
+      "size_bytes": 8219,
+      "sha256": "f3f6306ffc6487bdb87e16ba3d9be66bb9bc8c4980f9cdf2308623a3ff42abed"
+    },
+    {
+      "path": "LLM/run_monthly_hic_experiment.py",
+      "size_bytes": 8042,
+      "sha256": "45addc04ecb82e6a4567a30284b014f935830812e3fc7ed66b3b52e5b15d656e"
+    },
+    {
+      "path": "LLM/run_qdrant_hic_experiment.py",
+      "size_bytes": 10781,
+      "sha256": "5543e97fc4414e06d73fd16e63f4debc30f0439455478a11686c48f4a1667565"
+    },
+    {
+      "path": "LLM/sample_data.py",
+      "size_bytes": 11060,
+      "sha256": "b135a32b8c16c2abf94ccb9668b304808ff03c77ddd0349fa54f1a21e9becc79"
+    },
+    {
+      "path": "LLM/template/socialgoods.json",
+      "size_bytes": 1416,
+      "sha256": "07019c6f75129ee94da9dd2b2f3c020aaf27ad6703b84b67bc48380b64ebe8eb"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3519,
+      "sha256": "a5a55d1b739baa529b40ce8fc29e904ab7aadbf9e0756eb61f8a84a6a9775851"
+    },
+    {
+      "path": "scripts/audit_test7_collection_copy.py",
+      "size_bytes": 3424,
+      "sha256": "f7c7f339b0ab4613733320f9f68905b298c7f70b8043fc0d38573ad828db89a0"
+    },
+    {
+      "path": "scripts/fork_test8_qdrant_collection.py",
+      "size_bytes": 7242,
+      "sha256": "8dec241cab01b05726ff316c13d2b8894b59c500a70ed42eb20ce93f74c764ed"
+    },
+    {
+      "path": "scripts/freeze_agent_test8_run.py",
+      "size_bytes": 7701,
+      "sha256": "027bc15557663a79f45260d4213a81bcf2427c21742c01971b7cec49ab7c0633"
+    },
+    {
+      "path": "scripts/ingest_agent_test8_validation_experiences.py",
+      "size_bytes": 9760,
+      "sha256": "83c78cf538f199b13e05e3448077ed57bec9cb9d26b2c23a40468a9883466ded"
+    },
+    {
+      "path": "scripts/prepare_agent_test8_manifest.py",
+      "size_bytes": 6072,
+      "sha256": "603a225892bab08646221c655d36e8d4501f455318802256ed9d195a70731832"
+    },
+    {
+      "path": "scripts/restore_agent_test8_snapshot.py",
+      "size_bytes": 2509,
+      "sha256": "74290a4205ac764629efd3de9a7206edc151e02106592aa14b26dedf75043204"
+    },
+    {
+      "path": "scripts/run_agent_test6.py",
+      "size_bytes": 65156,
+      "sha256": "eb4aa6ff6171154a24b22e71f796229f568369a58a2622eb1eadeed982d775d0"
+    },
+    {
+      "path": "scripts/run_agent_test8.py",
+      "size_bytes": 27742,
+      "sha256": "d3ad9f4c985bd8afd86cb490460583ab08e6d970be18fc5915f051e401155773"
+    }
+  ]
+}
