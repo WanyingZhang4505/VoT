@@ -1,0 +1,85 @@
+{
+  "case_ordinals": [
+    4,
+    5,
+    6,
+    9,
+    11
+  ],
+  "cases": [
+    {
+      "case_id": "security_validation_series_20150701T000000",
+      "dataset": "Security",
+      "horizon": 10,
+      "initial_A_mae": 285440579.1,
+      "initial_B_mae": 288440579.1,
+      "initial_top1_point_id": "04d90392-e9c9-5a99-9562-84cfe94411f5",
+      "initial_top1_source_case_id": "security_validation_series_20150901T000000",
+      "initial_top1_time_eligible": false,
+      "ordinal": 4,
+      "truth_sha256": "e8c47a3885aa1b9deb6267aa59ebec93280174cbe025034b37b1f02c0e63641b"
+    },
+    {
+      "case_id": "security_validation_series_20160501T000000",
+      "dataset": "Security",
+      "horizon": 10,
+      "initial_A_mae": 243055522.3,
+      "initial_B_mae": 244135942.7,
+      "initial_top1_point_id": "cd6e2e57-6583-5701-a735-bd817caaeb69",
+      "initial_top1_source_case_id": "security_validation_series_20160501T000000",
+      "initial_top1_time_eligible": false,
+      "ordinal": 5,
+      "truth_sha256": "e65a4aac5e76187a7ca2dabbb055cb449638552a65585a851aae35c0a5d87dfd"
+    },
+    {
+      "case_id": "security_validation_series_20170301T000000",
+      "dataset": "Security",
+      "horizon": 10,
+      "initial_A_mae": 505756931.3,
+      "initial_B_mae": 591586033.3,
+      "initial_top1_point_id": "adb35c6f-9e55-59d4-9b59-7bcb7a97ff33",
+      "initial_top1_source_case_id": "security_validation_series_20170901T000000",
+      "initial_top1_time_eligible": false,
+      "ordinal": 6,
+      "truth_sha256": "9e3eacbb54c754cf7a388c6f00e623846bbf74e4c6e97d78cd4383a6e2ebfb61"
+    },
+    {
+      "case_id": "new_metr_validation_series_20200129T060000",
+      "dataset": "new_metr",
+      "horizon": 192,
+      "initial_A_mae": 3.953125,
+      "initial_B_mae": 4.588541666666667,
+      "initial_top1_point_id": "4ff01674-3cd3-5198-8c09-39f67f221d20",
+      "initial_top1_source_case_id": "new_metr_validation_series_20200129T060000",
+      "initial_top1_time_eligible": false,
+      "ordinal": 9,
+      "truth_sha256": "f1117c25519e610e7c2cb7c28d975007c5b326737fb12831f92ecf2b3aecb069"
+    },
+    {
+      "case_id": "new_metr_validation_series_20200605T060000",
+      "dataset": "new_metr",
+      "horizon": 192,
+      "initial_A_mae": 2.5677083333333335,
+      "initial_B_mae": 2.859375,
+      "initial_top1_point_id": "5ed59414-3f8c-55a4-aae1-7dffe91c46b3",
+      "initial_top1_source_case_id": "new_metr_validation_series_20201027T060000",
+      "initial_top1_time_eligible": false,
+      "ordinal": 11,
+      "truth_sha256": "81a2bf578f32ce22c36f73c2a85aee609fb13aef5e92ad07f4b90d16f7014f1c"
+    }
+  ],
+  "classification": "post_hoc_truth_aware_optimization_not_benchmark",
+  "comparison_baseline": "original Test 8 A, fixed per case",
+  "continue_condition": "continue only while latest B MAE is worse than original A MAE",
+  "created_utc": "2026-11-01T02:25:48.855080+00:00",
+  "early_stop_condition": "stop at first improved or tied B relative to original A",
+  "initial_B_is_original_test8_locked_prediction": true,
+  "max_revision_iterations_per_case": 5,
+  "outer_test_targets_read": false,
+  "qdrant_reads": 0,
+  "qdrant_writes": 0,
+  "run_id": "agent_test8_posthoc_degraded5_iter5_20261101",
+  "source_frozen_protocol_sha256": "aad4b34c9d6244324a998e613f49ae6f768f4656ebaafaa9dfa7b95e62b3c41b",
+  "source_run_id": "agent_test8_remaining3families_15_20261101",
+  "truth_feedback_allowed": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "source_collection": "DeepSeek Test 1",
+  "source_collection_status": "green",
+  "points_count": 718,
+  "vector": {
+    "size": 1024,
+    "distance": "Cosine"
+  },
+  "qdrant_version": "1.19.2",
+  "snapshot_name": "DeepSeek Test 1-8008848820407063-2026-11-01-04-52-09.snapshot",
+  "snapshot_creation_time": "2026-11-01T04:52:10",
+  "snapshot_size_bytes": 15307264,
+  "snapshot_sha256": "cf204937015addaf7a0bece6ec92063ecf1f66a4b033c6fbbdce902d8adc99f1",
+  "qdrant_reported_checksum": "cf204937015addaf7a0bece6ec92063ecf1f66a4b033c6fbbdce902d8adc99f1",
+  "checked_at_utc": "2026-11-01T05:12:15.1577706+00:00",
+  "validation_derived_points": 15,
+  "interpretation": "Development library includes 15 post-score validation-derived experiences; not an independent blind-test memory bank."
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "new_metr_validation_series_20200605T060000",
+  "correction": {
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "A long horizon over an irregular, volatile series may encounter level changes that the forecast does not represent.",
+        "The isolated zero in the history could be anomalous or valid; either interpretation may affect a forecast based on typical nonzero values. The evidence does not resolve which applies.",
+        "Check whether the visible history has level changes or substantial volatility that the current forecast does not reflect.",
+        "Use text only when its timing, relevance to the target, and relationship to the observations are clear; otherwise treat it as weak context.",
+        "Do not apply a directional adjustment when the current forecast or visible history supports a different direction or changing levels.",
+        "Do not transfer this reflection when the target, sampling pattern, forecast shape, or quality and relevance of available text differ materially.",
+        "Do not infer a causal relationship from weather descriptions or aligned anomalous values without supporting evidence.",
+        "Post-hoc case-local empirical update: The first B forecast used a flat level one unit below the better A baseline. With a mostly level series and no supported trend, use the dominant recent central level rather than shifting the baseline downward based on scattered dips or an ambiguous zero. Do not extrapolate the timing of those dips."
+      ]
+    },
+    "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+    "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\",\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\",\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\"],\"exclusions\":[\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\"]},\"schema_version\":5,\"transfer_schema_version\":1}"
+  },
+  "sha256": "6bf17fa2a3628ffc6c0a4b52fa5566786cfbabd90536311bbc83aaf296e0f8fd",
+  "metadata": {
+    "split": "validation",
+    "memory_version": "agent_test8_postscore_experience_v1",
+    "memory_type": "postscore_validation_experience",
+    "source_run_id": "remaining3families_15_20261101",
+    "source_run_classification": "validation evaluation; not outer-test",
+    "case_ordinal": 11,
+    "dataset": "new_metr",
+    "horizon": 192,
+    "evaluation_stage": "posthoc_validation_feedback_correction_revision",
+    "original_A_metrics": {
+      "mae": 2.5677083333333335,
+      "mse": 18.796875,
+      "rmse": 4.335536299006156
+    },
+    "original_B_metrics": {
+      "mae": 2.859375,
+      "mse": 16.182291666666668,
+      "rmse": 4.022721922612432
+    },
+    "stored_experience_B_metrics": {
+      "mae": 2.5677083333333335,
+      "mse": 18.796875,
+      "rmse": 4.335536299006156
+    },
+    "original_B_direction_vs_A": "worsened",
+    "stored_experience_direction_vs_A": "tied",
+    "source_forecast_lock_sha256": "11147071b2d8c35ec600a47e8dd290b58eadbc93c7ffdbf1d405aea57ec26b3c",
+    "source_case_input_sha256": "4038be8242c08111d3c0c924e6430d84cec56807b26f5c9a40054f4765938d4c",
+    "initial_top1_point_id": "5ed59414-3f8c-55a4-aae1-7dffe91c46b3",
+    "initial_top1_source_case_id": "new_metr_validation_series_20201027T060000",
+    "initial_top1_time_eligible": false,
+    "outer_test_targets_read": false,
+    "posthoc_correction_feedback_used": true,
+    "qdrant_write_scope": "agent_test_8 only"
+  }
+}

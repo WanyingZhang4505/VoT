@@ -1,13 +1,7 @@
-# Agent Test 8 reproducibility bundle
+# Reproducible Agent Test 8 HIC project (DeepSeek)
 
-This commit adds a portable project archive for the local Agent Test 8 run to the VoT `BILL_Agent` branch.
+The `HIC/` folder contains the complete sanitized source package for the local HIC workflow and the DeepSeek Test 1 evaluation. `Agent_Test_8_Project.zip` is the same package as a single download; `Agent_Test_8_Project_manifest.json` lists each packaged file and SHA256, and `Agent_Test_8_Project_SHA256SUMS.txt` verifies the ZIP.
 
-- `Agent_Test_8_Project.zip`: runner sources, dependencies, the full Agent Test 8 run and follow-up artifacts, source inputs, the initial 703-point Qdrant export, and restore instructions.
-- `Agent_Test_8_Project_manifest.json`: per-file sizes and SHA256 checksums for the archive contents.
-- `Agent_Test_8_Project_SHA256SUMS.txt`: SHA256 checksum of the ZIP archive.
+The project includes the `DeepSeek Test 1` 718-point Qdrant snapshot, plus the clean 703-point frozen evaluation baseline. The current snapshot uses 1024-dimensional Cosine vectors and was created by Qdrant 1.19.2. It includes 15 experiences derived from validation after scoring, so treat the 718-point library as development memory, not an untouched benchmark resource. Snapshot metadata and restore instructions are in `HIC/qdrant/` and the project README.
 
-The bundle intentionally excludes API credentials, Python virtual environments, Hugging Face model weights, Qdrant runtime storage, and unrelated local scratch files. The original frozen evaluation uses the 703-point baseline. The separately documented 718-point post-score memory bank is derived from the 15 validation cases and must not be described as an independent blind-test library.
-
-To unpack, verify `Agent_Test_8_Project_SHA256SUMS.txt`, then extract the ZIP. Follow `agent_test8_project/README.md` for Qdrant restore and runner workflow. The language-model worker used by the saved run is Codex task-agent; this archive does not claim that an arbitrary clone can replay the same responses without an available Codex worker.
-
-The project was packaged from upstream fork branch `bill` and committed here without changing that branch.
+API keys, virtual environments, Python caches, and downloaded model weights are excluded. Start from `config/api.env.example` and supply your own key locally. Read `HIC/README.md` before running the strict one-pass runner; it records the collection binding, artifact paths, target limitations, and evaluation boundaries. On Windows, extract the ZIP to a short path such as `C:\HIC` because the frozen audit filenames are long.

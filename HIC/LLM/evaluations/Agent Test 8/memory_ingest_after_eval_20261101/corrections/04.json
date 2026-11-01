@@ -1,0 +1,56 @@
+{
+  "case_id": "security_validation_series_20150701T000000",
+  "correction": {
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "A flat forecast may smooth away sharp movements in a volatile series, leaving it high when values are low and low when values spike. This is a hypothesis, not an established cause.",
+        "The history and the forecast-time text may not contain enough target-specific information to identify future direction. Their relevance to the numeric series is unverified.",
+        "Consider this lesson when the visible history is short and volatile, the forecast is flat or heavily smoothed, and the target definition or the text’s connection to it is unclear.",
+        "Check the current forecast and visible history for evidence of a stable level or trend before applying this reflection. Use only text that is demonstrably relevant to the target when considering directional adjustments.",
+        "Do not apply the flat-forecast lesson when prediction-time evidence supports a stable trend, recurring pattern, or relevant target-linked signal.",
+        "Do not infer a directional adjustment from dated text whose relationship to the target is unclear.",
+        "Treat this as a hypothesis from one case, not evidence that the same behavior will recur.",
+        "Post-hoc case-local empirical update: The first B forecast held a flat level that was too high for the robust center: its validation errors were dominated by one isolated large excursion while the other observations clustered lower. For a short, volatile horizon with an undefined target, do not extrapolate an isolated high historical point as a persistent level. Reassess the typical level from the pre-target history and keep unsupported spikes out of the flat baseline."
+      ]
+    },
+    "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+    "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\",\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\",\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\"],\"exclusions\":[\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\"]},\"schema_version\":5,\"transfer_schema_version\":1}"
+  },
+  "sha256": "10b59ca80c7b5895766a00fa067f4212a732015b491e2f70ddfdd9d778347c28",
+  "metadata": {
+    "split": "validation",
+    "memory_version": "agent_test8_postscore_experience_v1",
+    "memory_type": "postscore_validation_experience",
+    "source_run_id": "remaining3families_15_20261101",
+    "source_run_classification": "validation evaluation; not outer-test",
+    "case_ordinal": 4,
+    "dataset": "Security",
+    "horizon": 10,
+    "evaluation_stage": "posthoc_validation_feedback_correction_revision",
+    "original_A_metrics": {
+      "mae": 285440579.1,
+      "mse": 2.455166334079767e+17,
+      "rmse": 495496350.54960465
+    },
+    "original_B_metrics": {
+      "mae": 288440579.1,
+      "mse": 2.453750688229767e+17,
+      "rmse": 495353478.66243625
+    },
+    "stored_experience_B_metrics": {
+      "mae": 208365271.7,
+      "mse": 2.707293805389767e+17,
+      "rmse": 520316615.66682327
+    },
+    "original_B_direction_vs_A": "worsened",
+    "stored_experience_direction_vs_A": "improved",
+    "source_forecast_lock_sha256": "04adb65f6feeeffc2bd8f69f0bcc65bb2436e508b8f7bb7d959acfce2be3fa0c",
+    "source_case_input_sha256": "842189bcd630aabcae258218fc3b8203751c076589e7a268c7d884a93c7c9de8",
+    "initial_top1_point_id": "04d90392-e9c9-5a99-9562-84cfe94411f5",
+    "initial_top1_source_case_id": "security_validation_series_20150901T000000",
+    "initial_top1_time_eligible": false,
+    "outer_test_targets_read": false,
+    "posthoc_correction_feedback_used": true,
+    "qdrant_write_scope": "agent_test_8 only"
+  }
+}

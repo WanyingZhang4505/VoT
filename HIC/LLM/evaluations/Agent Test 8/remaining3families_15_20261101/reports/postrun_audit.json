@@ -1,0 +1,231 @@
+{
+  "run_id": "agent_test8_remaining3families_15_20261101",
+  "created_utc": "2026-11-01T02:13:08.225206+00:00",
+  "case_count": 15,
+  "forecast_lock_count": 15,
+  "truth_audit_count": 15,
+  "all_truths_after_matching_locks": true,
+  "truth_audit_checks": [
+    {
+      "ordinal": 1,
+      "case_id": "health_validation_National|X_20150126T000000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 2,
+      "case_id": "health_validation_National|X_20151005T000000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 3,
+      "case_id": "health_validation_National|X_20160613T000000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 4,
+      "case_id": "security_validation_series_20150701T000000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 5,
+      "case_id": "security_validation_series_20160501T000000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 6,
+      "case_id": "security_validation_series_20170301T000000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 7,
+      "case_id": "new_metr_validation_series_20190923T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 8,
+      "case_id": "new_metr_validation_series_20191126T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 9,
+      "case_id": "new_metr_validation_series_20200129T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 10,
+      "case_id": "new_metr_validation_series_20200402T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 11,
+      "case_id": "new_metr_validation_series_20200605T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 12,
+      "case_id": "new_metr_validation_series_20200808T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 13,
+      "case_id": "new_metr_validation_series_20201011T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 14,
+      "case_id": "new_metr_validation_series_20201214T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    },
+    {
+      "ordinal": 15,
+      "case_id": "new_metr_validation_series_20210216T060000",
+      "lock_hash_matches": true,
+      "truth_read_after_lock": true,
+      "outer_test_targets_read": false
+    }
+  ],
+  "outer_test_targets_read": false,
+  "qdrant_writes": 0,
+  "final_live_qdrant": {
+    "agent_test_7": {
+      "status": "green",
+      "points_count": 703,
+      "vector_size": 1024,
+      "distance": "Cosine"
+    },
+    "agent_test_8": {
+      "status": "green",
+      "points_count": 703,
+      "vector_size": 1024,
+      "distance": "Cosine"
+    },
+    "checked_before_utc": "2026-11-01T02:13:08.175921+00:00",
+    "checked_after_utc": "2026-11-01T02:13:08.225206+00:00"
+  },
+  "qdrant_initial_copy": {
+    "source": "agent_test_7",
+    "target": "agent_test_8",
+    "points": 703,
+    "snapshot_path": "preflight/qdrant_snapshot/agent_test_7_full_points.jsonl",
+    "snapshot_size_bytes": 14443556,
+    "snapshot_sha256": "0dbd02848356f0497dee90bcdcee4e4e3b4422f480db00b2f98abc7834641acf",
+    "exact_ids_payloads_vectors_match": true,
+    "Test7_modified": false
+  },
+  "retrieval_audit": {
+    "direct_top1_count": 15,
+    "strictly_prior_count": 5,
+    "time_ineligible_count": 10,
+    "same_source_case_or_history_origin_count": 4,
+    "time_ineligible_cases": [
+      "health_validation_National|X_20150126T000000",
+      "health_validation_National|X_20151005T000000",
+      "health_validation_National|X_20160613T000000",
+      "security_validation_series_20150701T000000",
+      "security_validation_series_20160501T000000",
+      "security_validation_series_20170301T000000",
+      "new_metr_validation_series_20190923T060000",
+      "new_metr_validation_series_20191126T060000",
+      "new_metr_validation_series_20200129T060000",
+      "new_metr_validation_series_20200605T060000"
+    ],
+    "same_source_cases": [
+      "health_validation_National|X_20160613T000000",
+      "security_validation_series_20160501T000000",
+      "new_metr_validation_series_20191126T060000",
+      "new_metr_validation_series_20200129T060000"
+    ],
+    "filtering_applied": false
+  },
+  "technical_failure_events": [
+    {
+      "event": "case01 local Qdrant socket denied",
+      "time": "2026-10-31T20:47:41.03034-04:00",
+      "type": "WinError 10013",
+      "truth_read": false
+    },
+    {
+      "event": "case07 local Qdrant socket denied during runner advancement",
+      "time": "2026-10-31T21:41:24.348954-04:00",
+      "type": "WinError 10013",
+      "truth_read": false
+    },
+    {
+      "event": "case07 A initial response failed frozen length validation",
+      "type": "response_schema_failure",
+      "observed_predictions": 149,
+      "required_predictions": 192,
+      "response": "tasks/responses/case07_a_attempt1.json"
+    },
+    {
+      "event": "case07 A recovery dispatch 2 exceeded wait window and was requeued",
+      "type": "delayed_response_timeout_requeue",
+      "worker": "/root/test8_case07_a_recovery"
+    },
+    {
+      "event": "case07 A recovery dispatch 3 exceeded wait window and was requeued",
+      "type": "no_response_timeout_requeue",
+      "worker": "/root/test8_case07_a_recovery2"
+    },
+    {
+      "event": "case07 A dispatch 4 returned incomplete transport response due max_output_tokens; same frozen worker/context resumed and wrote valid file",
+      "type": "response_transport_failure",
+      "worker": "/root/test8_case07_a_recovery3"
+    }
+  ],
+  "technical_failure_event_count": 6,
+  "terminal_technical_failures": 0,
+  "retry_or_recovery_actions": [
+    "case07 A task redispatched three times after the initial 149-value response, with identical request hash 8674c0a41734f1b786b079ae059a7f0470481c95d3be6ce7fa2dfdb1d19915e2",
+    "case07 A same-context continuation after max_output_tokens transport failure wrote the valid response",
+    "case01 runner call repeated after socket denial using the same frozen configuration and approved local service access",
+    "case07 runner call repeated after socket denial using the same frozen configuration and approved local service access"
+  ],
+  "retry_or_recovery_action_count": 6,
+  "case07_a_response_deviation": {
+    "extra_complete_response_present": true,
+    "selected_and_locked": "tasks/responses/case07_a_recovery3.json",
+    "selected_sha256": "9f9495e6a209164078fa5d2b915df7c2e2bc2273d378dec16cc80766b8b2a609",
+    "selected_count": 192,
+    "additional_unscored": "tasks/responses/case07_a_recovery.json",
+    "additional_sha256": "1be9ac1097dfec5f1a1ed1be24a09be0a3232988bcc79811eee745352810fd7b",
+    "additional_count": 192,
+    "both_created_before_lock": true,
+    "additional_scored_or_used_for_selection": false,
+    "reason": "Late response after its dispatch was requeued; retained for audit and not compared against truth."
+  },
+  "protocol_deviations": [
+    "Case 7 produced an additional complete A response before its forecast lock. The first valid response recorded by the runner was locked; the late duplicate remains preserved and unscored. This deviates from exactly one valid A response per case.",
+    "Two local socket permission failures required same-configuration runner retries.",
+    "Case 7 required schema/transport recovery; all successful forecast attempts used the unchanged request hash."
+  ],
+  "benchmark_scope": "Based on Test 7 development memory; not an independent external benchmark."
+}

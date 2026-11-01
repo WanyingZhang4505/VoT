@@ -1,0 +1,185 @@
+{
+  "run_id": "agent_test8_posthoc_correction_driven_degraded5_iter5_20261101",
+  "source_run_id": "agent_test8_remaining3families_15_20261101",
+  "classification": "post-hoc validation-truth-aware correction update followed by forecast; not a benchmark result",
+  "status": "complete",
+  "case_count": 5,
+  "iterations_total": 5,
+  "max_iterations_per_case": 5,
+  "completed_revision_rounds_per_case": {
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "9": 1,
+    "11": 1
+  },
+  "final_direction_counts_vs_original_A_by_MAE": {
+    "improved": 3,
+    "tied": 2,
+    "worsened": 0
+  },
+  "case_results": [
+    {
+      "ordinal": 4,
+      "case_id": "security_validation_series_20150701T000000",
+      "iteration": 1,
+      "correction_sha256": "10b59ca80c7b5895766a00fa067f4212a732015b491e2f70ddfdd9d778347c28",
+      "task_sha256": "ff3baef73e733735e11acbf6f2331d335747b90a7627a87de4cf02a34439a539",
+      "response_sha256": "de54f2b350cb9e8bc6adef5c646e5aaa31a0414befc39bc311be96403a57ccd1",
+      "prediction_sha256": "6d78022ef87e67ed6319af0d73122a18d33ad7c7ef4ac638035c76c5b1be2026",
+      "A_metrics": {
+        "mae": 285440579.1,
+        "mse": 2.455166334079767e+17,
+        "rmse": 495496350.54960465
+      },
+      "original_B0_metrics": {
+        "mae": 288440579.1,
+        "mse": 2.453750688229767e+17,
+        "rmse": 495353478.66243625
+      },
+      "revised_correction_B_metrics": {
+        "mae": 208365271.7,
+        "mse": 2.707293805389767e+17,
+        "rmse": 520316615.66682327
+      },
+      "direction_vs_original_A_by_MAE": "improved",
+      "direction_vs_original_B0_by_MAE": "improved",
+      "iterations": 1,
+      "stopped_at_first_nonworse": true,
+      "validation_truth_used_to_score": true,
+      "outer_test_targets_read": false,
+      "qdrant_write": false
+    },
+    {
+      "ordinal": 5,
+      "case_id": "security_validation_series_20160501T000000",
+      "iteration": 1,
+      "correction_sha256": "293a69658268a33e9820a77c84b5b63cf2e1557914b8736e2b6966dc359916e2",
+      "task_sha256": "e38d4f14a50803c78d46b54b925430d1878bc98fb1a786544d7442522536abab",
+      "response_sha256": "9d92ac1118c4bf2d094888752e5a2123339dde112ce2e7866e17983a3c09fb32",
+      "prediction_sha256": "711edfc4ed1d7ef93d576044288e073cd4dfdc4fed1634d5c0dfd48a1aa0c630",
+      "A_metrics": {
+        "mae": 243055522.3,
+        "mse": 2.4106677430842147e+17,
+        "rmse": 490985513.33865386
+      },
+      "original_B0_metrics": {
+        "mae": 244135942.7,
+        "mse": 2.4226275304407066e+17,
+        "rmse": 492201943.35665786
+      },
+      "revised_correction_B_metrics": {
+        "mae": 228396176.3,
+        "mse": 2.2224685371642144e+17,
+        "rmse": 471430645.71198744
+      },
+      "direction_vs_original_A_by_MAE": "improved",
+      "direction_vs_original_B0_by_MAE": "improved",
+      "iterations": 1,
+      "stopped_at_first_nonworse": true,
+      "validation_truth_used_to_score": true,
+      "outer_test_targets_read": false,
+      "qdrant_write": false
+    },
+    {
+      "ordinal": 6,
+      "case_id": "security_validation_series_20170301T000000",
+      "iteration": 1,
+      "correction_sha256": "9e17fbf0a7e7b3edc9b98e782126d86d797fc9db5a7814588c60fcb1c255bcde",
+      "task_sha256": "752e5c9c4baa331bea61515b32cfd3cc0ed32aaba61a6859888d7193d3dc387e",
+      "response_sha256": "21071cfe3642d32b8f4f8cc2df068911836d777477d76383fcc6ea6b6bdd75b6",
+      "prediction_sha256": "6feb27fd2afb60215dc3fbd42f10c4b94d2a76d52bcb38e85d6058fd675ada40",
+      "A_metrics": {
+        "mae": 505756931.3,
+        "mse": 4.5920182770683814e+17,
+        "rmse": 677644322.4190978
+      },
+      "original_B0_metrics": {
+        "mae": 591586033.3,
+        "mse": 5.984324732368381e+17,
+        "rmse": 773584173.3365788
+      },
+      "revised_correction_B_metrics": {
+        "mae": 373293428.5,
+        "mse": 2.719089206888382e+17,
+        "rmse": 521448866.80175865
+      },
+      "direction_vs_original_A_by_MAE": "improved",
+      "direction_vs_original_B0_by_MAE": "improved",
+      "iterations": 1,
+      "stopped_at_first_nonworse": true,
+      "validation_truth_used_to_score": true,
+      "outer_test_targets_read": false,
+      "qdrant_write": false
+    },
+    {
+      "ordinal": 9,
+      "case_id": "new_metr_validation_series_20200129T060000",
+      "iteration": 1,
+      "correction_sha256": "d2092c9dbdcf86c90e0525f3f7778ba80d5969f5fbb03c71f94a58bacf1aab52",
+      "task_sha256": "6fc613062f7ffafa6ba6d163bca9392d166581ed0af32a91f29e43775e50f657",
+      "response_sha256": "1a372837f24ec17a098773b9b9ace0cc591bd1bcc048a636c9f7b790963d0956",
+      "prediction_sha256": "b5eec1b006887b521c49606342224c2ef99c2b476d9f07adf8519445ebd790c8",
+      "A_metrics": {
+        "mae": 3.953125,
+        "mse": 47.015625,
+        "rmse": 6.856794075951239
+      },
+      "original_B0_metrics": {
+        "mae": 4.588541666666667,
+        "mse": 38.255208333333336,
+        "rmse": 6.185079492887164
+      },
+      "revised_correction_B_metrics": {
+        "mae": 3.953125,
+        "mse": 47.015625,
+        "rmse": 6.856794075951239
+      },
+      "direction_vs_original_A_by_MAE": "tied",
+      "direction_vs_original_B0_by_MAE": "improved",
+      "iterations": 1,
+      "stopped_at_first_nonworse": true,
+      "validation_truth_used_to_score": true,
+      "outer_test_targets_read": false,
+      "qdrant_write": false
+    },
+    {
+      "ordinal": 11,
+      "case_id": "new_metr_validation_series_20200605T060000",
+      "iteration": 1,
+      "correction_sha256": "6bf17fa2a3628ffc6c0a4b52fa5566786cfbabd90536311bbc83aaf296e0f8fd",
+      "task_sha256": "04f2307d597e298fd755f8f65a3b0b12d4c19b2f7e6be0bedceb151718d9821e",
+      "response_sha256": "1a372837f24ec17a098773b9b9ace0cc591bd1bcc048a636c9f7b790963d0956",
+      "prediction_sha256": "b5eec1b006887b521c49606342224c2ef99c2b476d9f07adf8519445ebd790c8",
+      "A_metrics": {
+        "mae": 2.5677083333333335,
+        "mse": 18.796875,
+        "rmse": 4.335536299006156
+      },
+      "original_B0_metrics": {
+        "mae": 2.859375,
+        "mse": 16.182291666666668,
+        "rmse": 4.022721922612432
+      },
+      "revised_correction_B_metrics": {
+        "mae": 2.5677083333333335,
+        "mse": 18.796875,
+        "rmse": 4.335536299006156
+      },
+      "direction_vs_original_A_by_MAE": "tied",
+      "direction_vs_original_B0_by_MAE": "improved",
+      "iterations": 1,
+      "stopped_at_first_nonworse": true,
+      "validation_truth_used_to_score": true,
+      "outer_test_targets_read": false,
+      "qdrant_write": false
+    }
+  ],
+  "truth_used_to_update_corrections": true,
+  "outer_test_targets_read": false,
+  "qdrant_writes": 0,
+  "deviation": "Reforecasts were authored in the primary agent context using the frozen prompts with the revised correction injected; no separate inference worker or Qdrant model call was used.",
+  "created_utc": "2026-11-01T02:35:00+00:00",
+  "raw_validation_truth_values_in_reforecast_prompts": false,
+  "corrections_contain_validation_derived_error_feedback": true
+}

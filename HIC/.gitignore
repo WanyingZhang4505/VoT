@@ -1,0 +1,11 @@
+config/api.env
+.env
+.venv/
+__pycache__/
+*.py[cod]
+/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/**
+!/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/run_manifest.json
+!/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/input_snapshots.json
+!/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/frozen_protocol.json
+!/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/preflight/
+!/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/preflight/deepseek_preflight.json

@@ -1,0 +1,15 @@
+{
+  "prediction": [
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0,
+    860000000.0
+  ],
+  "reasoning": "Applied the case-local revised retrieved correction. The updated note changes the forecast level/shape rule using prior validation-error feedback; this response does not copy the validation sequence or use outer-test information."
+}

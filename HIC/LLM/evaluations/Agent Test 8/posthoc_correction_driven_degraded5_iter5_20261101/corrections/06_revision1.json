@@ -1,0 +1,28 @@
+{
+  "ordinal": 6,
+  "case_id": "security_validation_series_20170301T000000",
+  "iteration": 1,
+  "source": "original Test 8 Top-1 correction, case-local revision based on this case original B0 validation error feedback",
+  "prior_correction_sha256": "ffe89ce69aca9cda28ea62a5f9c41c0044ab258f9b6d32647e54a2554a9bcdd1",
+  "updated_correction": {
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "Using a robust level baseline may have limited the influence of a volatile ending observation, but a flat forecast could not track the actual series' changing direction. This is an unverified hypothesis, not an established cause.",
+        "The missing target definition, units, dates, and covariates may have made a directional forecast unjustified. This is an unverified hypothesis, not an established cause.",
+        "Consider a robust level baseline when the visible history is short and volatile, the target and units are unknown, and no prediction-time evidence supports a direction or trend.",
+        "Treat dated text as indirect context unless its relevance to the target is established from prediction-time evidence.",
+        "Keep uncertainty explicit when the history is sparse and its dates, units, or relationship to available text are unclear.",
+        "Do not apply this lesson when prediction-time evidence establishes a relevant trend, seasonal pattern, or relationship between text and target.",
+        "Do not treat a flat forecast as suitable when the task context or visible history supports a different forecasting structure.",
+        "Do not treat this single case as proof that a robust level baseline will generalize.",
+        "Post-hoc case-local empirical update: The first B forecast imposed a declining path and materially underpredicted the validation window. A short irregular history does not support that continued decay. Avoid mechanically reverting toward older low values after a recent level shift; prefer a stable central level unless the visible pre-target evidence establishes a sustained trend. Do not attempt to predict the timing of isolated excursions."
+      ]
+    },
+    "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+    "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\",\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\",\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\"],\"exclusions\":[\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\"]},\"schema_version\":5,\"transfer_schema_version\":1}"
+  },
+  "updated_correction_sha256": "9e17fbf0a7e7b3edc9b98e782126d86d797fc9db5a7814588c60fcb1c255bcde",
+  "validation_truth_used_for_correction_update": true,
+  "outer_test_targets_read": false,
+  "qdrant_write": false
+}

@@ -1,0 +1,52 @@
+{
+  "case_id": "new_metr_validation_series_20200402T060000",
+  "correction": {
+    "schema_version": 1,
+    "active_revision_id": "agent_test8_postscore_case_experience_v1",
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "Paired validation experience for this case: the original retrieval-assisted B forecast was tied versus no-retrieval A by MAE. Treat this as one case-specific observation, not a portable forecast direction or numeric target lesson.",
+        "Transfer only qualitative reasoning when target, time scale, history shape, and source applicability genuinely match; never copy realized outcomes, predictions, or error magnitudes.",
+        "When relevance is uncertain, prioritize the current case's visible pre-target history and keep forecasts grounded in that evidence."
+      ],
+      "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Use a retrieved case only as a qualitative analogy when its context matches.\",\"Do not infer causality from a single paired validation result.\"],\"exclusions\":[\"This memory contains no realized target values, predictions, or outcome-specific numeric error pattern.\"]},\"schema_version\":1}"
+    }
+  },
+  "sha256": "1e398c518540bbb0fc1a0dfbb055a5a02e51795373355058835f2a6f778f6489",
+  "metadata": {
+    "split": "validation",
+    "memory_version": "agent_test8_postscore_experience_v1",
+    "memory_type": "postscore_validation_experience",
+    "source_run_id": "remaining3families_15_20261101",
+    "source_run_classification": "validation evaluation; not outer-test",
+    "case_ordinal": 10,
+    "dataset": "new_metr",
+    "horizon": 192,
+    "evaluation_stage": "original_frozen_test8_validation_result",
+    "original_A_metrics": {
+      "mae": 4.734375,
+      "mse": 68.83854166666667,
+      "rmse": 8.296899521307141
+    },
+    "original_B_metrics": {
+      "mae": 4.734375,
+      "mse": 68.83854166666667,
+      "rmse": 8.296899521307141
+    },
+    "stored_experience_B_metrics": {
+      "mae": 4.734375,
+      "mse": 68.83854166666667,
+      "rmse": 8.296899521307141
+    },
+    "original_B_direction_vs_A": "tied",
+    "stored_experience_direction_vs_A": "tied",
+    "source_forecast_lock_sha256": "6c0aeca35ca0f8707be7700fe4a8044c777e5229830d80ee543ef9ecdf9e0251",
+    "source_case_input_sha256": "637953c97c8a386b2ab5af02f6e4c447823937650c07f94895b53b7a96b2aa0c",
+    "initial_top1_point_id": "69686ae9-d3d6-5509-b53b-5ae12a3826ed",
+    "initial_top1_source_case_id": "new_metr_validation_series_20200113T060000",
+    "initial_top1_time_eligible": true,
+    "outer_test_targets_read": false,
+    "posthoc_correction_feedback_used": false,
+    "qdrant_write_scope": "agent_test_8 only"
+  }
+}

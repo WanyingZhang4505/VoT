@@ -1,0 +1,22 @@
+{
+  "dataset_info": {
+    "data_modalities": "numeric time series, covariates when supplied, and dated text",
+    "dataset_name": "Health",
+    "frequency": "weekly",
+    "target_unit": "unknown",
+    "target_variable": "unknown"
+  },
+  "forecast_outlook": {
+    "confidence": "Low: the target has recently risen from its low, but the history alone does not establish whether that turn will persist.",
+    "expected_direction": "Recent observations suggest a modest upward bias after a prolonged decline; this is a cautious inference from the supplied history, not a claim about future values.",
+    "horizon": "36 weeks",
+    "key_signal": "The target fell from 3.45794 to a low near 0.80, then rose to 1.24325 in the final observation. The supplied ILI and age-group counts also rise near the end of the window.",
+    "uncertainty": "The target's meaning and unit are unknown, and the text mixes broad influenza context with dated facts from different periods. Its relationship to this series is not established."
+  },
+  "predictive_factors": {
+    "covariates": "% WEIGHTED ILI and ILITOTAL declined alongside the target and rose near the end; the supplied age-group counts show a similar late increase. These are observed co-movements, not evidence of causation. WEEK advances from 5 to 40 in 2015; YEAR is constant. NUM. OF PROVIDERS and TOTAL PATIENTS vary, so the late count increases should be read in that context.",
+    "temporal_patterns": "The target declines substantially across most of the window, with small fluctuations and a low around 0.80. It then turns upward over the final observations, reaching 1.24325. The late rise remains below the early-window level.",
+    "text_evidence": "The text includes a dated report that H5N8 and reassortant H5N2 were detected in wild birds and backyard birds in Washington in December 2014, and facts about U.S. influenza activity and vaccine distribution. Other fragments discuss influenza broadly or refer to different periods. The text is not independently source-verified, does not directly report this numeric target, and cannot establish a causal link to its observed movement.",
+    "uncertainty": "Only one target history is supplied, with no documented target interpretation or unit. The late upward movement may or may not persist; the text's timing, relevance, and relation to the target are uncertain."
+  }
+}

@@ -1,7 +1,24 @@
 {
-  "file_count": 357,
-  "total_bytes": 43455451,
+  "file_count": 392,
+  "total_bytes": 74129077,
+  "archive_root": "agent_test8_project",
+  "excluded_runtime_artifacts": [
+    "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_superseded_before_inference",
+    "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/progress.json",
+    "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/preflight/live_preflight_latest.json",
+    "API credentials, virtual environments, and Python caches"
+  ],
   "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 523,
+      "sha256": "988cd8a48db7f4eac6dac1a59c86845cd51cc73e6f9ecf86a189aaad72c542d2"
+    },
+    {
+      "path": "config/api.env.example",
+      "size_bytes": 147,
+      "sha256": "34cb0af5dc101a9a1726371e248ee0b0d01ae111df3f8af524e1e391123dea73"
+    },
     {
       "path": "config/model.yaml",
       "size_bytes": 206,
@@ -208,6 +225,16 @@
       "sha256": "aad6599580d3f0fb290d951f757fd624a6f93806f193c42a635b124a58114f08"
     },
     {
+      "path": "LLM/deepseek_strict_tool_provider.py",
+      "size_bytes": 17739,
+      "sha256": "118dbd6a1434c5d3fe6a55397d35401abd4364529da8a1d17672dc1f16d42094"
+    },
+    {
+      "path": "LLM/deepseek_test8_provider.py",
+      "size_bytes": 13394,
+      "sha256": "ef62e307a134a3ddbcd116d898b040b66bd2e4dcdfb6ff3bced65b4f4c53fa6c"
+    },
+    {
       "path": "LLM/deepseek_usage.py",
       "size_bytes": 31002,
       "sha256": "9cd03c7af6ec95292e8278c2d6b84a007ef908b4a12b27877dbac58e107b5929"
@@ -221,6 +248,81 @@
       "path": "LLM/economy_rolling_eval.py",
       "size_bytes": 16504,
       "sha256": "acb406420474fa22bb06e4fff24e31929594ca0888b6ac63a2e130fc04350b0e"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/frozen_protocol.json",
+      "size_bytes": 3275,
+      "sha256": "03b1e0a46a17b8cb16261c3e4b8fca9ce427bb6ad548c04b26ef4fef53d56fcb"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/input_snapshots.json",
+      "size_bytes": 361136,
+      "sha256": "c2b713c6103205db9b8632675b8fffc16077ddfbddd46b7b6ad7854f02641f62"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/preflight/deepseek_preflight.json",
+      "size_bytes": 2234,
+      "sha256": "235a1299bc8027d5e917b8d7aa80da6ed735eec17ad04be774ac0115606e2aa3"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/run_manifest.json",
+      "size_bytes": 8049,
+      "sha256": "9d3fc969ca7ccf73ef555cd9ee475dc13eea1c5bc2a4650718d38b8b998391ad"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/cases/01_5961b044144850cee26a6c18db0b2a1e221d006330fb613496e345195614a7b7.json",
+      "size_bytes": 1152,
+      "sha256": "6a81f3c4cbb51f8b9d3f83dbec10adcc104ea4eafb596f15bfac11ff06f6f10f"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/frozen_protocol.json",
+      "size_bytes": 4716,
+      "sha256": "e728985a0fcfec32abce96c7ac4277d6135d855ed9e585e27978dd088ca58318"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/input_snapshots.json",
+      "size_bytes": 361001,
+      "sha256": "bd60ae4db5ab769b1be8a75670ef003faa7a3d0be00ce188a70b33e923579036"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/preflight/deepseek_preflight.json",
+      "size_bytes": 2708,
+      "sha256": "999a81ab57a88d34b1dbda7e22bdf0e74888a86e39d0c0e2cf705000205e7a45"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/preflight/live_preflight_latest.json",
+      "size_bytes": 974,
+      "sha256": "2497364eb21832aa5ab0f5fbc3d073992fdce23af7db58ed0c4ddcecfe7266bf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/progress.json",
+      "size_bytes": 345,
+      "sha256": "0d7335505c198ba725dbcc334777c8a10137c1ec4c92a26abe09a81c53194423"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/run_manifest.json",
+      "size_bytes": 9421,
+      "sha256": "9b42a092b2fdba031697a7abce9cf50766eb401f602e866ffd04fbc8740b38e3"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/onepass_15/technical_failures/01_attempt_1.json",
+      "size_bytes": 550,
+      "sha256": "ec940ea694ecc43d77bc3e161c4efe76b8fe00c143f74fb5fcabe70e8b491c0c"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_restore_receipt.json",
+      "size_bytes": 532,
+      "sha256": "c0a8742e7fa388482ce82c5ad99b1adf884da1d580f753e59ccf12920030d8ed"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_snapshot/agent_test_8_filtered_703.jsonl",
+      "size_bytes": 14443556,
+      "sha256": "0dbd02848356f0497dee90bcdcee4e4e3b4422f480db00b2f98abc7834641acf"
+    },
+    {
+      "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_source_audit.json",
+      "size_bytes": 3253,
+      "sha256": "da1f47708c0af49093ed0145fbe3b839aeb1f2e45839c59b0db8386344a30391"
     },
     {
       "path": "LLM/evaluations/Agent Test 8/memory_ingest_after_eval_20261101/audit/ingest_plan.json",
@@ -1743,9 +1845,24 @@
       "sha256": "07019c6f75129ee94da9dd2b2f3c020aaf27ad6703b84b67bc48380b64ebe8eb"
     },
     {
+      "path": "qdrant/DeepSeek_Test_1_718_20261101.snapshot",
+      "size_bytes": 15307264,
+      "sha256": "cf204937015addaf7a0bece6ec92063ecf1f66a4b033c6fbbdce902d8adc99f1"
+    },
+    {
+      "path": "qdrant/README.md",
+      "size_bytes": 936,
+      "sha256": "9db73146837e6ba7ccdc53d8c71d9ed4ced6f940f157960d1448b9b14de7aac7"
+    },
+    {
+      "path": "qdrant/snapshot_manifest.json",
+      "size_bytes": 831,
+      "sha256": "340803278c077291ac0c90cb624e787c59207777d2640f2c09912c3fb77b4399"
+    },
+    {
       "path": "README.md",
-      "size_bytes": 3519,
-      "sha256": "a5a55d1b739baa529b40ce8fc29e904ab7aadbf9e0756eb61f8a84a6a9775851"
+      "size_bytes": 3400,
+      "sha256": "5e42ed3ea1f06d2e59d0fac7d1da3ea91b371146ab2aa94224387e5a4c694f40"
     },
     {
       "path": "scripts/audit_test7_collection_copy.py",
@@ -1758,9 +1875,24 @@
       "sha256": "8dec241cab01b05726ff316c13d2b8894b59c500a70ed42eb20ce93f74c764ed"
     },
     {
+      "path": "scripts/freeze_agent_test8_deepseek.py",
+      "size_bytes": 11759,
+      "sha256": "f5aff75e201a8308a8b44887da40c065291049d2ec09d387820630837e292c40"
+    },
+    {
       "path": "scripts/freeze_agent_test8_run.py",
       "size_bytes": 7701,
       "sha256": "027bc15557663a79f45260d4213a81bcf2427c21742c01971b7cec49ab7c0633"
+    },
+    {
+      "path": "scripts/freeze_deepseek_test1.py",
+      "size_bytes": 5567,
+      "sha256": "8b16574b9fb2500c5204104dbf4da4e6cca789c81d5c4089af4a82465e6f3e1f"
+    },
+    {
+      "path": "scripts/freeze_deepseek_test1_r2.py",
+      "size_bytes": 7890,
+      "sha256": "eb64d858b9976e078112909aa01af8ff7b6a8d650c8d83cc52eb7eabc70a6a68"
     },
     {
       "path": "scripts/ingest_agent_test8_validation_experiences.py",
@@ -1773,9 +1905,34 @@
       "sha256": "603a225892bab08646221c655d36e8d4501f455318802256ed9d195a70731832"
     },
     {
+      "path": "scripts/prepare_deepseek_test1_memory.py",
+      "size_bytes": 8228,
+      "sha256": "d227740b17549df729235e51fd1b07962d16627fb14d5560e78ecebb93350001"
+    },
+    {
+      "path": "scripts/probe_deepseek_json_schema.py",
+      "size_bytes": 6021,
+      "sha256": "7b1070eb7fb23f66e1b5d6f775e9c089df606879dcc678f8fd95c46294fb34fb"
+    },
+    {
+      "path": "scripts/recover_deepseek_strict_pilot_case.py",
+      "size_bytes": 12627,
+      "sha256": "2b8917b8537216f69133138e8eccbe12355787e903aaaa8467f0e758a6a1a453"
+    },
+    {
+      "path": "scripts/recover_deepseek_test1_h192_remaining.py",
+      "size_bytes": 469,
+      "sha256": "fd56366531408a2ac99488c22390f608cd6513f7cdabb5c10804ff71af2fe039"
+    },
+    {
+      "path": "scripts/recover_deepseek_test1_h192_shape.py",
+      "size_bytes": 24168,
+      "sha256": "1c1c6f5f1c3b91e10f456b56bdba0dea5446428fb88d0775beb2e8b46b17293a"
+    },
+    {
       "path": "scripts/restore_agent_test8_snapshot.py",
-      "size_bytes": 2509,
-      "sha256": "74290a4205ac764629efd3de9a7206edc151e02106592aa14b26dedf75043204"
+      "size_bytes": 4867,
+      "sha256": "3c73d51cbc956a2c949466a7aa7aeb669427d55802527cd76dc0a9c6d5db7676"
     },
     {
       "path": "scripts/run_agent_test6.py",
@@ -1786,6 +1943,31 @@
       "path": "scripts/run_agent_test8.py",
       "size_bytes": 27742,
       "sha256": "d3ad9f4c985bd8afd86cb490460583ab08e6d970be18fc5915f051e401155773"
+    },
+    {
+      "path": "scripts/run_agent_test8_deepseek.py",
+      "size_bytes": 16528,
+      "sha256": "549eafe8d24a871e58d6b8a1e4161165c12989ef0c0a0bd9fc198783c010194a"
+    },
+    {
+      "path": "scripts/run_deepseek_test1.py",
+      "size_bytes": 3124,
+      "sha256": "003d3b8f0ba8c3e6466505d7a53c1d3cda7eab7cc5e14743c93b12854dc1b12e"
+    },
+    {
+      "path": "scripts/run_deepseek_test1_r2.py",
+      "size_bytes": 3318,
+      "sha256": "2ec0594c8286469acf954b516cdc2611b3fc74cc959b2961da35fae23bcbdbc1"
+    },
+    {
+      "path": "scripts/run_deepseek_test1_strict.py",
+      "size_bytes": 25512,
+      "sha256": "169773ba6fb48f2a44e48189bbd78ec8bf3ddee5f82592b7436f70f5349516c3"
+    },
+    {
+      "path": "tests/test_deepseek_strict_forecast.py",
+      "size_bytes": 2440,
+      "sha256": "2f1425d4fd2362604cfe8dc0b08adc022cdd153b2ae7eb491bb8830189e1bc13"
     }
   ]
 }

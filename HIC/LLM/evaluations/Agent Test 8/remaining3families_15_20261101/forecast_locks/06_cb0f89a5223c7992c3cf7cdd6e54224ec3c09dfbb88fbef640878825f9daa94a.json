@@ -1,0 +1,119 @@
+{
+  "baseline": {
+    "prediction": [
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0,
+      550000000.0
+    ],
+    "reasoning": "The series is volatile, and its final value of about 1.72 billion is a sharp jump from the prior observations. With no evidence that this jump will persist, I use a cautious elevated level that partly reflects it while allowing for mean reversion; uncertainty remains high."
+  },
+  "case_id": "security_validation_series_20170301T000000",
+  "dataset": "Security",
+  "forecast_lock_sha256": "f94b931b4852ed1589039b67bfa3ed39061833878ad5ce0a26649c929ab69814",
+  "forecast_protocol_version": "hic_codex_direct_scope16_paired_validation_v3_full_hic_one_memory_isolated",
+  "frozen_case_input_sha256": "bbac0c7cfeab5983f06f06dea729d3185c9fe4123f38f045adb4854709028f15",
+  "full_hic": {
+    "prediction": [
+      650000000.0,
+      550000000.0,
+      480000000.0,
+      430000000.0,
+      400000000.0,
+      380000000.0,
+      370000000.0,
+      360000000.0,
+      350000000.0,
+      350000000.0
+    ],
+    "reasoning": "The eight observations are sparse and volatile, and the final jump is a single point with no target definition or supporting covariates. I use a mildly elevated near-term level that gradually returns toward the earlier range rather than extrapolating the spike. The disaster-response text has no established link to the numeric series, so it does not affect the forecast. This trajectory is uncertain."
+  },
+  "horizon": 10,
+  "locked_utc": "2026-11-01T01:06:21.730060+00:00",
+  "ordinal": 6,
+  "outer_test_targets_read": false,
+  "paired_parameters": {
+    "memory_count": 1,
+    "strict_history_start": true,
+    "text_top_k": 5
+  },
+  "protocol": "agent_test8_frozen_one_pass_direct_nearest_v1",
+  "query_embedding_sha256": "0006bdde1fa8f2e4a9f11b330e17958cfcae87c3b8f6d469c882ed033c3e0f0e",
+  "request_sha256": {
+    "baseline_no_retrieval_paired_v1": "671088409ea691a0bee9662f4497e7229cebd4ad8c10ab6e2529b21df6cb119c",
+    "full_hic_forecast_paired_v2": "f96833d0f8ebcca5113c4d54f4cacf703a2cb267cfca4b652baef8f62b5cc24f",
+    "summary_direct_v2": "0a9b472944bb88373934e02e20d8ec73ce4fbfad8c8eda462f35b7e3902c29ed"
+  },
+  "retrieval_trace": {
+    "candidate_count": 703,
+    "eligibility_filter_applied": false,
+    "excluded_point_ids": [],
+    "mode": "direct_nearest",
+    "selected": [
+      {
+        "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+        "case_id": "security_validation_series_20170901T000000",
+        "correction": "{\"active_revision\":{\"qualitative_transfer_notes\":[\"Using a robust level baseline may have limited the influence of a volatile ending observation, but a flat forecast could not track the actual series' changing direction. This is an unverified hypothesis, not an established cause.\",\"The missing target definition, units, dates, and covariates may have made a directional forecast unjustified. This is an unverified hypothesis, not an established cause.\",\"Consider a robust level baseline when the visible history is short and volatile, the target and units are unknown, and no prediction-time evidence supports a direction or trend.\",\"Treat dated text as indirect context unless its relevance to the target is established from prediction-time evidence.\",\"Keep uncertainty explicit when the history is sparse and its dates, units, or relationship to available text are unclear.\",\"Do not apply this lesson when prediction-time evidence establishes a relevant trend, seasonal pattern, or relationship between text and target.\",\"Do not treat a flat forecast as suitable when the task context or visible history supports a different forecasting structure.\",\"Do not treat this single case as proof that a robust level baseline will generalize.\"]},\"active_revision_id\":\"test6_outcome_blind_transfer_v1+case_reflection_v1\",\"stored_correction\":\"{\\\"reflection\\\":{\\\"applicability_conditions\\\":[\\\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\\\",\\\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\\\",\\\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\\\"],\\\"exclusions\\\":[\\\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\\\"]},\\\"schema_version\\\":5,\\\"transfer_schema_version\\\":1}\"}",
+        "correction_sha256": "ffe89ce69aca9cda28ea62a5f9c41c0044ab258f9b6d32647e54a2554a9bcdd1",
+        "point_id": "adb35c6f-9e55-59d4-9b59-7bcb7a97ff33",
+        "query_history_start": "2017-03-01T00:00:00",
+        "same_data_source": true,
+        "same_history_origin": false,
+        "same_source_case": false,
+        "same_source_dataset": true,
+        "similarity": 0.94847584,
+        "source_case_id": "security_validation_series_20170901T000000",
+        "source_dataset": "Security",
+        "source_frequency": "monthly",
+        "source_history_start": "2017-09-01T00:00:00",
+        "source_horizon": 12,
+        "source_target_end": "2019-04-30T00:00:00",
+        "source_unit": "unknown",
+        "time_eligibility_policy": "source target_end < query history_start; audit only, never filters retrieval",
+        "time_eligible_strictly_prior": false
+      }
+    ]
+  },
+  "run_id": "agent_test8_remaining3families_15_20261101",
+  "semantic_input_sha256": "ef7bee6f2e4c700a2e53207c7df3ff6822c42b21ec511184915e1561adc7dec0",
+  "summary_prompt_version": "hic_summary_v2_task_context",
+  "validation_truth_read": false,
+  "worker_responses": {
+    "baseline_no_retrieval_paired_v1": {
+      "prompt_sha256": "87ee464eee917dd944f9104fd8608d1cbfe8aac00fb2714f6cc0151312f850eb",
+      "prompt_version": "agent_test8_paired_no_revision_v1",
+      "raw_response_sha256": "e2955a898ac04b62d9823be7a8cbcf1c26287fb73145013fa2909e19b4912af2",
+      "raw_response_text": "{\n  \"prediction\": [550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000, 550000000],\n  \"reasoning\": \"The series is volatile, and its final value of about 1.72 billion is a sharp jump from the prior observations. With no evidence that this jump will persist, I use a cautious elevated level that partly reflects it while allowing for mean reversion; uncertainty remains high.\"\n}",
+      "request_sha256": "671088409ea691a0bee9662f4497e7229cebd4ad8c10ab6e2529b21df6cb119c",
+      "response_source": "collaboration:/root/test8_case06_a",
+      "task_id": "agent_test8_remaining3families_15_20261101:security_validation_series_20170301T000000:H10:baseline_no_retrieval_paired_v1",
+      "worker_context_id": "/root/test8_case06_a"
+    },
+    "full_hic_forecast_paired_v2": {
+      "prompt_sha256": "76034d00d4f710e14fff646842ba18e8562cda116a4377e9c2f8d00d1b81f055",
+      "prompt_version": "agent_test8_paired_no_revision_v1",
+      "raw_response_sha256": "504487a371b8b2e1d519bdef485c73f7cd1a769b3b283671685b7a84aac587b1",
+      "raw_response_text": "{\n  \"prediction\": [650000000, 550000000, 480000000, 430000000, 400000000, 380000000, 370000000, 360000000, 350000000, 350000000],\n  \"reasoning\": \"The eight observations are sparse and volatile, and the final jump is a single point with no target definition or supporting covariates. I use a mildly elevated near-term level that gradually returns toward the earlier range rather than extrapolating the spike. The disaster-response text has no established link to the numeric series, so it does not affect the forecast. This trajectory is uncertain.\"\n}",
+      "request_sha256": "f96833d0f8ebcca5113c4d54f4cacf703a2cb267cfca4b652baef8f62b5cc24f",
+      "response_source": "collaboration:/root/test8_case06_b",
+      "task_id": "agent_test8_remaining3families_15_20261101:security_validation_series_20170301T000000:H10:full_hic_forecast_paired_v2",
+      "worker_context_id": "/root/test8_case06_b"
+    },
+    "summary_direct_v2": {
+      "prompt_sha256": "5b142fc92859ade242993a531ee082bdaecbe8654964ffff828618cdce4affc6",
+      "prompt_version": "agent_test8_paired_no_revision_v1",
+      "raw_response_sha256": "7c21d561447d119fb58e821e8ec2df76611a20c195fb8ac1f30decb08120ad52",
+      "raw_response_text": "{\n  \"dataset_info\": {\n    \"data_modalities\": \"numeric time series and dated text\",\n    \"dataset_name\": \"Security\",\n    \"frequency\": \"monthly\",\n    \"target_unit\": \"unknown\",\n    \"target_variable\": \"unknown\"\n  },\n  \"forecast_outlook\": {\n    \"confidence\": \"Low, because the short series is volatile and the text does not directly describe the target.\",\n    \"expected_direction\": \"The latest observation is sharply higher, but the history does not establish a persistent direction.\",\n    \"horizon\": \"10 months, at monthly frequency.\",\n    \"key_signal\": \"The series ends with a sharp increase to about 1.72 billion, following several fluctuating observations.\",\n    \"uncertainty\": \"The target’s meaning and unit are unknown, and the dated disaster-management text has no established link to the series.\"\n  },\n  \"predictive_factors\": {\n    \"covariates\": \"No covariate values were supplied.\",\n    \"temporal_patterns\": \"The series falls from about 355 million to 211 million, then fluctuates upward and downward before rising to 600 million and jumping to about 1.72 billion in its final observation. The ending level is markedly higher than earlier observations.\",\n    \"text_evidence\": \"Dated fragments from February through October 2017 discuss disaster response, preparedness, and relief. They are not independently verified and do not directly observe the target; their relevance to the numeric series is unclear.\",\n    \"uncertainty\": \"Only eight numeric observations are supplied, with no stated alignment between those observations and the dated text. The target, its unit, and any relationship to the text remain unresolved, so forecast direction is uncertain.\"\n  }\n}",
+      "request_sha256": "0a9b472944bb88373934e02e20d8ec73ce4fbfad8c8eda462f35b7e3902c29ed",
+      "response_source": "collaboration:/root/test8_case06_summary",
+      "task_id": "agent_test8_remaining3families_15_20261101:security_validation_series_20170301T000000:H10:summary_direct_v2",
+      "worker_context_id": "/root/test8_case06_summary"
+    }
+  }
+}

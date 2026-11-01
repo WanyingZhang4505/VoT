@@ -1,0 +1,38 @@
+{
+  "embedding": {
+    "dimension": 1024,
+    "max_length": 8192,
+    "model": "BAAI/bge-m3"
+  },
+  "frozen_utc": "2026-11-01T00:47:29.652948+00:00",
+  "implementation_files": {
+    "LLM/hic.py": "180515bc11c769d09d47732d3dc69d5ead8f74ef67aec3ce8770285aae7b68b9",
+    "LLM/hic_agent_validation.py": "103c2b0896e7def41f6064e2e85cb809fed1048b0ca0b691ab0303c33a9ff684",
+    "LLM/hic_codex_agent.py": "2064e98267f092610df19dee3d32bbfaa6cc0abe2216faa3736a3b757ba57136",
+    "LLM/hic_vnext.py": "72aa0ae5e90f3a3250541f6d182fadfeb30087c4e016382b01693e71e0b9151d",
+    "LLM/native_hic_data.py": "e6f5ca108558f599c492950c9058caeca978ef0eb2b861fc79cea5e26805e97d",
+    "LLM/qdrant_store.py": "a485d6f6ac93d407c00d52e878cf55641593fad35b3f92fb0d6aba3cb0f4b1e5",
+    "scripts/fork_test8_qdrant_collection.py": "8dec241cab01b05726ff316c13d2b8894b59c500a70ed42eb20ce93f74c764ed",
+    "scripts/prepare_agent_test8_manifest.py": "603a225892bab08646221c655d36e8d4501f455318802256ed9d195a70731832",
+    "scripts/run_agent_test8.py": "d3ad9f4c985bd8afd86cb490460583ab08e6d970be18fc5915f051e401155773"
+  },
+  "input_snapshots_sha256": "1e8f8af81ef7098bae530b70233f320763271e5475777ea9822507a1b5392f40",
+  "jobs_sha256": "5f0a21bf76d9949f9dcdc0c475be968b52c5cd3070a67d80cc8625815b791bdc",
+  "outer_test_targets_read": false,
+  "paired_forecast_parameters": {
+    "memory_count": 1,
+    "strict_history_start": true,
+    "text_top_k": 5
+  },
+  "paired_forecast_protocol": "hic_codex_direct_scope16_paired_validation_v3_full_hic_one_memory_isolated",
+  "preflight_evidence_sha256": "54c28d5c6053b5ac56b2a55538842c2923940d653ffce7239866073c085de601",
+  "protocol": "agent_test8_frozen_one_pass_direct_nearest_v1",
+  "qdrant_copy_manifest_sha256": "82eb8d93278d0d735f6735cfe8f8e5f94c7fd55d34179e191949cfa9819240a8",
+  "retrieval": "agent_test_8 direct_nearest Top-1; same Test 7 search semantics; no eligibility filtering",
+  "run_manifest_sha256": "075e71544fb9f0ce32721e537e0df0806fe8973631d0664cc7268b138493384e",
+  "score_protocol": "one A and one B; exact per-case truth reveal only after forecast lock; no revision",
+  "source_collection_immutable": true,
+  "summary_prompt_version": "hic_summary_v2_task_context",
+  "target_collection_frozen_point_count": 703,
+  "truth_read_before_first_prediction": false
+}

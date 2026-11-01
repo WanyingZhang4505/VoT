@@ -1,0 +1,22 @@
+{
+  "dataset_info": {
+    "data_modalities": "numeric time series, covariates when supplied, and dated text",
+    "dataset_name": "Health",
+    "frequency": "weekly",
+    "target_unit": "unknown",
+    "target_variable": "unknown"
+  },
+  "forecast_outlook": {
+    "confidence": "Low: the recent rise is clear, but the target meaning and unit are unknown, the endpoint has a slight pullback, and text evidence is not independently verified.",
+    "expected_direction": "No future direction asserted; the series rose sharply over the latter part of the supplied window, then edged down in its final two observations.",
+    "horizon": "36 weeks at weekly frequency.",
+    "key_signal": "The target climbed from about 0.79 near the early-window trough to a peak of 4.76, then eased to 4.57. Supplied weighted ILI also rose substantially and declined slightly at the end.",
+    "uncertainty": "The target’s real-world interpretation and unit are unspecified; the late-window pullback leaves the immediate pattern ambiguous, and text timing and relevance are limited."
+  },
+  "predictive_factors": {
+    "covariates": "% WEIGHTED ILI rose from 0.66 at its early-window low to 5.06, then fell to 4.58 at the end. ILITOTAL and the supplied age-bin counts also increased markedly in the later observations, with some late declines. These covariates do not establish the target’s meaning or a causal relationship.",
+    "temporal_patterns": "The target declined from about 1.00 to 0.79 early in the window, then generally rose, with a sharper increase in the later observations. It peaked at 4.76 and ended at 4.57 after two lower readings.",
+    "text_evidence": "The text includes a report of an H1N1 variant infection for the week ending December 12, 2015, which predates the supplied 2016–2017 history. It also gives August 3, 2016 as the date of an FDA approval. Other fragments provide broad influenza context, historical facts, or undated statements. The pipeline says the text is not independently source-verified; none is a direct observation of the numeric target.",
+    "uncertainty": "The target and unit are unknown, the supplied text is not independently verified and has mixed or unclear timing, and the final target observations show a small decline after a pronounced rise. No future target values or direction can be established from this history alone."
+  }
+}

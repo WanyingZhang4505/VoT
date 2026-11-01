@@ -1,0 +1,147 @@
+{
+  "contract_version": 1,
+  "as_of": "2026-10-19",
+  "upstream_artifact": {
+    "repository": "https://github.com/WanyingZhang4505/VoT",
+    "commit": "df600d5b6528ab3311ab2f0d8cd1566a2deb16c0",
+    "identity_evidence": "Each local CSV's CRLF-normalized Git blob matches the file at the pinned VoT commit. Per-file SHA-256 and blob IDs are recorded in data/source_manifest.json.",
+    "interpretation_limit": "This proves copied-artifact identity only. It does not prove how VoT obtained, selected, transformed, aggregated, or revised the original observations."
+  },
+  "paper_reference": {
+    "title": "Time-MMD: Multi-Domain Multimodal Dataset for Time Series Analysis",
+    "url": "https://arxiv.org/html/2406.08627v4",
+    "sections": ["Table 1", "Appendix D"]
+  },
+  "evaluation_policy": {
+    "same_artifact_numeric_evaluation": "exploratory_only",
+    "event_semantic_claim": "blocked_until_news_source_publication_time_and_target_relevance_are_audited",
+    "cross_dataset_or_cross_target_memory": "blocked_until_target_identity_unit_and_compatible_horizon_are_verified",
+    "source_hash_rule": "Verified HIC memory and query must carry the same plan-pinned source_sha256.",
+    "registry_is_enforced_by_runner": true
+  },
+  "official_source_checks": [
+    {
+      "dataset": "Agriculture",
+      "checked_at": "2026-10-20",
+      "source_url": "https://www.ers.usda.gov/data-products/meat-price-spreads/documentation",
+      "confirmed": "USDA ERS defines both wholesale and retail broiler composites in cents per retail pound and defines wholesale-to-retail spread as retail value minus wholesale value. The independently bounded fit-prefix audit found all 233 comparable fit rows satisfy OT = Wholesale broiler composite + Retail-wholesale spread for broiler composite within 1e-6 tolerance, supporting the retail-composite interpretation for that prefix.",
+      "mapping_status_unchanged": "partial",
+      "reason_not_upgraded": "The fit-prefix arithmetic supports the formula but does not prove the exact upstream ERS download, source revision/vintage, seasonal-adjustment status, or that the same mapping holds outside the audited fit prefix. The full-series follow-up read is separately recorded as an exposure and is not used to promote this contract."
+    },
+    {
+      "dataset": "Economy_sort",
+      "checked_at": "2026-10-19",
+      "source_url": "https://www2.census.gov/programs-surveys/trade/balance/c0015.html",
+      "confirmed": "The Census page labels the series U.S. trade in goods with the World, monthly, not seasonally adjusted; values are nominal millions of U.S. dollars and include exports, imports, and balance.",
+      "mapping_status_unchanged": "partial",
+      "reason_not_upgraded": "The existing local audit found 374/423 OT values equal Exports minus Imports and 49 differ by at most 0.1; the local source vintage, rounding/transform, and mapping to the paper's three-dimensional target remain unresolved."
+    },
+    {
+      "dataset": "Energy",
+      "checked_at": "2026-10-19",
+      "source_url": "https://www.eia.gov/dnav/pet/PET_PRI_GND_A_EPM0_PTE_DPGAL_W.htm",
+      "confirmed": "EIA publishes weekly retail gasoline prices by U.S. and regional areas in dollars per gallon, including taxes; the national regular-gasoline series has a documented EIA series identifier.",
+      "mapping_status_unchanged": "partial",
+      "reason_not_upgraded": "The local OT column has not been matched to the national EIA series ID or a documented transformation; the paper's nine-dimensional target mapping is unresolved."
+    },
+    {
+      "dataset": "Security",
+      "checked_at": "2026-10-19",
+      "source_url": "https://www.fema.gov/about/reports-and-data/openfema",
+      "confirmed": "OpenFEMA exposes multiple disaster, assistance, public-assistance, hazard-mitigation, and grants datasets through downloads and an API.",
+      "mapping_status_unchanged": "unknown",
+      "reason_not_upgraded": "The generic local OT schema does not identify which FEMA dataset, measure, unit, aggregation, or vintage produced the series."
+    },
+    {
+      "dataset": "SocialGood",
+      "checked_at": "2026-10-19",
+      "source_url": "https://www.bls.gov/developers/api_faqs.htm",
+      "confirmed": "BLS states that API retrieval requires the exact series ID; series identifiers encode survey-specific metadata, so a generic unemployment label is not enough to identify a series.",
+      "mapping_status_unchanged": "partial",
+      "reason_not_upgraded": "The local artifact has no verified BLS series ID, population/group definition, seasonal-adjustment status, unit, or explanation for the 892-versus-900 row difference."
+    }
+  ],
+  "datasets": [
+    {
+      "dataset": "Agriculture",
+      "local_file": "data/Agriculture.csv",
+      "local_sha256": "99135c58a8a67099970a990584c895530e3d56db309702271081981f976a71b6",
+      "local_rows": 496,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "monthly", "supporting_fields": ["Wholesale broiler composite", "Retail-wholesale spread for broiler composite"]},
+      "time_mmd_reference": {"target": "Retail Broiler Composite", "dimensions": 1, "frequency": "monthly", "samples": 496, "provider_named_in_paper": "USDA Economic Research Service", "source_url": "https://www.ers.usda.gov/data-products/meat-price-spreads/documentation/"},
+      "mapping_status": "partial",
+      "fit_prefix_reconciliation": {"audit": "docs/hic_agriculture_fit_contract_audit_20261020.md", "rows_compared": 233, "rows_matching_formula": 233, "tolerance": 1e-6, "maximum_absolute_residual": 5.115907697472721e-13, "scope": "native 64% fit prefix only; no validation or outer-test OT values"},
+      "evidence_and_gaps": "The native 64% fit prefix supports OT = wholesale broiler composite + retail-wholesale spread, consistent with the USDA ERS retail broiler composite definition and cents-per-retail-pound unit. The mapping remains partial because the exact upstream ERS artifact/revision, seasonal-adjustment status, and full source lineage are not proven. A later full-file read is logged as target exposure and is not used as clean confirmation or to promote this mapping."
+    },
+    {
+      "dataset": "Climate",
+      "local_file": "data/Climate.csv",
+      "local_sha256": "d5c0cffd3bfb27296e5031d89e0630e585fc0f221fb9c9b85775b1b2e2fdb50c",
+      "local_rows": 496,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "monthly", "code_interpretation": "contiguous U.S. monthly precipitation total", "code_unit": "inches", "supporting_fields": ["Anomaly"]},
+      "time_mmd_reference": {"target": "Drought Level", "dimensions": 5, "frequency": "monthly", "samples": 496, "provider_named_in_paper": "NOAA NCEI; numeric source link is drought.gov", "source_url": "https://www.drought.gov/historical-information?dataset=0&selectedDateUSDM=20240514"},
+      "mapping_status": "conflict",
+      "evidence_and_gaps": "The local VoT artifact is a single OT series; the paper describes a five-dimensional drought target. In an independent NOAA NCEI Climate at a Glance check, all 314 local monthly OT values from 1983-01 through 2009-02 matched the displayed contiguous-U.S. precipitation 1-Month/All Months values exactly at 0.01-inch precision. This strongly supports the local precipitation/inches interpretation, but does not prove the original download field or transformation lineage. Keep the paper-target mapping as conflict; do not call this the paper's unchanged Drought Level series. The same NOAA page also exposed March-December 2009 values; see data/external_reference_exposure_ledger_20261019.json."
+    },
+    {
+      "dataset": "Economy_sort",
+      "local_file": "data/Economy_sort.csv",
+      "local_sha256": "275af408db7cd60ed5744dd78d72bdd83672996571b51d0a5433f51ae82690f7",
+      "local_rows": 423,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "monthly", "supporting_fields": ["Exports", "Imports"]},
+      "time_mmd_reference": {"target": "International Trade Balance", "dimensions": 3, "frequency": "monthly", "samples": 423, "provider_named_in_paper": "U.S. Census Bureau", "source_url": "https://www.census.gov/foreign-trade/balance/c0015.html"},
+      "mapping_status": "partial",
+      "evidence_and_gaps": "The local file has 423 rows; 374 OT values equal Exports minus Imports within floating-point tolerance, while 49 differ by at most 0.1. This supports a trade-balance relationship, but does not settle the difference, units, seasonal adjustment, source vintage, or mapping from the local scalar OT to the paper's three-dimensional target."
+    },
+    {
+      "dataset": "Energy",
+      "local_file": "data/Energy.csv",
+      "local_sha256": "d32f6dca6818cf8cb415c15af77a9d8e63904a04bf2cd8243fde92ffb67e547f",
+      "local_rows": 1479,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "weekly", "supporting_fields": ["eight named regional retail gasoline price series in dollars per gallon"]},
+      "time_mmd_reference": {"target": "Gasoline Prices", "dimensions": 9, "frequency": "weekly", "samples": 1479, "unit_named_in_paper": "U.S. dollars per gallon", "provider_named_in_paper": "U.S. Energy Information Administration", "source_url": "https://www.eia.gov/petroleum/gasdiesel/"},
+      "mapping_status": "partial",
+      "evidence_and_gaps": "The local file contains OT and eight clearly labeled regional price columns, consistent with a nine-value gasoline-price family. The exact meaning of OT (for example, national series or another aggregate), its exact EIA series ID, and the paper-to-local column mapping have not been verified."
+    },
+    {
+      "dataset": "Health",
+      "local_file": "data/Health.csv",
+      "local_sha256": "63b7bcd452c021edf241206262a239d063c908ba1115e3d23f0de70055f6aff4",
+      "local_rows": 1389,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "weekly", "supporting_fields": ["% WEIGHTED ILI", "AGE 0-4", "AGE 25-49", "AGE 25-64", "AGE 5-24", "AGE 50-64", "AGE 65", "ILITOTAL", "NUM. OF PROVIDERS", "TOTAL PATIENTS", "REGION", "REGION TYPE"]},
+      "time_mmd_reference": {"target": "Influenza Patients Proportion", "dimensions": 11, "frequency": "weekly", "samples": 1389, "provider_named_in_paper": "U.S. Centers for Disease Control and Prevention", "source_url": "https://www.cdc.gov/flu/weekly/pastreports.htm"},
+      "mapping_status": "conflict",
+      "evidence_and_gaps": "The local CSV contains multiple plausible ILI measures and subgroup fields; in an inspected row, OT differs from % WEIGHTED ILI. The HIC loader forecasts only OT, while the paper describes an 11-dimensional target. Exact OT definition, geography/group aggregation, denominator, and mapping to the paper are unresolved."
+    },
+    {
+      "dataset": "Security",
+      "local_file": "data/Security.csv",
+      "local_sha256": "f01af1376e25d182b2c8adc06436d864ae0abf5978aba22be7d2d598678cb837",
+      "local_rows": 297,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "monthly"},
+      "time_mmd_reference": {"target": "Disaster and Emergency Grants", "dimensions": 1, "frequency": "monthly", "samples": 297, "provider_named_in_paper": "Federal Emergency Management Agency OpenFEMA", "source_url": "https://www.fema.gov/about/openfema/data-sets"},
+      "mapping_status": "unknown",
+      "evidence_and_gaps": "The local schema contains only generic OT plus dates/text fields. The name, measure, unit, aggregation rule, FEMA dataset/table, and source vintage are not identifiable from the local schema alone."
+    },
+    {
+      "dataset": "SocialGood",
+      "local_file": "data/SocialGood.csv",
+      "local_sha256": "009eda3907fc049c38c3d7918423cb82866d2f0760582388ef3cadc38560f4c2",
+      "local_rows": 892,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "monthly"},
+      "time_mmd_reference": {"target": "Unemployment Rate", "dimensions": 1, "frequency": "monthly", "samples": 900, "provider_named_in_paper": "U.S. Bureau of Labor Statistics", "source_url": "https://data.bls.gov/home.htm"},
+      "mapping_status": "partial",
+      "evidence_and_gaps": "The domain, single target dimension, and monthly cadence are plausible matches, but the local series has 892 rows versus 900 in the paper table. Exact BLS series ID, population/group definition, unit, seasonal adjustment, missing-period explanation, and revision vintage are unresolved."
+    },
+    {
+      "dataset": "new_metr",
+      "local_file": "data/new_metr.csv",
+      "local_sha256": "0f135daea9c4a4fc2dc6f06e2e1e45c2b4b5b2a82c169624d2bbbbc3ace402b4",
+      "local_rows": 12339,
+      "local_target": {"field": "OT", "dimensions_used_by_hic": 1, "frequency": "irregular", "supporting_fields": ["MINTEMP", "MAXTEMP", "HUMIDITY"]},
+      "time_mmd_reference": null,
+      "mapping_status": "unknown",
+      "evidence_and_gaps": "This file is not one of the nine Table 1 Time-MMD targets. Its timestamps are irregular and the local schema does not identify OT's measurement, unit, entity, aggregation, or original provider. Keep it as a separately named local series; do not map it to the paper's Environment or Climate target by theme."
+    }
+  ]
+}

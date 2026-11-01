@@ -1,0 +1,24 @@
+{
+  "dataset_info": {
+    "dataset_name": "SocialGood monthly series",
+    "domain": "United States labor-market time series",
+    "target_variable": "OT (single numeric target series)",
+    "unit": "Percent-like numeric scale as supplied; source metadata not independently verified",
+    "frequency": "Monthly",
+    "data_modalities": "Numeric time series and timestamped text facts",
+    "geography": "United States",
+    "subgroup_fields": "None present in the supplied CSV"
+  },
+  "predictive_factors": {
+    "Temporal Dynamics for prediction": "Describe the direction, volatility, and changes in the supplied OT history; do not infer subgroup patterns.",
+    "External Drivers for prediction": "Summarize only relevant, dated labor-market or economic facts provided in the input. Separate reported facts from inference and do not claim causality.",
+    "Evidence Quality for prediction": "Note missing, noisy, contradictory, or weakly related text evidence and explain its uncertainty."
+  },
+  "forecast_outlook": {
+    "expected_direction": "Concise expected direction over the target horizon.",
+    "key_driver": "Most relevant supported signal, or state that evidence is insufficient.",
+    "confidence": "Low, medium, or high with a short evidence-based reason.",
+    "uncertainty": "Main ambiguity or limitation in the supplied history and text.",
+    "horizon": "The next 12 monthly target values."
+  }
+}

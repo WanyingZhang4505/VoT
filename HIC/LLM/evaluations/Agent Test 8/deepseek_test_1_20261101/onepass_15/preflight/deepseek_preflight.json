@@ -1,0 +1,65 @@
+{
+  "api_calls": 0,
+  "excluded_validation_feedback_count": 15,
+  "outer_test_targets_read": false,
+  "protocol": "agent_test8_deepseek_preflight_config_v1",
+  "provider": {
+    "api_key_configured": true,
+    "backend": "deepseek_api",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "max_tokens": 2048,
+    "model": "deepseek-flash",
+    "response_format": "json_object",
+    "temperature": 0.7,
+    "thinking": "disabled"
+  },
+  "qdrant_restore_receipt_sha256": "c0a8742e7fa388482ce82c5ad99b1adf884da1d580f753e59ccf12920030d8ed",
+  "qdrant_source_audit_sha256": "da1f47708c0af49093ed0145fbe3b839aeb1f2e45839c59b0db8386344a30391",
+  "qdrant_writes": 0,
+  "restore_status": "pending; run the non-overwriting restore command",
+  "retrieval_collection": "DeepSeek Test 1",
+  "retrieval_collection_live_points_before_filter": 718,
+  "retrieval_collection_points_after_excluding_current_cases": 703,
+  "retrieval_collection_source": "agent_test_8",
+  "retrieval_snapshot": {
+    "bytes": 14443556,
+    "dimension": 1024,
+    "distance": "Cosine",
+    "path": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_snapshot/agent_test_8_filtered_703.jsonl",
+    "point_count": 703,
+    "sha256": "0dbd02848356f0497dee90bcdcee4e4e3b4422f480db00b2f98abc7834641acf",
+    "unique_ids": 703
+  },
+  "scope": {
+    "case_count": 15,
+    "case_ids": [
+      "health_validation_National|X_20150126T000000",
+      "health_validation_National|X_20151005T000000",
+      "health_validation_National|X_20160613T000000",
+      "security_validation_series_20150701T000000",
+      "security_validation_series_20160501T000000",
+      "security_validation_series_20170301T000000",
+      "new_metr_validation_series_20190923T060000",
+      "new_metr_validation_series_20191126T060000",
+      "new_metr_validation_series_20200129T060000",
+      "new_metr_validation_series_20200402T060000",
+      "new_metr_validation_series_20200605T060000",
+      "new_metr_validation_series_20200808T060000",
+      "new_metr_validation_series_20201011T060000",
+      "new_metr_validation_series_20201214T060000",
+      "new_metr_validation_series_20210216T060000"
+    ],
+    "group_counts": {
+      "Health/H36": 3,
+      "Security/H10": 3,
+      "new_metr/H192": 9
+    }
+  },
+  "sources": {
+    "Health/H36": "63b7bcd452c021edf241206262a239d063c908ba1115e3d23f0de70055f6aff4",
+    "Security/H10": "f01af1376e25d182b2c8adc06436d864ae0abf5978aba22be7d2d598678cb837",
+    "new_metr/H192": "0f135daea9c4a4fc2dc6f06e2e1e45c2b4b5b2a82c169624d2bbbbc3ace402b4"
+  },
+  "validation_truth_read": false,
+  "verified_utc": "2026-11-01T04:03:22.661373+00:00"
+}

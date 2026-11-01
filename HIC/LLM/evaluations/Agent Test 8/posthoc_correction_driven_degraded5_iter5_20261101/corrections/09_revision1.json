@@ -1,0 +1,26 @@
+{
+  "ordinal": 9,
+  "case_id": "new_metr_validation_series_20200129T060000",
+  "iteration": 1,
+  "source": "original Test 8 Top-1 correction, case-local revision based on this case original B0 validation error feedback",
+  "prior_correction_sha256": "78537332ce36aa26a7199579f68355cddbbd9306821891efae6824cb3dfa835e",
+  "updated_correction": {
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "A flat continuation may be vulnerable to an unobserved level shift later in the forecast horizon; this is a hypothesis, not an established cause.",
+        "The supplied context does not establish a relationship between the target and weather information, so that information may not have helped anticipate changes.",
+        "Treat this as a caution when the target is unnamed or its relationship to supplied covariates is unestablished, the visible history contains abrupt level shifts, and the forecast holds a flat level over a long irregular horizon.",
+        "Use only when prediction-time evidence supports describing the recent level as steady; retain uncertainty about possible shifts rather than treating a plateau as proof of persistence.",
+        "Do not apply when prediction-time evidence establishes a reliable target relationship or a clear trend that supports a different forecast shape.",
+        "Exclude text or covariates whose timing, alignment, relevance, or source quality is too uncertain to inform the forecast.",
+        "Post-hoc case-local empirical update: The first B forecast added detailed oscillations over a long irregular horizon and had worse absolute error than the flat A baseline. When intervals are irregular and the target is undefined, do not invent a future oscillation schedule. Prefer a stable level supported by the dominant recent history; only add variation when the pre-target sequence establishes a repeatable pattern."
+      ]
+    },
+    "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+    "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\",\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\",\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\"],\"exclusions\":[\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\"]},\"schema_version\":5,\"transfer_schema_version\":1}"
+  },
+  "updated_correction_sha256": "d2092c9dbdcf86c90e0525f3f7778ba80d5969f5fbb03c71f94a58bacf1aab52",
+  "validation_truth_used_for_correction_update": true,
+  "outer_test_targets_read": false,
+  "qdrant_write": false
+}

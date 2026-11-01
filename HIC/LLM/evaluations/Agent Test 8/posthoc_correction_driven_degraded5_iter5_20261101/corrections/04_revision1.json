@@ -1,0 +1,27 @@
+{
+  "ordinal": 4,
+  "case_id": "security_validation_series_20150701T000000",
+  "iteration": 1,
+  "source": "original Test 8 Top-1 correction, case-local revision based on this case original B0 validation error feedback",
+  "prior_correction_sha256": "fd1c776ea6be9fe29805ce10cf7155989587321e553c17f6f823c4ffc497b021",
+  "updated_correction": {
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "A flat forecast may smooth away sharp movements in a volatile series, leaving it high when values are low and low when values spike. This is a hypothesis, not an established cause.",
+        "The history and the forecast-time text may not contain enough target-specific information to identify future direction. Their relevance to the numeric series is unverified.",
+        "Consider this lesson when the visible history is short and volatile, the forecast is flat or heavily smoothed, and the target definition or the text’s connection to it is unclear.",
+        "Check the current forecast and visible history for evidence of a stable level or trend before applying this reflection. Use only text that is demonstrably relevant to the target when considering directional adjustments.",
+        "Do not apply the flat-forecast lesson when prediction-time evidence supports a stable trend, recurring pattern, or relevant target-linked signal.",
+        "Do not infer a directional adjustment from dated text whose relationship to the target is unclear.",
+        "Treat this as a hypothesis from one case, not evidence that the same behavior will recur.",
+        "Post-hoc case-local empirical update: The first B forecast held a flat level that was too high for the robust center: its validation errors were dominated by one isolated large excursion while the other observations clustered lower. For a short, volatile horizon with an undefined target, do not extrapolate an isolated high historical point as a persistent level. Reassess the typical level from the pre-target history and keep unsupported spikes out of the flat baseline."
+      ]
+    },
+    "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+    "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\",\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\",\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\"],\"exclusions\":[\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\"]},\"schema_version\":5,\"transfer_schema_version\":1}"
+  },
+  "updated_correction_sha256": "10b59ca80c7b5895766a00fa067f4212a732015b491e2f70ddfdd9d778347c28",
+  "validation_truth_used_for_correction_update": true,
+  "outer_test_targets_read": false,
+  "qdrant_write": false
+}

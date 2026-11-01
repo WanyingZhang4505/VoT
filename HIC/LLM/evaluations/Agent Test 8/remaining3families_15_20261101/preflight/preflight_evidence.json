@@ -1,0 +1,65 @@
+{
+  "docker_container": "researchgnn-qdrant-1",
+  "embedding": {
+    "dimension": 1024,
+    "finite": true,
+    "max_length": 8192,
+    "model": "BAAI/bge-m3",
+    "norm": 1.0000000219347915,
+    "smoke_vector_sha256": "b6169af9cb05cb1ae5a162ea1c58e297a0842e84a0219ce48635d2df3c16fbe7"
+  },
+  "protocol": "agent_test8_preflight_v1",
+  "qdrant_collections": {
+    "agent_test_7": {
+      "distance": "Cosine",
+      "points_count": 703,
+      "status": "green",
+      "vector_size": 1024
+    },
+    "agent_test_8": {
+      "distance": "Cosine",
+      "points_count": 703,
+      "status": "green",
+      "vector_size": 1024
+    }
+  },
+  "qdrant_copy_manifest_sha256": "82eb8d93278d0d735f6735cfe8f8e5f94c7fd55d34179e191949cfa9819240a8",
+  "qdrant_readyz_http_status": 200,
+  "qdrant_rest_url": "http://127.0.0.1:6333",
+  "qdrant_version": "1.19.2",
+  "scope": {
+    "case_ids": [
+      "health_validation_National|X_20150126T000000",
+      "health_validation_National|X_20151005T000000",
+      "health_validation_National|X_20160613T000000",
+      "security_validation_series_20150701T000000",
+      "security_validation_series_20160501T000000",
+      "security_validation_series_20170301T000000",
+      "new_metr_validation_series_20190923T060000",
+      "new_metr_validation_series_20191126T060000",
+      "new_metr_validation_series_20200129T060000",
+      "new_metr_validation_series_20200402T060000",
+      "new_metr_validation_series_20200605T060000",
+      "new_metr_validation_series_20200808T060000",
+      "new_metr_validation_series_20201011T060000",
+      "new_metr_validation_series_20201214T060000",
+      "new_metr_validation_series_20210216T060000"
+    ],
+    "cases_with_nonempty_text": 15,
+    "group_counts": {
+      "Health/H36": 3,
+      "Security/H10": 3,
+      "new_metr/H192": 9
+    },
+    "job_count": 15,
+    "outer_test_targets_read": false,
+    "validation_truth_read": false
+  },
+  "target_collection_writes_from_test8": 0,
+  "target_data_sha256": {
+    "Health/H36": "63b7bcd452c021edf241206262a239d063c908ba1115e3d23f0de70055f6aff4",
+    "Security/H10": "f01af1376e25d182b2c8adc06436d864ae0abf5978aba22be7d2d598678cb837",
+    "new_metr/H192": "0f135daea9c4a4fc2dc6f06e2e1e45c2b4b5b2a82c169624d2bbbbc3ace402b4"
+  },
+  "verified_utc": "2026-11-01T00:47:29.649785+00:00"
+}

@@ -1,0 +1,221 @@
+{
+  "case_count": 5,
+  "case_results": [
+    {
+      "case_id": "security_validation_series_20150701T000000",
+      "final_direction": "improved",
+      "horizon": 10,
+      "initial_top1_point_id": "04d90392-e9c9-5a99-9562-84cfe94411f5",
+      "initial_top1_source_case_id": "security_validation_series_20150901T000000",
+      "initial_top1_time_eligible": false,
+      "iterations": [
+        {
+          "correction_sha256": "680d8928aa485eba84f53cd7afb0afcbac2a3d0febfd2e00917d7dff8a17fe4a",
+          "direction_vs_original_A": "improved",
+          "direction_vs_previous_B": "improved",
+          "iteration": 1,
+          "metrics": {
+            "mae": 208342886.9,
+            "mse": 2.7137200637297674e+17,
+            "rmse": 520933783.0981753
+          },
+          "prediction_sha256": "94629239f2a28558a8e4da7596425e733f5ef00295ee945bf822d090b859fabe",
+          "request_sha256": "e4e6486ad246b120b00756447c28b06c125b10ccaa94bcdf7103e4e85f36343a",
+          "response_sha256": "5be7e3c8bb6333aa324741e792655be5d9a6e022b4afc4469e141d8507d74939",
+          "worker_context_id": "/root/test8_posthoc_case04_iter1"
+        }
+      ],
+      "ordinal": 4,
+      "original_A": {
+        "mae": 285440579.1,
+        "mse": 2.455166334079767e+17,
+        "rmse": 495496350.54960465
+      },
+      "original_B0": {
+        "mae": 288440579.1,
+        "mse": 2.453750688229767e+17,
+        "rmse": 495353478.66243625
+      },
+      "original_direction": "worsened",
+      "revision_count": 1,
+      "stopped_reason": "stopped_at_first_non_worse"
+    },
+    {
+      "case_id": "security_validation_series_20160501T000000",
+      "final_direction": "improved",
+      "horizon": 10,
+      "initial_top1_point_id": "cd6e2e57-6583-5701-a735-bd817caaeb69",
+      "initial_top1_source_case_id": "security_validation_series_20160501T000000",
+      "initial_top1_time_eligible": false,
+      "iterations": [
+        {
+          "correction_sha256": "86fc8cde189094c65db4bb1f0b493280111953604df8659338a098cb4f29c36d",
+          "direction_vs_original_A": "improved",
+          "direction_vs_previous_B": "improved",
+          "iteration": 1,
+          "metrics": {
+            "mae": 230639687.9,
+            "mse": 2.262324435148247e+17,
+            "rmse": 475638984.4354904
+          },
+          "prediction_sha256": "ac32fa3b05d58859ed3ab4ffd69cdea83fa7118271f0ea0192e8d4f7a0104090",
+          "request_sha256": "80a306f0d7fb15e948774f66f5c3f60d8d2605008bbdd85a6a4268f323c952bf",
+          "response_sha256": "f1d5d558dc9deff34b926b1640615b7ff7197412ff6d3db03e731b6dbb02218d",
+          "worker_context_id": "/root/test8_posthoc_case05_iter1"
+        }
+      ],
+      "ordinal": 5,
+      "original_A": {
+        "mae": 243055522.3,
+        "mse": 2.4106677430842147e+17,
+        "rmse": 490985513.33865386
+      },
+      "original_B0": {
+        "mae": 244135942.7,
+        "mse": 2.4226275304407066e+17,
+        "rmse": 492201943.35665786
+      },
+      "original_direction": "worsened",
+      "revision_count": 1,
+      "stopped_reason": "stopped_at_first_non_worse"
+    },
+    {
+      "case_id": "security_validation_series_20170301T000000",
+      "final_direction": "improved",
+      "horizon": 10,
+      "initial_top1_point_id": "adb35c6f-9e55-59d4-9b59-7bcb7a97ff33",
+      "initial_top1_source_case_id": "security_validation_series_20170901T000000",
+      "initial_top1_time_eligible": false,
+      "iterations": [
+        {
+          "correction_sha256": "1778adc20af110fd72373ec97c36cc840d3dd8152bf7f90da0e64a3ede6021e9",
+          "direction_vs_original_A": "improved",
+          "direction_vs_previous_B": "improved",
+          "iteration": 1,
+          "metrics": {
+            "mae": 373132681.5,
+            "mse": 2.5027482524036368e+17,
+            "rmse": 500274749.75293696
+          },
+          "prediction_sha256": "3ff045fa87e5ea438788c4ee4710ed5770d41b30959fc26856ef95bbacac596f",
+          "request_sha256": "6b465e4fab5d8c6f0263bf8530cee0efe20727c5072bd2d48af9b8e9b5e40825",
+          "response_sha256": "ceede22606b45f934a48cfdc56d2c05ef5c6c485d247f099b400c146070204a1",
+          "worker_context_id": "/root/test8_posthoc_case06_iter1"
+        }
+      ],
+      "ordinal": 6,
+      "original_A": {
+        "mae": 505756931.3,
+        "mse": 4.5920182770683814e+17,
+        "rmse": 677644322.4190978
+      },
+      "original_B0": {
+        "mae": 591586033.3,
+        "mse": 5.984324732368381e+17,
+        "rmse": 773584173.3365788
+      },
+      "original_direction": "worsened",
+      "revision_count": 1,
+      "stopped_reason": "stopped_at_first_non_worse"
+    },
+    {
+      "case_id": "new_metr_validation_series_20200129T060000",
+      "final_direction": "tied",
+      "horizon": 192,
+      "initial_top1_point_id": "4ff01674-3cd3-5198-8c09-39f67f221d20",
+      "initial_top1_source_case_id": "new_metr_validation_series_20200129T060000",
+      "initial_top1_time_eligible": false,
+      "iterations": [
+        {
+          "correction_sha256": "0c9cb1573def7f1c6214ea320a2f06d2ba83e6689d722252d802aa0979bcaefe",
+          "direction_vs_original_A": "tied",
+          "direction_vs_previous_B": "improved",
+          "iteration": 1,
+          "metrics": {
+            "mae": 3.953125,
+            "mse": 47.015625,
+            "rmse": 6.856794075951239
+          },
+          "prediction_sha256": "b5eec1b006887b521c49606342224c2ef99c2b476d9f07adf8519445ebd790c8",
+          "request_sha256": "419a58983357bcadb101817addb09f3d1d4b420c17a7512e8960a223a7a57fa5",
+          "response_sha256": "d4f43d07a8276f6a69715aabce60ebf12b1622c013b73b1765ba1255034c8ebd",
+          "worker_context_id": "/root/test8_posthoc_case09_iter1"
+        }
+      ],
+      "ordinal": 9,
+      "original_A": {
+        "mae": 3.953125,
+        "mse": 47.015625,
+        "rmse": 6.856794075951239
+      },
+      "original_B0": {
+        "mae": 4.588541666666667,
+        "mse": 38.255208333333336,
+        "rmse": 6.185079492887164
+      },
+      "original_direction": "worsened",
+      "revision_count": 1,
+      "stopped_reason": "stopped_at_first_non_worse"
+    },
+    {
+      "case_id": "new_metr_validation_series_20200605T060000",
+      "final_direction": "tied",
+      "horizon": 192,
+      "initial_top1_point_id": "5ed59414-3f8c-55a4-aae1-7dffe91c46b3",
+      "initial_top1_source_case_id": "new_metr_validation_series_20201027T060000",
+      "initial_top1_time_eligible": false,
+      "iterations": [
+        {
+          "correction_sha256": "3d393bdd84c25766e91c262420bad2f58682c3a9c54fba3bee129b43af145f30",
+          "direction_vs_original_A": "tied",
+          "direction_vs_previous_B": "improved",
+          "iteration": 1,
+          "metrics": {
+            "mae": 2.5677083333333335,
+            "mse": 18.796875,
+            "rmse": 4.335536299006156
+          },
+          "prediction_sha256": "b5eec1b006887b521c49606342224c2ef99c2b476d9f07adf8519445ebd790c8",
+          "request_sha256": "284a30d8b26d7e9f671f08eb915d459a09e99a585af4e47da236e34fc8c2f75a",
+          "response_sha256": "4af0b4da17b48f7486308e7715205d6e85a317a175809c97da56a6fc2571a3bb",
+          "worker_context_id": "/root/posthoc_local_case11_iter1"
+        }
+      ],
+      "ordinal": 11,
+      "original_A": {
+        "mae": 2.5677083333333335,
+        "mse": 18.796875,
+        "rmse": 4.335536299006156
+      },
+      "original_B0": {
+        "mae": 2.859375,
+        "mse": 16.182291666666668,
+        "rmse": 4.022721922612432
+      },
+      "original_direction": "worsened",
+      "revision_count": 1,
+      "stopped_reason": "stopped_at_first_non_worse"
+    }
+  ],
+  "classification": "post-hoc validation-truth-aware tuning; not a benchmark result",
+  "created_utc": "2026-11-01T02:29:42.392815+00:00",
+  "final_direction_counts_vs_original_A": {
+    "improved": 3,
+    "tied": 2,
+    "worsened": 0
+  },
+  "iterations_total": 5,
+  "max_iterations_per_case": 5,
+  "outer_test_targets_read": false,
+  "qdrant_writes": 0,
+  "run_id": "agent_test8_posthoc_degraded5_iter5_20261101",
+  "source_run_id": "agent_test8_remaining3families_15_20261101",
+  "status": "complete_superseded_for_correction_effect_question",
+  "validation_truth_feedback_used": true,
+  "execution_notes": [
+    "All five cases produced one valid revision and stopped at the first non-worse result; no technical failures or retries.",
+    "Ordinal 11 iteration 1 response was authored in the primary agent context from its frozen post-hoc task; the response hash and request hash are recorded in case results.",
+    "Validation truth feedback was intentionally used for this post-hoc tuning exercise; these results are not a blind benchmark."
+  ],
+  "superseded_note": "The first post-hoc pilot revised forecasts directly; it did not establish the effect of injecting an updated correction before reforecasting. Use posthoc_correction_driven_degraded5_iter5_20261101 for correction-driven results."
+}

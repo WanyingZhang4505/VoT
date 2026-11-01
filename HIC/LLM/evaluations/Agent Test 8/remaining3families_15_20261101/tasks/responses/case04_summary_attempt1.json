@@ -1,0 +1,22 @@
+{
+  "dataset_info": {
+    "data_modalities": "numeric time series, covariates when supplied, and dated text",
+    "dataset_name": "Security",
+    "frequency": "monthly",
+    "target_unit": "unknown",
+    "target_variable": "unknown"
+  },
+  "forecast_outlook": {
+    "confidence": "Low: the short numeric history is highly volatile, and the text has no established direct relevance to the target.",
+    "expected_direction": "Evidence is insufficient to support a directional expectation.",
+    "horizon": "10 months at monthly frequency.",
+    "key_signal": "The series falls sharply, rebounds to a pronounced peak, then drops and partially recovers.",
+    "uncertainty": "The values have no supplied dates or unit, and the dated text is unverified and does not directly identify the target."
+  },
+  "predictive_factors": {
+    "covariates": "No covariate values were supplied.",
+    "temporal_patterns": "Across the eight observations, the value drops from about 1.265 billion to 344 million, edges up to 362 million, spikes to about 1.501 billion, then declines to 260 million before rising to 342 million. Volatility is high; the sequence has no sustained direction.",
+    "text_evidence": "Dated fragments from June 2015 to February 2016 discuss US disaster preparedness, response, and assistance. They provide general context but no direct target observations; their source verification and target relevance are not established.",
+    "uncertainty": "The short history lacks dates and units, and the supplied text does not establish a relationship to the numeric series. No future target values or direction can be inferred reliably."
+  }
+}

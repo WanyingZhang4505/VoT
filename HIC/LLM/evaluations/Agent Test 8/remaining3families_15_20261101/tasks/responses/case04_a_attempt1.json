@@ -1,0 +1,4 @@
+{
+  "prediction": [375000000, 375000000, 375000000, 375000000, 375000000, 375000000, 375000000, 375000000, 375000000, 375000000],
+  "reasoning": "The eight observations are highly volatile and show no sustained direction. A flat forecast near the historical median provides a robust baseline that is less affected by the two large spikes. The short history and unknown target units make longer-term changes uncertain."
+}

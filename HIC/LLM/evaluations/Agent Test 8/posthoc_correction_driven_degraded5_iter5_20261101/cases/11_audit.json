@@ -1,0 +1,14 @@
+{
+  "case_id": "new_metr_validation_series_20200605T060000",
+  "ordinal": 11,
+  "original_B0_prediction_sha256": "3a39337f4f33f3397c5a03b7cad54b5bf0def75ab74f072d9129e56de1fa0510",
+  "revised_correction_sha256": "6bf17fa2a3628ffc6c0a4b52fa5566786cfbabd90536311bbc83aaf296e0f8fd",
+  "revised_forecast_prediction_sha256": "b5eec1b006887b521c49606342224c2ef99c2b476d9f07adf8519445ebd790c8",
+  "truth_sha256": "81a2bf578f32ce22c36f73c2a85aee609fb13aef5e92ad07f4b90d16f7014f1c",
+  "metrics": {
+    "mae": 2.5677083333333335,
+    "mse": 18.796875,
+    "rmse": 4.335536299006156
+  },
+  "truth_read_after_original_predictions_locked": true
+}

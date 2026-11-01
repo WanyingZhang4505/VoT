@@ -1,0 +1,27 @@
+{
+  "ordinal": 11,
+  "case_id": "new_metr_validation_series_20200605T060000",
+  "iteration": 1,
+  "source": "original Test 8 Top-1 correction, case-local revision based on this case original B0 validation error feedback",
+  "prior_correction_sha256": "220ce5e4c92a4cbac97e55dd379daf0861f7aabd0c3e1a233d5ec95839a1a073",
+  "updated_correction": {
+    "active_revision": {
+      "qualitative_transfer_notes": [
+        "A long horizon over an irregular, volatile series may encounter level changes that the forecast does not represent.",
+        "The isolated zero in the history could be anomalous or valid; either interpretation may affect a forecast based on typical nonzero values. The evidence does not resolve which applies.",
+        "Check whether the visible history has level changes or substantial volatility that the current forecast does not reflect.",
+        "Use text only when its timing, relevance to the target, and relationship to the observations are clear; otherwise treat it as weak context.",
+        "Do not apply a directional adjustment when the current forecast or visible history supports a different direction or changing levels.",
+        "Do not transfer this reflection when the target, sampling pattern, forecast shape, or quality and relevance of available text differ materially.",
+        "Do not infer a causal relationship from weather descriptions or aligned anomalous values without supporting evidence.",
+        "Post-hoc case-local empirical update: The first B forecast used a flat level one unit below the better A baseline. With a mostly level series and no supported trend, use the dominant recent central level rather than shifting the baseline downward based on scattered dips or an ambiguous zero. Do not extrapolate the timing of those dips."
+      ]
+    },
+    "active_revision_id": "test6_outcome_blind_transfer_v1+case_reflection_v1",
+    "stored_correction": "{\"reflection\":{\"applicability_conditions\":[\"Compare a candidate forecast with the pre-target history and do not assume continuation or reversal beyond what the available evidence establishes.\",\"Use text or covariates only when their relation to the target, units, and time alignment is clear.\",\"When target identity or units are unclear, do not infer target-specific effects from domain text without an established link.\"],\"exclusions\":[\"This transfer record contains no realized target values, forecast values, or outcome-specific error pattern.\"]},\"schema_version\":5,\"transfer_schema_version\":1}"
+  },
+  "updated_correction_sha256": "6bf17fa2a3628ffc6c0a4b52fa5566786cfbabd90536311bbc83aaf296e0f8fd",
+  "validation_truth_used_for_correction_update": true,
+  "outer_test_targets_read": false,
+  "qdrant_write": false
+}

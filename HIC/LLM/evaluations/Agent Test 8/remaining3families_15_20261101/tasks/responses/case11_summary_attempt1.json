@@ -1,0 +1,22 @@
+{
+  "dataset_info": {
+    "data_modalities": "numeric time series, covariates when supplied, and dated text",
+    "dataset_name": "new_metr",
+    "frequency": "irregular",
+    "target_unit": "unknown",
+    "target_variable": "unknown"
+  },
+  "forecast_outlook": {
+    "confidence": "Low: the history is mostly level but irregular, and includes an isolated zero whose meaning is unclear.",
+    "expected_direction": "No clear direction is supported by the observed history; the latest readings are 85 then 90 after a mostly 90–100 range.",
+    "horizon": "192 observations at irregular frequency.",
+    "key_signal": "The series is generally level around 90–100, with intermittent dips to 80–85 and one isolated zero followed by a return to 90.",
+    "uncertainty": "The zero may represent a genuine observation or a data-quality anomaly; timestamps and the relationship between text and target are not established."
+  },
+  "predictive_factors": {
+    "covariates": "Supplied covariates are HUMIDITY, MAXTEMP, and MINTEMP. Their nonzero values are mostly about 50–80, 27–35, and 24–30 respectively; each has a zero that may be anomalous. No unavailable values are inferred.",
+    "temporal_patterns": "The target stays mostly between 90 and 100, with scattered readings of 80–85 and a single zero. It returns to 90 after that zero; no sustained rise or fall is visible.",
+    "text_evidence": "The supplied text repeatedly describes warm, humid conditions with showers or thunderstorms, with some heavy-rain periods. These are unverified text descriptions, not direct target observations; their timestamps and relevance to the target are not established.",
+    "uncertainty": "The sampling intervals are irregular, the meaning of the zero readings is unknown, and the text's alignment and relationship to the target are unclear. These limits prevent a reliable directional conclusion."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 1,
+  "verified_on": "2026-10-19",
+  "local_data_directory": "data/",
+  "upstream_repository": "https://github.com/WanyingZhang4505/VoT",
+  "upstream_commit": "df600d5b6528ab3311ab2f0d8cd1566a2deb16c0",
+  "verification_method": "For each local CSV, normalize CRLF line endings to LF, then compute the Git blob SHA-1 (SHA-1 of 'blob <byte-count>\\0<content>'); compare it with the GitHub blob at the pinned commit.",
+  "result": "All eight local files exactly match the pinned upstream file contents after CRLF-to-LF normalization.",
+  "interpretation_boundary": "This establishes the identity of the copied VoT repository artifacts only. It does not establish the original publisher, raw source URL, target definition, units, transformations, or historical data release lineage.",
+  "line_ending_audit": "All local files use CRLF only, one CRLF per physical line. The upstream Git blobs are LF-normalized; local-minus-upstream byte count equals the physical line count for every file.",
+  "files": [
+    {"path":"data/Agriculture.csv","upstream_path":"data/Agriculture.csv","rows":496,"local_bytes":710264,"local_sha256":"99135c58a8a67099970a990584c895530e3d56db309702271081981f976a71b6","upstream_git_blob_sha1":"e1f69a0551963825c7e5664b7992e85024528273"},
+    {"path":"data/Climate.csv","upstream_path":"data/Climate.csv","rows":496,"local_bytes":766017,"local_sha256":"d5c0cffd3bfb27296e5031d89e0630e585fc0f221fb9c9b85775b1b2e2fdb50c","upstream_git_blob_sha1":"e59cc3c332b88a9cd5e8a37b43e96811f50b8320"},
+    {"path":"data/Economy_sort.csv","upstream_path":"data/Economy_sort.csv","rows":423,"local_bytes":980956,"local_sha256":"275af408db7cd60ed5744dd78d72bdd83672996571b51d0a5433f51ae82690f7","upstream_git_blob_sha1":"05abf67f07d76597027cc29cca2eb3bedec05bcb"},
+    {"path":"data/Energy.csv","upstream_path":"data/Energy.csv","rows":1479,"local_bytes":783993,"local_sha256":"d32f6dca6818cf8cb415c15af77a9d8e63904a04bf2cd8243fde92ffb67e547f","upstream_git_blob_sha1":"270d586d6d2e085ef5051f408592253ca8dfb0fd"},
+    {"path":"data/Health.csv","upstream_path":"data/Health.csv","rows":1389,"local_bytes":1054449,"local_sha256":"63b7bcd452c021edf241206262a239d063c908ba1115e3d23f0de70055f6aff4","upstream_git_blob_sha1":"b800f2258b9087630ff44c295ee08565d9d7f09b"},
+    {"path":"data/Security.csv","upstream_path":"data/Security.csv","rows":297,"local_bytes":730921,"local_sha256":"f01af1376e25d182b2c8adc06436d864ae0abf5978aba22be7d2d598678cb837","upstream_git_blob_sha1":"05698d14e49874f3179fed348b5a4bbcf609f869"},
+    {"path":"data/SocialGood.csv","upstream_path":"data/SocialGood.csv","rows":892,"local_bytes":2138395,"local_sha256":"009eda3907fc049c38c3d7918423cb82866d2f0760582388ef3cadc38560f4c2","upstream_git_blob_sha1":"93e437d94e525b3a68254b2e5256c0d0c5708b6e"},
+    {"path":"data/new_metr.csv","upstream_path":"data/new_metr.csv","rows":12339,"local_bytes":2456220,"local_sha256":"0f135daea9c4a4fc2dc6f06e2e1e45c2b4b5b2a82c169624d2bbbbc3ace402b4","upstream_git_blob_sha1":"ec506ee2a8d5b93e6e8d364357b20c333cc7ebb7"}
+  ],
+  "upstream_blob_sizes_bytes": {
+    "Agriculture.csv": 709767,
+    "Climate.csv": 765520,
+    "Economy_sort.csv": 980532,
+    "Energy.csv": 782513,
+    "Health.csv": 1053059,
+    "Security.csv": 730623,
+    "SocialGood.csv": 2137502,
+    "new_metr.csv": 2443880
+  },
+  "climate_note": {
+    "status": "source_artifact_identity_confirmed; original_target_lineage_unresolved",
+    "alice_vot_file_schema": "Date, OT, Anomaly, start_date, end_date, date, prior_history_avg, prior_history_std, fact, preds",
+    "official_time_mmd_paper_description": "Climate is listed as monthly five-dimensional Drought Level.",
+    "official_time_mmd_numerical_file_is_the_same_artifact": false,
+    "official_time_mmd_file_git_blob_sha1": "ea59211c83a0376418e3821a5a1b3624f1d91e16",
+    "official_time_mmd_file_header": "MapDate,AreaOfInterest,OT,D0,D1,D2,D3,D4,ValidStart,ValidEnd,StatisticFormatID,date,start_date,end_date",
+    "note": "The local file is confirmed as Alice's VoT repository artifact, not as the unchanged official Time-MMD numerical Climate file. The precipitation/inches interpretation remains supported by local code and earlier annual cross-checks, but the original source field and transformation chain are still not proved."
+  }
+}

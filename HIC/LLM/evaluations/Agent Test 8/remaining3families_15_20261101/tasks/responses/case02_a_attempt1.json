@@ -1,0 +1,4 @@
+{
+  "prediction": [1.05, 1.0, 0.96, 0.92, 0.9, 0.88, 0.87, 0.89, 0.94, 1.02, 1.12, 1.25, 1.42, 1.62, 1.85, 2.1, 2.36, 2.62, 2.88, 3.12, 3.3, 3.42, 3.48, 3.4, 3.25, 3.05, 2.8, 2.55, 2.3, 2.05, 1.82, 1.62, 1.45, 1.3, 1.18, 1.1],
+  "reasoning": "The target has declined from its late-winter peak to about 1.10 by the end of the observed period. I expect it to remain low through summer, then rise during the colder months and ease after a winter peak. The supplied covariates show a similar seasonal pattern, but the target is unidentified, so the forecast is uncertain."
+}

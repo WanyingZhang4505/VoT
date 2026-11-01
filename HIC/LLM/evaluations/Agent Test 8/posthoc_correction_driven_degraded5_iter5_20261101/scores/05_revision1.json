@@ -1,0 +1,31 @@
+{
+  "ordinal": 5,
+  "case_id": "security_validation_series_20160501T000000",
+  "iteration": 1,
+  "correction_sha256": "293a69658268a33e9820a77c84b5b63cf2e1557914b8736e2b6966dc359916e2",
+  "task_sha256": "e38d4f14a50803c78d46b54b925430d1878bc98fb1a786544d7442522536abab",
+  "response_sha256": "9d92ac1118c4bf2d094888752e5a2123339dde112ce2e7866e17983a3c09fb32",
+  "prediction_sha256": "711edfc4ed1d7ef93d576044288e073cd4dfdc4fed1634d5c0dfd48a1aa0c630",
+  "A_metrics": {
+    "mae": 243055522.3,
+    "mse": 2.4106677430842147e+17,
+    "rmse": 490985513.33865386
+  },
+  "original_B0_metrics": {
+    "mae": 244135942.7,
+    "mse": 2.4226275304407066e+17,
+    "rmse": 492201943.35665786
+  },
+  "revised_correction_B_metrics": {
+    "mae": 228396176.3,
+    "mse": 2.2224685371642144e+17,
+    "rmse": 471430645.71198744
+  },
+  "direction_vs_original_A_by_MAE": "improved",
+  "direction_vs_original_B0_by_MAE": "improved",
+  "iterations": 1,
+  "stopped_at_first_nonworse": true,
+  "validation_truth_used_to_score": true,
+  "outer_test_targets_read": false,
+  "qdrant_write": false
+}

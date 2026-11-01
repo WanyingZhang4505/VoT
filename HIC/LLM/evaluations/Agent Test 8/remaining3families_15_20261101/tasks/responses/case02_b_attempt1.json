@@ -1,0 +1,4 @@
+{
+  "prediction": [1.08, 1.02, 0.98, 0.95, 0.93, 0.92, 0.93, 0.96, 1.00, 1.05, 1.12, 1.22, 1.35, 1.52, 1.72, 1.94, 2.16, 2.36, 2.54, 2.70, 2.84, 2.96, 3.04, 3.08, 3.10, 3.09, 3.05, 2.98, 2.90, 2.82, 2.74, 2.67, 2.62, 2.59, 2.58, 2.60],
+  "reasoning": "The target is unidentified and has no documented unit, so I use only its observed shape: it declined toward about 1.10 by the end of the history, after rising to a winter peak. I forecast a low summer period followed by a gradual rise toward winter, with uncertainty increasing over the horizon. The influenza-related covariates show a broadly similar pattern, but their relationship to the target is not established, so they are only qualitative context. The retrieved reflection cautions against assuming that a decline will taper to a stable level without evidence of reversal; here, the visible history supports a rise after the low, but does not establish its timing or magnitude."
+}

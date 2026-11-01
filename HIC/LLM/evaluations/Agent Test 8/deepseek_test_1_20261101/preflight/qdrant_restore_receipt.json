@@ -1,0 +1,14 @@
+{
+  "collection": "DeepSeek Test 1",
+  "dimension": 1024,
+  "distance": "Cosine",
+  "points_count": 703,
+  "qdrant_url": "http://127.0.0.1:6333",
+  "snapshot_bytes": 14443556,
+  "snapshot_lines": 703,
+  "snapshot_sha256": "0dbd02848356f0497dee90bcdcee4e4e3b4422f480db00b2f98abc7834641acf",
+  "source_snapshot": "LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_snapshot/agent_test_8_filtered_703.jsonl",
+  "status": "green",
+  "unique_ids_verified": 703,
+  "verified_utc": "2026-11-01T04:03:17.321639+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "dataset_info": {
+    "data_modalities": "numeric time series, supplied weather covariates, and source-aligned text",
+    "dataset_name": "new_metr",
+    "frequency": "irregular",
+    "target_unit": "unknown",
+    "target_variable": "unknown"
+  },
+  "forecast_outlook": {
+    "confidence": "Low: the target is unnamed, observations are irregularly spaced, and the series fluctuates without a clear persistent direction.",
+    "expected_direction": "No defensible directional expectation; the latest observations are near 90 after a recent dip, within a series that has varied widely.",
+    "horizon": "192 steps at irregular frequency, as specified by the forecast-task contract.",
+    "key_signal": "The series rose from an early level near 65 to repeated values around 90–100, then dipped and most recently returned to 90.",
+    "uncertainty": "The target's meaning and unit are unknown, timestamps are not supplied, and the relationship between the weather reports, covariates, and target is unestablished."
+  },
+  "predictive_factors": {
+    "covariates": "Humidity rises from about 30–40 early to a peak of 75, then is mostly 45–50 near the end. Maximum temperature peaks at 34 and is 28–29 in the latest observations; minimum temperature varies and is 21–25 near the end. No relationship to the unnamed target is established.",
+    "temporal_patterns": "Values range from 60 to 100. The series moves from a mostly 65–85 early level to sustained values around 85–95, briefly reaches 100, then falls as low as 70 before ending at 90. Repeated plateaus alternate with short swings; irregular spacing limits interpretation of timing.",
+    "text_evidence": "The supplied text consists of weather descriptions, including sunny or dry periods, later rain and showers, and changing temperature and humidity ranges. These reports are not independently source-verified, have no explicit dates here, and do not directly identify or measure the target; they provide context only.",
+    "uncertainty": "The supplied history does not establish target identity, units, observation intervals, or whether weather conditions are relevant to the target. These limits prevent a reliable directional forecast."
+  }
+}

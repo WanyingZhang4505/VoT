@@ -1,0 +1,14 @@
+{
+  "case_id": "security_validation_series_20160501T000000",
+  "ordinal": 5,
+  "original_B0_prediction_sha256": "882a7cd025ac366bdd3ced4fed9abce89c6711540d2082ab731ff5e68bac8d2e",
+  "revised_correction_sha256": "293a69658268a33e9820a77c84b5b63cf2e1557914b8736e2b6966dc359916e2",
+  "revised_forecast_prediction_sha256": "711edfc4ed1d7ef93d576044288e073cd4dfdc4fed1634d5c0dfd48a1aa0c630",
+  "truth_sha256": "e65a4aac5e76187a7ca2dabbb055cb449638552a65585a851aae35c0a5d87dfd",
+  "metrics": {
+    "mae": 228396176.3,
+    "mse": 2.2224685371642144e+17,
+    "rmse": 471430645.71198744
+  },
+  "truth_read_after_original_predictions_locked": true
+}

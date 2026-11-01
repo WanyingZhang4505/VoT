@@ -1,0 +1,11 @@
+{
+  "collection": "agent_test_8",
+  "snapshot_name": "agent_test_8-8008848820407063-2026-11-01-02-42-53.snapshot",
+  "snapshot_path": "C:\\Users\\admin\\Documents\\New project\\_research_gnn_working\\LLM\\evaluations\\Agent Test 8\\memory_ingest_after_eval_20261101\\snapshot\\agent_test_8-8008848820407063-2026-11-01-02-42-53.snapshot",
+  "snapshot_size_bytes": 15311360,
+  "snapshot_sha256": "fb2f62775d5d285ef2073dc4079913c1b8b7a050a5a1fca4cdd839dcf6db7734",
+  "point_count_before": 703,
+  "vector_size": 1024,
+  "distance": "Cosine",
+  "created_utc": "2026-11-01T02:42:54.414799+00:00"
+}
