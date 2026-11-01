@@ -2,9 +2,13 @@
 
 This is the source bundle for the local HIC workflow and the one-pass DeepSeek Test 1 evaluation. It includes the Test 8 code, frozen manifests, run and audit artifacts, datasets, and portable Qdrant libraries. The repository `BILL_DeepSeek` branch also contains this project expanded under `HIC/` for direct browsing, plus a ZIP and per-file SHA256 manifest.
 
+For clone-to-forecast instructions and the read-only new-case runner, start with [`DEEPSEEK_HIC_README.md`](DEEPSEEK_HIC_README.md).
+
 ## DeepSeek Test 1 runner
 
-The strict one-pass runner is `scripts/run_deepseek_test1_strict.py`. It binds to the `DeepSeek Test 1` collection and writes outputs to the local evaluation artifact root recorded in the runner and manifests. The collection's frozen 703-point evaluation baseline is retained at `LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_snapshot/agent_test_8_filtered_703.jsonl`.
+The strict one-pass runner is `scripts/run_deepseek_test1_strict.py`. It binds to the frozen 15-case protocol and requires a green 703-point `DeepSeek Test 1` collection. The collection's frozen 703-point evaluation baseline is retained at `LLM/evaluations/Agent Test 8/deepseek_test_1_20261101/preflight/qdrant_snapshot/agent_test_8_filtered_703.jsonl`. It is not the command for arbitrary new cases.
+
+Use `scripts/run_deepseek_hic_case.py` with a truth-free input JSON for a new single case. It requires the 718-point collection restored from `qdrant/DeepSeek_Test_1_718_20261101.snapshot`, checks the exact point count/vector configuration, and performs read-only Top-1 retrieval. The full input schema, restore steps, and commands are in `DEEPSEEK_HIC_README.md`.
 
 For a portable copy of the current live retrieval collection, see `qdrant/DeepSeek_Test_1_718_20261101.snapshot`. It contains 718 points, 1024-dimensional Cosine vectors, including 15 validation-derived experiences added after scoring. This library is useful for continued HIC development; results from it are not an untouched blind benchmark. Its source, point count, Qdrant version, file size, and hashes are recorded in `qdrant/snapshot_manifest.json`.
 

@@ -9,3 +9,5 @@ __pycache__/
 !/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/frozen_protocol.json
 !/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/preflight/
 !/LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101*/preflight/deepseek_preflight.json
+/local_cases/
+/LLM/evaluations/DeepSeek HIC New Cases/

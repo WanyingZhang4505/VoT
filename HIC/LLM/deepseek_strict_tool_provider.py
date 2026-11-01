@@ -47,7 +47,7 @@ def _atomic_json(path: Path, value: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(
         mode="w", encoding="utf-8", newline="\n", dir=path.parent,
-        prefix=f".{path.name}.", suffix=".tmp", delete=False,
+        prefix=".tmp-", suffix=".json", delete=False,
     ) as handle:
         temporary = Path(handle.name)
         json.dump(value, handle, ensure_ascii=False, sort_keys=True,

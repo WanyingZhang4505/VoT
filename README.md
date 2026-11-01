@@ -1,5 +1,11 @@
 # VoT
 
+## DeepSeek HIC project
+
+See [the DeepSeek HIC setup and new-case guide](HIC/DEEPSEEK_HIC_README.md) for environment setup, Qdrant snapshot restore, API-key configuration, preflight, and a complete one-case prediction walkthrough. The matching portable package is [Agent_Test_8_Project.zip](Agent_Test_8_Project.zip), with its [file manifest](Agent_Test_8_Project_manifest.json) and [SHA256 checksum](Agent_Test_8_Project_SHA256SUMS.txt).
+
+## Original VoT project
+
 ## Quickstart
 
 ### Installation

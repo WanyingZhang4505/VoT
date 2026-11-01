@@ -1,18 +1,19 @@
 {
-  "file_count": 392,
-  "total_bytes": 74129077,
+  "file_count": 395,
+  "total_bytes": 74168265,
   "archive_root": "agent_test8_project",
   "excluded_runtime_artifacts": [
     "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_superseded_before_inference",
     "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/progress.json",
     "LLM/evaluations/Agent Test 8/deepseek_onepass_15_20261101_r2/preflight/live_preflight_latest.json",
-    "API credentials, virtual environments, and Python caches"
+    "API credentials, virtual environments, and Python caches",
+    "user-created local_cases inputs and DeepSeek HIC New Cases run outputs"
   ],
   "files": [
     {
       "path": ".gitignore",
-      "size_bytes": 523,
-      "sha256": "988cd8a48db7f4eac6dac1a59c86845cd51cc73e6f9ecf86a189aaad72c542d2"
+      "size_bytes": 578,
+      "sha256": "ede3833ae2470561d07a4bd53175ddade26c3faf2f7447ade4f3771b7b12f599"
     },
     {
       "path": "config/api.env.example",
@@ -78,6 +79,11 @@
       "path": "data/target_contracts.json",
       "size_bytes": 13269,
       "sha256": "9d2cae51f90c11a3da1dbe47ecba7bc7cfcd30fe1744d0c0202d8b5ea25abb00"
+    },
+    {
+      "path": "DEEPSEEK_HIC_README.md",
+      "size_bytes": 15372,
+      "sha256": "cfe4e62bd447b863a9c6a510530614d8a86050962557cfbb5c096c2ad038fc37"
     },
     {
       "path": "docker-compose.yml",
@@ -226,8 +232,8 @@
     },
     {
       "path": "LLM/deepseek_strict_tool_provider.py",
-      "size_bytes": 17739,
-      "sha256": "118dbd6a1434c5d3fe6a55397d35401abd4364529da8a1d17672dc1f16d42094"
+      "size_bytes": 17731,
+      "sha256": "8518de0c6bce1220a7ed917f13a841f6b7de5876ed5aa0fcaf193ece052f5bc4"
     },
     {
       "path": "LLM/deepseek_test8_provider.py",
@@ -1861,8 +1867,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 3400,
-      "sha256": "5e42ed3ea1f06d2e59d0fac7d1da3ea91b371146ab2aa94224387e5a4c694f40"
+      "size_bytes": 3908,
+      "sha256": "4e1940729d2ebab1f3a6af1aecd1bbaa43c0daf69595e1eb8b179f6125dbffba"
     },
     {
       "path": "scripts/audit_test7_collection_copy.py",
@@ -1950,6 +1956,11 @@
       "sha256": "549eafe8d24a871e58d6b8a1e4161165c12989ef0c0a0bd9fc198783c010194a"
     },
     {
+      "path": "scripts/run_deepseek_hic_case.py",
+      "size_bytes": 19963,
+      "sha256": "ea4187598248b43001732a33c3ec19ca79ae5f1e18260c2203c522a5518178ff"
+    },
+    {
       "path": "scripts/run_deepseek_test1.py",
       "size_bytes": 3124,
       "sha256": "003d3b8f0ba8c3e6466505d7a53c1d3cda7eab7cc5e14743c93b12854dc1b12e"
@@ -1963,6 +1974,11 @@
       "path": "scripts/run_deepseek_test1_strict.py",
       "size_bytes": 25512,
       "sha256": "169773ba6fb48f2a44e48189bbd78ec8bf3ddee5f82592b7436f70f5349516c3"
+    },
+    {
+      "path": "tests/test_deepseek_hic_case_runner.py",
+      "size_bytes": 3298,
+      "sha256": "f20fa71aa50ae7a0960a47bbd4c7dd241e39d1f48a2fdcd74befa5cedbf39faf"
     },
     {
       "path": "tests/test_deepseek_strict_forecast.py",
