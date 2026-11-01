@@ -1,0 +1,23 @@
+{
+  "verified_utc": "2026-11-01T05:44:39.424075+00:00",
+  "source_collection": "DeepSeek Test 1",
+  "points_count": 718,
+  "vector_size": 1024,
+  "distance": "Cosine",
+  "old_artifact_sha256": "cf204937015addaf7a0bece6ec92063ecf1f66a4b033c6fbbdce902d8adc99f1",
+  "old_artifact_restored_points": 703,
+  "old_artifact_missing_points": 15,
+  "snapshot_sha256": "d0fd9a858bc75f76504da492b9d72e152c867e8c69a541736842ae3c42c32860",
+  "snapshot_size_bytes": 15562752,
+  "snapshot_name": "DeepSeek Test 1-8008848820407063-2026-11-01-05-44-34.snapshot",
+  "restored_status": "green",
+  "all_point_ids_payloads_vectors_equal": true,
+  "source_payload_vector_sha256": "96f53651b51f41f1a8eee0495ae64b102608c2de631afd593d6bd1acdc68d223",
+  "restored_payload_vector_sha256": "96f53651b51f41f1a8eee0495ae64b102608c2de631afd593d6bd1acdc68d223",
+  "source_points_unchanged": true,
+  "finding": "Previous published artifact restored only 703 points despite its 718-point manifest. Fresh source snapshot restores all 718 points and matches source point IDs, payloads, and vectors.",
+  "temporary_collections_removed": [
+    "alice_hic_repro_check_20261101",
+    "alice_hic_repro_check_20261101_v2"
+  ]
+}

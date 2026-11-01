@@ -92,7 +92,7 @@ curl.exe -X POST "http://127.0.0.1:6333/collections/$collectionName/snapshots/up
 Expected snapshot SHA256:
 
 ```text
-cf204937015addaf7a0bece6ec92063ecf1f66a4b033c6fbbdce902d8adc99f1
+d0fd9a858bc75f76504da492b9d72e152c867e8c69a541736842ae3c42c32860
 ```
 
 Verify the restored collection before prediction:
@@ -104,6 +104,8 @@ $info.result.config.params.vectors | ConvertTo-Json -Depth 4
 ```
 
 Expected values are `green`, `718`, vector size `1024`, and distance `Cosine`. The snapshot was produced by Qdrant 1.19.2. For compatibility, restore with 1.19.2 or a Qdrant version supported by the official snapshot compatibility guidance.
+
+The published snapshot was restored into a fresh verification collection on 2026-11-01. All 718 point IDs, payloads, and vectors matched the source collection. The saved audit is `HIC/qdrant/restore_verification_20261101.json` (repository-root path).
 
 ## 5. Configure the DeepSeek API key
 
